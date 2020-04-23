@@ -1,0 +1,47 @@
+/* Formatting for modal */
+.alleg-modalElement, .alleg-modalImage{
+    display:none;
+    margin:0;
+    width:100% !important;
+}
+.alleg-modalElement .button-set-container{
+    text-align: center;
+}
+.alleg-modalImage{
+    text-align: center;
+}
+#modalClose{
+    width:30px;
+    height:30px;
+    cursor: pointer;
+    font-size: 20px;
+    position: fixed;
+    top:5px;
+    right: 5px;
+    color: black;
+    font-weight: bold;
+}
+#modalBackground{
+    background-color:rgba(0,0,0,0.2);
+    z-index: 99;
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    margin:0;
+    display:none;
+    padding-top: 30px;
+}
+#modalFrame{
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    padding:25px;
+}
+/* End formatting of modal */
+.alleg-hide
+{display: none !important;}
+

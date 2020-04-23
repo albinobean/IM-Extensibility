@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #mcxQuickSurvey{
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: yellow;
+            height: 150px;
+            width: 150px;
+            padding:25px;
+            text-align: center;
+        }
+        #mcxQuickSurvey .mcxRating{
+            height: 50px;
+            width:50px;
+            margin:10px;
+            margin-top: 10px;
+            display: inline-block;
+            background-image: url("https://i.pinimg.com/originals/52/55/d0/5255d09ed4f8622b912661775f26bd58.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #mcxThumbDown{
+            transform: rotate(180deg)
+        }
+        #mcxCommentBox{
+            height: 50px;
+            width: 100%;
+        }
+        #mcxSubmitSurvey{
+            background-color: green;
+            color: yellow;
+        }
+        .selectedRating{
+            border: green 1px solid;
+        }
+        #mcxSurveyWindow{
+            display: none;
+        }
+    </style>
+    <script>
+
+        var customerRating;
+        $(document).ready(function () {
+            $('.mcxRating').click(function() {
+                $('.mcxRating').removeClass('selectedRating');
+                $(this).addClass('selectedRating');
+                // If a thumbup, then pass value of 1 else 0
+                customerRating=$(this).id=='mcxThumbUp' ? 1:0;
+                $('#mcxSubmitSurvey').removeAttr('disabled');
+            });
+            $('#mcxSubmitSurvey').click(function(){
+                var surveyURL='https://alias.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=ATT6MP&Rating=' + customerRating + '&Comment=' + $('#mcxCommentBox').val();
+                try {
+                    $('#mcxSurveyWindow').attr('src',surveyURL);
+                    alert('Your survey was submitted.  Thank you for your feedback.');
+                    $('#mcxQuickSurvey').hide();
+                } catch (e) {
+
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="mcxQuickSurvey">
+        <div id="mcxThumbUp" class="mcxRating"></div>
+        <div id="mcxThumbDown" class="mcxRating"></div>
+        <input id="mcxCommentBox">
+        <button id="mcxSubmitSurvey" onclick="mcxSubmitSurvey()" disabled="disabled">Submit</button>
+        <iframe id="mcxSurveyWindow"></iframe>
+    </div>
+</body>
+</html>

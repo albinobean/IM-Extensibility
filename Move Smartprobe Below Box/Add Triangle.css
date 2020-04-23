@@ -1,0 +1,10 @@
+.smart-probe-container:before{
+    content: " ";
+    display:block;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent; /*to have an isosceles triangle, this should be the same width as the one above*/
+    border-bottom: 10px solid #8AC452; /*This border sets the color of the triangle and the width--it should be the sum of the two border widths above*/
+}

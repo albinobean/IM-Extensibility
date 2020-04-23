@@ -1,0 +1,76 @@
+#headerLogoImage2 {
+    height: 60px;
+    margin-top: 20px;
+}
+
+#helpContainer {
+    position: fixed;
+    left: 5px;
+    top:75px
+}
+.helpSourceContainer{
+    background-color: white;
+    border-radius: 35px;
+    height: 70px;
+    width: 70px;
+    transition-duration: 1s;
+    border: 1px solid #253746;
+    z-index: 2;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.helpSourceContainer:hover{
+    width: 400px;
+    /* height: 75px; */
+}
+.helpSourceContainer img {
+    height: auto;
+    width: 50px;
+    margin: 9px;
+    transition: ease;
+    -webkit-transition: ease;
+    -moz-transition: ease;
+    -ms-transition: ease;
+    -o-transition: ease;
+    -webkit-transition: ease;
+}
+/* .helpSourceContainer:hover img, .helpSourceContainer img:hover {
+    width: 60px;
+    height: 60px;
+} */
+.helpDescriptionContainer{
+    display:none;
+    visibility: hidden;
+    margin:10px;
+    transition-delay: 1s;
+    text-align: center;
+    font-size: 12px;
+    padding:10px;
+    transition-duration: 10s;
+    overflow: hidden;
+}
+.helpIcon:hover .helpDescriptionContainer, .helpSourceContainer:hover .helpDescriptionContainer{
+    display:table-cell;
+    visibility: visible;
+}
+.helpTitle{
+    font-weight: bold;
+    color:#253746;
+    margin-bottom:0;
+}
+.helpDescription{
+    color:#717C7D;
+    margin:0
+}
+.helpIconWrapper{
+    vertical-align: top;
+    width:70px;
+}
+.helpSourceContainer>table{
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+@media screen and (max-width:700px){
+    #helpContainer{display:none;}
+}

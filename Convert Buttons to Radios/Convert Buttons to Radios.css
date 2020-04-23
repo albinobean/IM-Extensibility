@@ -1,0 +1,26 @@
+.last2ButtonsToRadios{
+    table-layout: fixed;
+}
+.last2ButtonsToRadios .ScaleHeaderRight{
+    text-align: center;
+}
+.last2ButtonsToRadios .ScaleHeaderCenter:nth-last-child(3){
+    text-align: right;
+}
+.last2ButtonsToRadios td:nth-last-child(2) label,
+.last2ButtonsToRadios td:nth-last-child(1) label{
+    display:none !important;
+}
+.last2ButtonsToRadios td:nth-last-child(2) input,
+.last2ButtonsToRadios td:nth-last-child(1) input{
+    display:block;
+    opacity: unset !important;
+    clip: unset;
+    height: unset;
+    width: unset;
+    position: unset;
+    padding: unset;
+    overflow: unset;
+    border: unset;
+    margin:auto;
+}

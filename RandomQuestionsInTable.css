@@ -1,0 +1,22 @@
+/*
+- Add question class 'alleg-TableWithOnly3Questions'
+- Randomize order of questions
+- This will not work if the questions are required because they will still be 'displayed' (according to the platform) and will be expected to be answered
+*/
+
+.alleg-TableWithOnly3Questions tr{
+    display:none;
+}
+
+/*Show header row*/
+.alleg-TableWithOnly3Questions tr:first-child,
+/*Support for IE9+*/
+.alleg-TableWithOnly3Questions tr:nth-child(2),
+.alleg-TableWithOnly3Questions tr:nth-child(3),
+.alleg-TableWithOnly3Questions tr:nth-child(4),
+/*support back to IE7*/
+.alleg-TableWithOnly3Questions tr:first-child + tr,
+.alleg-TableWithOnly3Questions tr:first-child + tr + tr,
+.alleg-TableWithOnly3Questions tr:first-child + tr + tr + tr{
+    display:table-row !important;
+}

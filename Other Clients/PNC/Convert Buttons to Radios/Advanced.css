@@ -1,0 +1,52 @@
+.last2ButtonsToRadios{
+    table-layout: fixed;
+}
+.last2ButtonsToRadios .ScaleHeaderRight{
+    text-align: center;
+}
+.last2ButtonsToRadios .ScaleHeaderCenter:nth-last-child(3){
+    text-align: right;
+}
+.last2ButtonsToRadios td:nth-last-child(2) label,
+.last2ButtonsToRadios td:nth-last-child(1) label{
+    display:none !important;
+}
+.last2ButtonsToRadios td:nth-last-child(2) input,
+.last2ButtonsToRadios td:nth-last-child(1) input{
+    display:block;
+    opacity: 1 !important;
+    clip: unset;
+    height: auto;
+    width: auto;
+    position: relative;
+    padding: unset;
+    overflow: unset;
+    border: unset;
+    margin:auto;
+}
+.last2ButtonsToRadios .multiScaleTableHeader td:nth-last-child(2) .scaleText,
+.last2ButtonsToRadios .multiScaleTableHeader td:nth-last-child(1) .scaleText{
+    font-weight: normal !important;
+}
+.last2ButtonsToRadios .ui-button-text-only .ui-button-text{
+    padding-left: 0;
+    padding-right: 0;
+}
+.last2ButtonsToRadios .scale .QuestionCell{
+    width: 10% !important;
+}
+.last2ButtonsToRadios .Scale1Cell label{
+    width: 35px;
+}
+@media screen and (max-width: 380px){
+    .last2ButtonsToRadios{
+        width:110% !important;
+        margin-left:-3%;
+    }
+    .last2ButtonsToRadios .Scale1Cell .ui-button-text{
+        height: 25px !important;
+    }
+    .last2ButtonsToRadios .Scale1Cell .ui-button-text .answerText{
+        margin-top:0 !important;
+    }
+}

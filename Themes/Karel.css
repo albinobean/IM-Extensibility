@@ -1,0 +1,1285 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700'); /* custom font reference (please move this to the Advanced tab in the survey editor */
+/* START classes for all devices */
+
+*, u, strong, i { /* font fall back for unaddressed classes */
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.normal {
+    font: 14px 'Roboto', Arial, Helvetica, sans-serif;
+    line-height: 19px;
+    color: #717C7D;
+}
+
+border {
+    border-color: #717C7D !important;
+}
+
+.object { /* removes outline for focused objects */
+    outline: 0;
+    margin: 0px 40px 45px 40px;
+    background-color: #253746 !important;
+    padding: 0px !important;
+    border-radius: 0px;
+}
+
+#placeholder { /* handles the top margin for error and opt out messages */
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+#header {
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 3.5%;
+}
+
+#headerText {
+    color: #717C7D;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+}
+
+#header_img_two {
+    padding-right: 4%;
+}
+
+#survey { /* defines margins of survey area (1st=top, 2nd=right, 3rd=bottom, 4th=left) */
+    margin-left: auto; /* set to auto when questionnaire should be centered */
+    margin-right: auto; /* set to auto when questionnaire should be centered */
+    width: 976px;
+}
+
+#canvas {   /* removes default margin-left */
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 100px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,.15);
+    padding: 60px 0px 1px 0px;
+    border-radius: 2px;
+}
+
+.topNavigation { /* use first 3 to define color & last value to set transparency (0 = 100% transparent) */
+    background-color: rgba(255, 255, 255, 0);
+    margin-right: 5%; /* defines margin right when progress bar is set to RIGHT in designer */
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: right !important;
+}
+
+.alleg-headerText {
+    margin-bottom: 20px !important;
+}
+
+.surveyBackground {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.questionText { /* defines white space between text and next element */
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #717C7D;
+    font-weight: 500 !important;
+    font-style: normal !important;
+}
+
+.answerText {
+    display: inline-block; /* aligns first & second line of text (line break long text or small screens) */
+    margin-left: 8px; /* defines white space between form elements and text */
+    font-size: 13px;
+    color: #717C7D;
+    font-weight: 400;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+}
+
+input[type="text"], textarea { /* default styles for text fields & text areas */
+    padding: 5px !important;
+    font-size: 13px !important;
+    color: #717C7D !important;
+    font-weight: normal !important;
+    border: 1px solid #717C7D !important;
+    border-radius: 2px !important;
+    background-color: #fff;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+}
+
+input[type="text"]:focus, textarea:focus { /* active styles for text fields & text areas */
+    padding: 5px !important;
+    font-size: 13px !important;
+    color: #717C7D !important;
+    font-weight: normal !important;
+    border: 1px solid #717C7D !important;
+    background-color: #fff !important;
+    outline: none !important;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-box-shadow: 0 0 2px #717C7D;
+    box-shadow: 0 0 2px #717C7D;
+}
+
+.question .other input[type="text"] {
+    margin-left: 10px !important;
+}
+
+.questionText.checkbox {
+    margin-left: 12px !important;
+}
+
+.bonfire-header-text {
+    color: #717C7D;
+    font: 400 12px 'Roboto', Arial, Helvetica, sans-serif !important;
+    text-transform: none;
+}
+
+/* START checkbox & radio question styles */
+
+.scaleText {
+    color: #717C7D !important;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    text-transform: none !important;
+}
+
+.question td {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.question .alt td {     /* defines color of alternate rows */
+    background-color: rgba(221, 221, 221, 0);
+}
+
+.alt {
+    background-color: rgba(221, 221, 221, 0);
+}
+
+/* START table question styles */
+
+.table .scale .QuestionCell {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #717C7D !important;
+}
+
+.table .QuestionCell {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 8px 4px !important;
+}
+
+.table .alt .QuestionCell {
+    background-color: #717C7D !important;
+    opacity: .5;
+}
+
+.table .Scale1Cell {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 8px 4px !important;
+}
+
+.table .alt .Scale1Cell {
+    background-color: #717C7D !important;
+    opacity: .5;
+}
+
+.tableQuestion {
+    font-size: 13px;
+    margin: 0px 0px;
+    display: inline-block;
+    color: #717C7D;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    font-weight: 500;
+}
+
+.tableDescription {
+    font-size: 14px;
+    line-height: 19px;
+    color: #717C7D;
+    font-weight: 500 !important;
+    font-style: normal !important;
+}
+
+.table .scale .Scale1Cell { /* removes border and sets ALL table headers BG to white / transparent - if needed as non global add question id(s)*/
+    border: 0px solid #717C7D !important;
+    border-top: 0px solid #717C7D !important;
+    border-left: 0px solid #717C7D !important;
+    border-right: 0px solid #717C7D !important;
+    border-bottom: 1px solid #717C7D !important;
+    background-color: transparent !important;
+}
+
+.Scale1Cell .scaleText{ /* sets font to normal ALL table questions - if needed as non global add question id(s)*/
+    font-weight: 700 !important;
+    background-color: transparent !important;
+    text-transform: none !important;
+    font-size: 13px;
+}
+
+.table th, .table td { /* border styles for ALL table questions - if needed as non global add question id(s)*/
+    border: 0px 0px 0px 0px solid #717C7D !important;
+    border-top: 0px solid #717C7D !important;
+    border-left: 0px solid #717C7D !important;
+    border-right: 0px solid #717C7D !important;
+    /*border-bottom: 1px solid #aaa !important;*/
+    background-color: transparent!important;
+}
+
+tr.SingleScaleHeader td {
+    border: 0px !important;
+}
+
+.iradio_flat-blue {
+    margin: 2px !important;
+}
+
+/* END table question styles */
+
+/* START alleg-classes (.alleg-classes need to be referenced per question in Edit Question) */
+
+.alleg-single-button .ScaleHeaderCenter { /* aligns center table header for a 11 point scale when single-button is used */
+    padding-right: 1.8% !important; /* use 2.64% for a 7 point scale */
+}
+
+.alleg-single-button .scaleText {
+    text-transform: none;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+}
+
+.alleg-single-button .table .scale .Scale1Cell {
+    border-bottom: 0px solid white !important;
+    border: 0px solid white !important;
+}
+
+.alleg-single-button .table th, .alleg-single-button .table td {
+    border: 0px 0px 0px 0px solid #717C7D !important;
+    border-top: 0px solid #717C7D !important;
+    border-left: 0px solid #717C7D !important;
+    border-right: 0px solid #717C7D !important;
+    border-bottom: 0px solid #717C7D !important;
+    background-color: rgba (247, 247, 247, 0);
+}
+
+.alleg-single-button tr.SingleScaleHeader td {
+    border: 0px !important;
+}
+
+.alleg-single-button .table .Scale1Cell {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 4px !important;
+}
+
+.alleg-5-point-scale .ScaleHeaderLeft { /* table question with a 5 point scale */
+    padding-left: 8% !important;
+}
+
+.alleg-5-point-scale .ScaleHeaderRight { /* table question with a 5 point scale */
+    padding-right: 8% !important;
+}
+
+.alleg-7-point-scale .ScaleHeaderLeft { /* table question with a 7 point scale */
+    padding-left: 5% !important;
+}
+
+.alleg-7-point-scale .ScaleHeaderRight { /* table question with a 7 point scale */
+    padding-right: 5% !important;
+}
+
+.alleg-text { /* descriptive text */
+    width: auto !important;
+}
+
+/* END alleg-classes */
+
+select {
+    color: #717C7D;
+}
+
+select, option {
+    font-size: 14px !important;
+    background-color: #fff !important;
+    padding: 0px 5px;
+    min-width: 280px;
+}
+
+/* START button question styles (classes also apply for the .alleg-single-button) */
+
+.ui-buttonset .answerText {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    color: #717C7D;
+}
+
+.ui-buttonset .ui-button.ui-state-default {
+    border: 1px solid #aaa !important;
+    background-color: #eee !important;
+}
+
+.ui-buttonset .ui-button.ui-state-active {
+    border: 1px solid #717C7D !important;
+    background: #717C7D !important;
+}
+
+.ui-buttonset .ui-button.ui-state-active.ui-state-hover {
+    border: 1px solid #717C7D !important;
+    background: #717C7D !important;
+}
+
+.ui-buttonset .ui-button.ui-state-hover {
+    border: 1px solid #717C7D !important;
+    background-color: #fff !important;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.ui-buttonset .ui-button.ui-state-hover .answerText {
+    color: #fff;
+}
+
+.ui-buttonset .ui-button.ui-state-active .answerText {
+    color: #fff;
+}
+
+.ui-button-text-only .ui-button-text {
+    padding: .5em 1em .4em 1em !important;
+}
+
+/* END button question styles */
+
+/* START Slider question styles */
+
+.ui-slider .ui-slider-handle {
+    background: #253746;
+    border: 1px solid #717C7D !important;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    outline: none !important;
+}
+
+.ui-slider {
+    border: 1px solid #717C7D !important;
+    border-radius: 2px !important;
+}
+
+.ui-slider.ui-slider-horizontal {
+    background: #fff !important;
+}
+
+.ui-slider .ui-slider-range {
+    border-radius: 0px !important;
+    background-color: #eee !important;
+}
+
+.ui-widget-header {
+    background-color: #eee !important;
+}
+
+.ui-dialog-title {
+    color: #717C7D !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    color: #717C7D;
+}
+
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-first, .horizontal  .ui-slider-label-ticks span.ui-slider-label-tick-middle, .horizontal .ui-slider-label-ticks span.ui-slider-label-tick-last {
+    font-weight: normal !important;
+}
+
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-first {
+    text-align: center;
+    width: 6em;
+    margin-left: -3em;
+}
+
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-middle {
+    text-align: center;
+    width: 4em;
+    margin-left: -2.1em;
+}
+
+/* END Slider question styles */
+
+.heading2 {
+    font-size: 18px !important;
+    color: #717C7D;
+    font-weight: bold;
+    line-height: 26px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+}
+
+a {
+    color: #717C7D;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #717C7D;
+    text-decoration: underline;
+}
+
+.bottomNavigation {
+    background-color: transparent!important;
+    margin: 40px 0px;
+    padding: 0px;
+}
+
+.navigationContainer {
+    width: auto !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.right table {
+    float: right !important;
+}
+
+/* START progress bar styles SPRINGGREEN set in designer */
+
+.progressBar {
+    float: right !important;
+}
+
+.progressBar.springgreen LI {
+    list-style-type: none;
+    width: 17px;
+    height: 12px;
+}
+
+.progressBar.springgreen UL {
+    padding: 2px;
+    border: 1px solid #fff;
+    overflow: auto;
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0); /* defines background color & transparency of progress bar background */
+    overflow: hidden;
+}
+
+.progressBar.springgreen .done {
+    background-color: #fff; /* defines background color of clompleted bar */
+    background-image: url('');
+}
+
+.percentComplete{
+    float: right;
+    padding: 8px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: -25px;
+    margin-right: 5px;
+    color: #fff; /*defaults to black, update the color here per the theme design*/
+}
+
+/* END progress bar styles SPRINGGREEN set in designer */
+
+button {
+    color: #717C7D;
+    font-weight: normal;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+button:active, button:focus, button:hover, button:visited, button:checked {
+    color: #717C7D;
+    font-weight: normal;
+    background-color: #fff;
+    border: 1px solid #717C7D;
+}
+
+/* START button style CLEANGREY set in designer */
+
+BUTTON.cleangray {
+    background-color: #253746;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #118fd6), color-stop(100%, #0f6eca));
+    background-image: -webkit-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: -moz-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: -ms-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: -o-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    border: 1px solid #0f6eca;
+    border-bottom: 1px solid #0f6eca;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    padding: 10px;
+    margin: 0 16px 0 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: 700 15px 'Roboto', Arial, Helvetica, sans-serif !important;
+    text-transform: none;
+    width: 150px !important;
+    letter-spacing: none;
+    box-shadow: none !important;
+}
+
+BUTTON.cleangray:hover, BUTTON.cleangray:active {
+    background-color: #0f6eca;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0f6eca), color-stop(100%, #0f6eca));
+    background-image: -webkit-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: -moz-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: -ms-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: -o-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    border: 1px solid #285e8e;
+    border-bottom: 1px solid #285e8e;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    box-shadow: none !important;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+Button.backButton {
+    background-color: #1082d1;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #118fd6), color-stop(100%, #0f6eca));
+    background-image: -webkit-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: -moz-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: -ms-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: -o-linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    background-image: linear-gradient(top, #118fd6 0%, #0f6eca 100%);
+    border: 1px solid #0f6eca;
+    border-bottom: 1px solid #0f6eca;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    padding: 10px;
+    margin: 0 16px 0 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: 700 15px 'Roboto', Arial, Helvetica, sans-serif !important;
+    text-transform: none;
+    width: 150px !important;
+    letter-spacing: none;
+    box-shadow: none !important;
+}
+
+Button.backButton:hover, Button.backButton:active {
+    background-color: #0f6eca;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0f6eca), color-stop(100%, #0f6eca));
+    background-image: -webkit-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: -moz-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: -ms-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: -o-linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    background-image: linear-gradient(top, #0f6eca 0%, #0f6eca 100%);
+    border: 1px solid #285e8e;
+    border-bottom: 1px solid #285e8e;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    box-shadow: none !important;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+/* END button style CLEANGREY set in designer */
+
+/* START smart probe styles */
+
+.smart-probe-arrow-left  { /* defines color of probing box arrow */
+    border-right: 10px solid #6EA204;
+    margin-left: 2px;
+}
+
+.smart-probe-message { /* defines background color of probing box */
+    background-color: #6EA204;
+    color: #fff;
+    font: 400 14px 'Roboto', Arial, Helvetica, sans-serif !important;
+}
+
+/* END smart probe styles */
+
+/* END classes for all devices */
+
+/* START media queries to style per breakpoint */
+
+/* START media query max width 1050px (max-width value needs to be set in theme editor as well) */
+
+@media screen and (max-width: 1050px) {
+    *, u, strong, i {
+        font-size: 14px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    }
+
+    div {
+        border: 0px solid red; /* set to 1px for debugging */
+    }
+
+    #survey {
+        width:98%;
+        margin-top: 0%;
+    }
+
+    .surveyBackground {
+        width:100% !important;
+        min-height: inherit;
+    }
+
+    .element.style {
+        width:100% !important;
+    }
+
+    #header {
+        margin-top: 5px;
+    }
+
+    .pageBackground {
+        background-image: url(https://dell.inquisiteasp.com/surveys/images/KRYF39/tablet_dell01_12.jpg); /* hard coded background image for tablet (uploaded to image placeholder survey on company instance) */
+        background-size: 100%;
+    }
+
+    #canvas {   /* removes default margin-left */
+        margin-left: 4%;
+        margin-right: 4%;
+        min-height: inherit;
+        background-color: #fff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding: 30px 5px 20px 10px;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+    .topNavigation {    /* use first 3 to define color & last value to set transparency (0 = 100% transparent) */
+        background-color: rgba(255, 255, 255, 0);
+        margin-right: 2%;   /* defines margin right when progress bar is set to RIGHT in designer */
+        margin-left: 3.2%;   /* defines margin left when progress bar is set to LEFT in designer */
+        margin-top: 4% !important;
+        margin-bottom: 5%;
+        text-align: right !important;
+    }
+
+    .ui-buttonset .answerText {
+        margin: 0px;
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+    :focus {
+        outline-color: #cecece;
+    }
+
+    .button-set-container.ui-buttonset .ui-button {
+        width: 98% !important;
+    }
+
+    .ui-buttonset {
+        margin-right: 0px;
+    }
+
+    BUTTON.cleangray {
+        width: 150px !important;
+    }
+
+    .mobileTable TD, .mobileTable TH {
+        padding: 0px !important;
+    }
+
+    .bottomNavigation {
+        margin: 0px auto;
+        padding: 10px;
+    }
+
+    .alleg-table-attributes .table th {
+        border-bottom: none!important;
+    }
+}
+
+/* END media query max width 1050px */
+
+/* START media query max width 770px */
+
+@media screen and (max-width:770px) {
+
+
+    #header {
+        margin-top: 2px;
+    }
+
+    .topNavigation { /* use first 3 to define color & last value to set transparency (0 = 100% transparent) */
+        background-color: rgba(255, 255, 255, 0);
+        margin-right: 4%; /* defines margin right when progress bar is set to RIGHT in designer */
+        margin-left: 2.9%; /* defines margin left when progress bar is set to LEFT in designer */
+        margin-top: 1% !important;
+        margin-bottom: 3%;
+        text-align: right !important;
+    }
+
+    .ui-button-text-only .ui-button-text {
+        padding: .5em .5em .4em .5em !important;
+
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+}
+/* END media query max width 770px */
+
+
+/* START media query max width 720px */
+
+@media screen and (max-width:720px) {
+    tbody #undefined {
+        display: none !important;
+    }
+
+    tbody#undefined {
+        display: none !important;
+    }
+    *, u, strong, i {
+        font-size: 14px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    }
+
+    div {
+        border: 0px solid red; /* set to 1px for debugging */
+    }
+
+    #header {
+        margin-top: 0px;
+    }
+
+    #survey {
+        width:98%;
+        margin-top: 0%;
+    }
+
+    .surveyBackground {
+        width:100% !important;
+        min-height: inherit;
+    }
+
+    .element.style {
+        width:100% !important;
+    }
+
+    .pageBackground {
+        background-image: url(https://dell.inquisiteasp.com/surveys/images/KRYF39/tablet_dell01_12.jpg);
+        background-size: 100%;
+    }
+    #canvas {   /* removes default margin-left */
+        margin-left: 4%;
+        margin-right: 4%;
+        min-height: inherit;
+    }
+
+    .topNavigation { /* use first 3 to define color & last value to set transparency (0 = 100% transparent) */
+        background-color: rgba(255, 255, 255, 0);
+        margin-right: 4%; /* defines margin right when progress bar is set to RIGHT in designer */
+        margin-left: 2.9%; /* defines margin left when progress bar is set to LEFT in designer */
+        margin-top: 1% !important;
+        margin-bottom: 3%;
+        text-align: right !important;
+    }
+
+    .answerText {
+        font-size: 13px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    }
+
+    .ui-buttonset .answerText {
+        margin: 0px;
+        font-weight: normal;
+        font-size: 15px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    }
+
+    .button-set-container.ui-buttonset .ui-button {
+        width: 98% !important;
+    }
+
+    .button-set-image-container {
+        min-width: 80%;
+        width: 100% !important;
+    }
+
+    .ui-buttonset {
+        margin-right: 0px;
+    }
+
+    .tableQuestion {
+        font-size: 13px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    }
+
+    :focus {
+        outline-color: #cecece;
+    }
+
+    BUTTON.cleangray {
+        width: 150px !important;
+    }
+
+    .mobileTable TD, .mobileTable TH {
+        padding: 0px !important;
+    }
+
+    .bottomNavigation {
+        background-color: #fff !important;
+        width: 92%;
+        margin: 0px auto;
+        padding: 10px 0px;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+}
+
+/* END media query max width 720px */
+
+
+/* START media query max width 670px */
+
+@media screen and (max-width:670px) {
+
+    .topNavigation {
+        margin-top: 0px !important;
+        margin-bottom: 3%;
+    }
+
+    .ui-button-text-only .ui-button-text {
+        padding: 0.5em 0em .4em 0em !important;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+
+}
+
+/* END media query max width 670px */
+
+
+/* START media query max width 570px */
+
+@media screen and (max-width:570px) {
+
+    #header {
+        margin-top: -6px;
+        max-width: 550px;
+    }
+
+    #headerLogoImage {
+        margin-top: 4px;
+    }
+
+    .topNavigation {
+        margin-top: -5px !important;
+        margin-bottom: 3%;
+        max-width: 550px;
+    }
+
+    #canvas {
+        max-width: 550px;
+    }
+
+    .bottomNavigation {
+        max-width: 550px;
+    }
+
+    .ui-button-text-only .ui-button-text {
+        padding: 0.5em 0em .4em 0em !important;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+}
+
+/* END media query max width 570px */
+
+
+
+
+/* START media query max width 415px */
+
+@media screen and (max-width:415px) {
+    tbody #undefined {
+        display: none !important;
+    }
+
+    .pageBackground {
+        background-image: url(https://dell.inquisiteasp.com/surveys/images/KRYF39/mobile_dell01_12.jpg);
+        background-size: 100%;
+    }
+
+    .table .Scale1Cell {
+        padding: 4px 0px !important;
+    }
+
+    .ui-button-text-only .ui-button-text {
+        padding: 1px !important;
+    }
+
+    #canvas {
+        max-width: 400px;
+        padding-top: 45px;
+        padding-top: 20px;
+    }
+
+    .progressBar {
+        margin-top: -57px;
+    }
+
+
+    #header {
+        max-width: 400px;
+        margin-top: 0px;
+    }
+
+    .topNavigation {
+        max-width: 400px;
+        margin-top: 11% !important;
+        margin-bottom: -7%;
+
+    }
+    .bottomNavigation {
+        max-width: 400px;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+}
+
+/* END media query max width 415px */
+
+/* START media query max width 380px */
+
+@media screen and (max-width: 380px) {
+    tbody #undefined {
+        display: none !important;
+    }
+
+    tbody#undefined {
+        display: none !important;
+    }
+
+    *, u, strong, i {
+        font-size: 14px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+        letter-spacing: none !important;
+    }
+
+    *  {
+        overflow-x:inherit !important;
+    }
+
+    #survey {
+        width:95%;
+        margin-top:36%;
+    }
+
+    .surveyBackground {
+        width:100% !important;
+    }
+
+    .element.style {
+        width:100% !important;
+    }
+
+    .pageBackground {
+        background-image: url(https://dell.inquisiteasp.com/surveys/images/KRYF39/mobile_dell01_12.jpg);
+        background-size: 100%;
+    }
+
+    #header {
+        max-width: 370px;
+        margin-top: -135px;
+    }
+
+    #canvas { /* removes default margin-left */
+        margin-top: 30px;
+        margin-left: 0%;
+        margin-right: 0%;
+        max-width: 370px;
+        padding-top: 25px;
+    }
+
+    .table .Scale1Cell {
+        padding: 4px 0px !important;
+    }
+
+    .ui-button-text-only .ui-button-text {
+        padding: 0px !important;
+        margin: 3px 0px !important;
+    }
+
+    .progressBar {
+        margin-top: 0px;
+        margin-bottom: -25px;
+        padding-right: 15px;
+    }
+
+    .topNavigation {
+        max-width: 370px;
+        margin-top: -4.5% !important;
+        margin-bottom: -4%;
+    }
+    .progressBar.springgreen UL {
+        width: 205px;
+    }
+
+    .bottomNavigation {
+        max-width: 370px;
+        margin-top: 0px auto !important;
+        padding: 10px;
+        width: 95%;
+    }
+
+    .answerText {
+        font-size: 13px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    }
+
+    .ui-buttonset .answerText {
+        margin: 0px;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .button-set-cell.ui-buttonset .ui-button {
+        margin: unset;
+    }
+
+    .table .Scale1Cell {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 4px 2px !important;
+    }
+
+    .tableQuestion {
+        font-size: 13px;
+    }
+
+    .tableDescription {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    :focus {
+        outline-color: #cecece;
+    }
+
+    .button-set-container.ui-buttonset .ui-button {
+        width: 94% !important;
+    }
+
+    .button-set-image-container {
+        min-width: 80%;
+        width: 100% !important;
+    }
+
+    .ui-buttonset {
+        margin-right: 0px;
+    }
+
+    .questionText {
+        width: 98%;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    }
+
+    BUTTON.cleangray {
+        width: auto !important;
+    }
+
+    Button.backButton {
+        width: auto !important;
+    }
+
+    .smart-probe-arrow-left {
+        margin-left: 0px !important;
+    }
+
+    smart-probe-message {
+        padding: 8px !important;
+    }
+
+    .alleg-single-button .table .Scale1Cell {
+        padding: 2px !important;
+    }
+
+    .mobileTable TD, .mobileTable TH {
+        padding: 0px !important;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+}
+
+/* END media query max width 380px */
+
+
+/* START media query max width 360px */
+
+@media screen and (max-width: 360px) {
+
+    #header {
+        max-width: 350px;
+        margin-top: -131px;
+    }
+
+    .header {
+        padding: 5px 5px 5px 0px;
+    }
+
+    .topNavigation {
+        margin-top: -5% !important;
+        max-width: 350px;
+    }
+
+    .progressBar.springgreen UL {
+        width: 210px;
+    }
+
+    .progressBar {
+        padding-right: 0px;
+    }
+
+    #canvas {
+        max-width: 350px;
+    }
+
+    .bottomNavigation {
+        width: 94%;
+        max-width: 350px;
+        margin: -1px auto;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+
+}
+
+/* END media query max width 360px */
+
+/* START media query max width 320px */
+
+@media screen and (max-width: 320px) { /* fit 11 point scale using alleg-single-button to 320px screenwidth */
+    .ui-buttonset .ui-button.ui-state-default {
+        margin: 0px 0px 4px 0px !important;
+    }
+
+    .ui-button-text-only .ui-button-text {
+        padding: .2em .4em;
+    }
+
+    #header {
+        margin-top: -120px;
+    }
+
+    #header_img_two {
+        padding-right: 2% !important;
+    }
+
+    .topNavigation {
+        margin-top: -4.5% ! important;
+        margin-right: -2%;
+        padding-right: 0%;
+    }
+
+    .progressBar {
+        margin-top: 0px;
+        margin-bottom: -15px;
+        padding-right: 15px;
+    }
+
+    #canvas {
+        padding-top: 25px !important;
+        padding-bottom: 1px !important;
+        margin-top: 25px !important;
+    }
+
+    .bottomNavigation {
+        width: 98%;
+    }
+
+    .alleg-headerText {
+        margin-bottom: 20px !important;
+    }
+
+    .object { /* removes outline for focused objects */
+        margin: 0px 0px 45px 0px;
+    }
+
+
+}
+/* END media query max width 320px */
+
+/* END all media queries to style per breakpoint */
+
+/* START custom controls (image sprite uploaded to image place holder survey on company instance) */
+
+.icheckbox_minimal {
+    background: /*url(https://mcx.allegiancetech.de/surveys/images/P8DDHK/Preview/minimal_dell01.png) no-repeat; */
+            url(https://dell.inquisiteasp.com/surveys/images/KRYF39/Preview/minimal_dell01.png) no-repeat;
+    background-position: 0px 0;
+}
+
+.iradio_minimal {
+    background: /*url(https://mcx.allegiancetech.de/surveys/images/P8DDHK/Preview/minimal_dell01.png) no-repeat; */
+            url(https://dell.inquisiteasp.com/surveys/images/KRYF39/Preview/minimal_dell01.png) no-repeat;
+    background-position: -100px 0;
+}
+
+/* END custom controls */
+
+/* START fix for survey editor */
+
+.designObjectContainer.fluid-layout {
+    background-color:#fff !important;
+}
+
+.designObjectContainer.fluid-layout:hover {
+    background-color:#ececec !important;
+}
+
+.designObjectContainer.fluid-layout.ui-selected {
+    background-color:#ececec !important;
+}
+
+.canvasContainer #canvas {
+    background-color: transparent !important;
+}
+
+.libraryQuestions .designObjectContainer.fluid-layout {
+    background-color: transparent !important;
+}
+
+[data-scale-type="memo"] .questionContent {
+    padding-bottom: 105px !important;
+}
+
+/* END fix for survey editor */
+
+/* START survey specific styles */
+
+/* END survey specific styles */

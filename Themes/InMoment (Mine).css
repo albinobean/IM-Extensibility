@@ -1,0 +1,245 @@
+/*OVERALL*/
+.canvasContainer .surveyBackground{
+	background-color:#fff !important;
+}
+.surveyBackground
+{
+	padding-bottom: 40px;
+}
+#survey{
+	max-width:1000px;
+	margin-top:10px;
+}
+#canvas
+{
+	padding: 20px 30px 30px;
+	margin: 0px;
+	background-color: #FFF;
+}
+#header
+{
+	margin-bottom: 0px;
+}
+#headerTextContainer
+{
+	display: none;
+}
+#headerLogoContainer
+{
+	margin: 0px;
+	padding: 0 20px;
+	width:100%;
+        box-sizing: border-box;
+        height: 100px;
+        border-bottom: 5px solid #253746;
+}
+#headerLogoImage
+{
+        width: auto;
+	max-width: 100%;
+	height: 60px;
+	padding-top: 20px;
+}
+#headerLogoImage2{
+        float:right;
+}
+.header{padding:0px}
+/*NAVIGATION*/
+.topNavigation
+{
+	padding: 0px;
+	margin: 1px 0px;
+}
+.topNavigation .navigationContainer
+{
+	height: 5px;
+	background-color: #717c7d;
+}
+.bottomNavigation
+{
+	padding: 0px;
+	background-color: #253746;
+}
+.navigationContainer
+{
+	width: 100%;
+	padding: 0px;
+        border: 3px solid #253746;
+}
+BUTTON.minimal
+{
+	border: 1px solid #717C7D;
+	box-sizing: border-box; 
+	border-radius: 0px;
+	box-shadow: inset 0 0 #F6F6F6;
+	color: #FFF;
+	font: 18px / 1 "helvetica neue", helvetica, arial, sans-serif;
+	padding: 15px 10px;
+	text-shadow: 0 0 0 #FFF;
+	text-transform: uppercase;
+	margin-right: 0px;
+}
+BUTTON.minimal:hover
+{
+	background-color: #253746;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+	text-shadow: 0 0 0 #FFF;
+	box-shadow: inset 0 0 #F6F6F6;
+}
+BUTTON.nextButton
+{
+	float: right;
+	width: 80%;
+	text-align: right;
+	background-color: #253746;
+}
+BUTTON.backButton
+{
+	float: left;
+	width: 20%;
+	text-align: left;
+	background-color: #717C7D;
+}
+.footer
+{
+	margin: 10px 0px;
+	color: #9EA4A2;
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.progressBar.minimal UL, .progressBar
+{
+	padding: 0px;
+	width: 100%;
+	background-color: transparent;
+	margin: 0px auto;
+	border: 0px;
+	height: 3px;
+}
+.progressBar
+{
+	border-right: 0px;
+	border: 0px;
+	background-color: #444;
+}
+.progressBar.minimal LI
+{
+	width: 10%;
+	border: 0px;
+	border-right: 1px solid #FFF;
+	margin: 0px;
+	background-color: transparent;
+}
+.progressBar.minimal LI.done
+{
+	background-color: #253746;
+}
+
+/*QUESTIONS & FORM ELEMENTS*/
+TEXTAREA
+{
+	resize: none;
+}
+#canvas INPUT[type="text"], #canvas TEXTAREA, #canvas SELECT
+{
+	border: 1px solid #AAA;
+	padding: 10px 5px;
+	font-size: 14px;
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+.answerText, .questionText, .tableDescription, .bonfire-header-text, .heading1, .heading2, .heading3, .ui-buttonset .answerText
+{
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+.answerText
+{
+	font-size: 14px;
+}
+.heading1
+{
+	font-size: 32px;
+	font-weight: 500;
+}
+DIV#headerTextContainer .heading1
+{
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 22px;
+	padding: 6px 0px;
+	display: block;
+}
+.tableDescription
+{
+	margin-bottom: 0px;
+}
+.table TH, .table TD
+{
+	border-bottom: 1px solid #253746;
+	padding: 8px 0px;
+}
+.table TH SPAN, .table TD SPAN
+{
+	margin: 0px;
+}
+.bonfire-header-text
+{
+	text-transform: uppercase;
+	font-size: 11px;
+}
+.button-set-container.ui-buttonset .ui-button
+{
+	margin: 0px 8px 8px 0px;
+	padding: 5px;
+	width: 80px;
+}
+.ui-slider .ui-slider-handle{border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%;padding:2px; margin-top:-3px;border:0px}
+.ui-slider-wrapper .ui-slider-horizontal{height:7px}
+.ui-slider-wrapper.horizontal{margin-top: 10px;
+margin-left: 7px;}
+
+@media screen and (max-width: 700px) {
+    #survey {
+        width:95%;
+	margin-top:0;
+    }
+    BUTTON.nextButton
+  {
+    float: right;
+    width: 70%;
+    text-align: right;
+  }
+  BUTTON.backButton
+  {
+    float: left;
+    width: 30%;
+    text-align: left;
+  }
+  #canvas{padding:10px;}
+
+  /* Fitting tables to fit horizontally JS */
+  .table-object{
+      table-layout: fixed;
+  }
+  .table-object td{
+      border: 1px solid white;
+      width: 9vw;  /* 9% of view window */
+  }
+  .table-object td .ui-button-text-only{
+      padding:0;
+      width: 75%;
+      margin: auto !important;
+  }
+  .table-object td .ui-button-text-only .ui-button-text{
+        text-align: center;
+        margin: auto;
+        padding: inherit;
+    }
+    .table-object td .ui-button-text-only .ui-button-text .answerText{
+        font-size: 13px;
+    }
+}
