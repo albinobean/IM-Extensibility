@@ -1,0 +1,19 @@
+BUTTON.saveButton{
+    background-color: #717C7D;
+    min-width: 150px;
+    display: block;
+    clear: both;
+    margin: auto;
+}
+BUTTON.minimal{
+    margin-bottom: 15px;
+}
+#survey{
+    float: left;
+}
+#demoView{
+    float: right;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
