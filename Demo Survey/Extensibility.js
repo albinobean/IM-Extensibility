@@ -39,6 +39,7 @@ $(document).ready(function () {
                 localStorage.MCXDesiredLanguage=$('#FakeLanguageSelector option:selected').text();
                 backButtonClicked();
             });
+            addPreviewOnlyToggle();
             showModalBeforeExit(1);
             break;
         case 3:
@@ -239,4 +240,18 @@ function setFavicon(iconUrl){
     link.rel = 'shortcut icon';
     link.href = iconUrl;
     document.getElementsByTagName('head')[0].appendChild(link);
+}
+function addPreviewOnlyToggle(){
+    if($('#TestModeBanner').length>0 && $('.alleg-previewOnly').length>0){
+        var toggle=$('<span id="previewOnlyToggle" style="margin-right:5px;">Show Preview-only fields</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label>')
+        toggle.click(function(){
+            localStorage.setItem('showPreviewOnlyQuestions',$(this).children('input:checked').length)
+            if($(this).children('input:checked').length==1){$('.alleg-previewOnly').show();} else {$('.alleg-previewOnly').hide();}
+        });
+        $('#TestModeBanner').children('tbody').children('tr').children('td').prepend(toggle);
+        if(localStorage.getItem('showPreviewOnlyQuestions')==1){
+            toggle.children('input').prop('checked',true);
+            $('.alleg-previewOnly').show();
+        }
+    }
 }
