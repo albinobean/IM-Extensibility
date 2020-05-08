@@ -65,8 +65,10 @@ function initializeHTMLEditors(cls){
     $('.' + cls).each(function(){
         var myID=$(this).attr('id');
         if(cls.substring(1,6)=='alleg-'){
+            console.log('ALLEG: ' + cls);
             var quillContainerId=myID;
         } else {
+            console.log('OTHER: ' + cls);
             var quillContainerId=myID + 'quillContainer';
             var quillContainer='<div class="quillContainer" id="' + quillContainerId + '">' + $(this).html() + '</div>';
             $(this).html(quillContainer);   
@@ -76,6 +78,7 @@ function initializeHTMLEditors(cls){
         }));
     });
 }
+initializeHTMLEditors('editableHTML');
 function refreshPreview(){
     $('')
 }

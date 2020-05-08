@@ -140,6 +140,9 @@ BUTTON.minimal{
     }
 /* END Toggle PreviewOnly fields */
 /* HTML Editor formatting */
-    #emailPreview .ql-toolbar{display: none;} /* Hide toolbar until hover within the preview */
-    .quillContainer:hover .ql-toolbar{display: block;}
+    #emailPreview .ql-toolbar{
+        display: none; /* Hide toolbar until hover within the preview */
+        background-color: #ffffff;
+    } 
+    #emailPreview .editableHTML:hover .ql-toolbar{display: block;}
 /* END HTML Editor formatting*/
