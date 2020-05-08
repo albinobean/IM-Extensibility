@@ -1,3 +1,4 @@
+.alleg-hide{display:none;}
 BUTTON.saveButton{
     background-color: #717C7D;
     min-width: 150px;
@@ -23,9 +24,10 @@ BUTTON.minimal{
 }
 #canvas{overflow: hidden;} /* Prevent content from overlapping onto the preview */
 .questionDescription{
-    color: #cccccc;
+    color: #888;
     font-size: .8em;
     font-style: italic;
+    margin:5px 0;
 }
 .alleg-sectionHeader{
     background-color: #cccccc;
@@ -137,3 +139,7 @@ BUTTON.minimal{
         border-radius: 50%;
     }
 /* END Toggle PreviewOnly fields */
+/* HTML Editor formatting */
+    #emailPreview .ql-toolbar{display: none;} /* Hide toolbar until hover within the preview */
+    .quillContainer:hover .ql-toolbar{display: block;}
+/* END HTML Editor formatting*/

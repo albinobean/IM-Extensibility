@@ -12,16 +12,29 @@ $(document).ready(function(){
         refreshPreview();
         // saveButtonClicked();
     });
+    initializeHTMLEditors('alleg-HTMLEditor');
+    initializeHTMLEditors('editableHTML');
 });
 function addToggleListeners(){
-    $('#pageShadow').change(function(){
-        alert('clicked')
-        if($('#pageShadow').attr('checked')){
-            $('#emailBody').css('box-shadow','0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)');
-        } else {
-            $('#emailBody').css('box-shadow','');
-        }
-    });
+    // $('#pageShadow').change(function(){
+    //     alert('clicked')
+    //     if($('#pageShadow').attr('checked')){
+    //         $('#emailBody').css('box-shadow','0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)');
+    //     } else {
+    //         $('#emailBody').css('box-shadow','');
+    //     }
+    // });
+    addToggleListener('pageShadow',togglePageShadow);
+}
+function addToggleListener(tag,callback){
+    $('#' + tag).change(callback);
+}
+function togglePageShadow(val){
+    if(val){
+        $('#emailBody').css('box-shadow','0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)');
+    } else {
+        $('#emailBody').css('box-shadow','');
+    }
 }
 function retrieveTemplateHTML(){
   $.ajax(templateURL, {
@@ -46,6 +59,22 @@ function addPreviewOnlyToggle(){
         $('#TestModeBanner').children('tbody').children('tr').children('td').prepend(toggle);
         if(sessionStorage.getItem('showPreviewOnlyQuestions')==1){toggle.click();}
     }
+}
+function initializeHTMLEditors(cls){
+    var quills=[];
+    $('.' + cls).each(function(){
+        var myID=$(this).attr('id');
+        if(cls.substring(1,6)=='alleg-'){
+            var quillContainerId=myID;
+        } else {
+            var quillContainerId=myID + 'quillContainer';
+            var quillContainer='<div class="quillContainer" id="' + quillContainerId + '">' + $(this).html() + '</div>';
+            $(this).html(quillContainer);   
+        }
+        quills.push(new Quill('#' + quillContainerId,{
+            theme:'snow'
+        }));
+    });
 }
 function refreshPreview(){
     $('')
