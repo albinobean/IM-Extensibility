@@ -26,6 +26,22 @@ function addToggleListeners(){
     addToggleListener('pageShadow',togglePageShadow);
     
 }
+function toggleVisibility(inputElement,elementClass){
+    if($(inputElement).prop('checked')=='checked'){
+        $(elementClass).show();
+    } else {
+        $(elementClass).hide();
+    }
+}
+function addToggleVisibilityListener(qTag,answerText,elementClass){
+    
+}
+function addTextBoxChangeListener(qTag,cssAttr,elementClass){
+
+}
+function textBoxChanged(qTag,cssAttr,elementClass){
+
+}
 function addElementToggleListeners(){
     var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer']
     for(var i=0;i<elementToggles.length;i++){

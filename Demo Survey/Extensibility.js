@@ -58,8 +58,8 @@ $(document).ready(function () {
         case 6:
             $('.nextButton').unbind();
             $('.nextButton').click(function(){
-                logSurveyResponse($('#LTR_row .ui-state-active').text());
-                setTimeout(nextButtonClicked(),3000);
+                logSurveyResponse('LTR',$('#LTR_row .ui-state-active').text());
+                // setTimeout(nextButtonClicked(),3000);
             });
             break;
         case 8:
@@ -90,7 +90,6 @@ function SelectFirstRadio(qTag,SamePageDisplayLogic){
     }
     //See if one of the visible answers is already selected -- don't change if one has already been selected
     answerSelected=$(visibleRowsIdentifier + ' .checked').length>0;
-    console.log(answerSelected);
     $(visibleRowsIdentifier).each(function(){
         if($(this).css('display')!='none' && !answerSelected){
             $(this).find('.iCheck-helper').click();
@@ -221,14 +220,18 @@ function showModalBeforeExit(MaxTimesToShow){
     });
 }
 // End Modal code
-function logSurveyResponse(score){
+function logSurveyResponse(question,score){
     var url='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev'
     var data={
         survey:$('input[name=id]').val(),
-        score:score
+        authKey:'Demo',
+        question:question,
+        score:score,
+        callType:'addScore'
     }
-    $.get(url,data,function(data,status){
-
+    $.get(url,data,function(status){
+        console.log(status);
+        nextButtonClicked();
     });
 }
 function checkNextButtonEligibility(questionTag,validAnswers){

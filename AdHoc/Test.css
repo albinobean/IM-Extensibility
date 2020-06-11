@@ -1,0 +1,65 @@
+.alleg-LTRContainer{
+    display:none;
+    height: 450px;
+    background-image: url(https://thingamy.typepad.com/photos/uncategorized/2008/06/03/meetings.jpg);
+    background-size: cover;
+    background-position-y:center;
+    background-repeat: no-repeat;
+    
+}
+.alleg-LTRContainer>div{
+    background-color: rgba(255,255,255,.5);
+}
+.alleg-LTRReport {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+.alleg-LTRReport>span {
+    display: none;
+}
+/*Chart for Score 0*/
+#Q00000013_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=2146692226&format=image');
+}
+/*Chart for Score 1*/
+#Q00000014_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=945687672&format=image');
+}
+/*Chart for Score 2*/
+#Q00000015_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=85965232&format=image');
+}
+/*Chart for Score 3*/
+#Q00000016_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=26843083&format=image');
+}
+/*Chart for Score 4*/
+#Q00000017_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=396537645&format=image');
+}
+/*Chart for Score 5*/
+#Q00000018_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=299932409&format=image');
+}
+/*Chart for Score 6*/
+#Q00000019_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1727375184&format=image');
+}
+/*Chart for Score 7*/
+#Q0000001A_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1573770601&format=image');
+}
+/*Chart for Score 8*/
+#Q0000001B_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=425102917&format=image');
+}
+/*Chart for Score 9*/
+#Q0000001C_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=881229477&format=image');
+}
+/*Chart for Score 10*/
+#Q0000001D_text{
+	background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=750054111&format=image');
+}
