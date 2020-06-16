@@ -15,7 +15,7 @@ BUTTON.saveButton{
 BUTTON.minimal{
     margin-bottom: 15px;
 }
-#survey{
+.page2 #survey{
     float: left;
     width: 50%;
 }
@@ -153,3 +153,12 @@ BUTTON.minimal{
     #emailPreview .quillContainer{border-width: 0 !important;}
     #emailPreview .editableHTML:hover .ql-toolbar{display: block;}
 /* END HTML Editor formatting*/
+.alleg-backgroundColorSelector:after{
+    content:"i.e. #FFF or #FFFFFF or RGB(255,255,255) or RGBA (255,255,255,.05) or HSL(360,50%,50%) or HSLA(360,50%,50%0.5)";
+    color: #888;
+    font-style: italic;
+    margin:5px 0;
+    display: block;
+}
+/*Disable links in the preview */
+#emailPreview a{pointer-events: none;} 
