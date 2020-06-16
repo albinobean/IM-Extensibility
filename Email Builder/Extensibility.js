@@ -103,22 +103,11 @@ function showCorrectNumberOfAnchors(){
                 $('#leftScaleAnchor').show();
                 $('#rightScaleAnchor').show();
         }
-        for(var i=2;i<11;i++){
-            if(i<buttonsToShow){
-                $('#emailPreview #Button' + i).show();
-                $('#emailPreview #Star' + i).show();
-            } else {
-                $('#emailPreview #Button' + i).hide();
-                $('#emailPreview #Star' + i).hide();
-            }
-        }
-        
     });
 }
 function showCorrectNumberOfButtons(){
     $('input[name="Q0000003E.Q0000003F"]').change(function(){
         var buttonsToShow=parseInt($(this).attr('value'))+2;
-        console.log(buttonsToShow);
         for(var i=2;i<11;i++){
             if(i<buttonsToShow){
                 $('#emailPreview #Button' + i).show();
@@ -280,6 +269,7 @@ function refreshPreview(){
 function populateHTMLQuestions(){
     var tempHTML=$('#emailPreview').html();
     tempHTML=replaceMSOPlaceholders(tempHTML);
+    tempHTML.replace(/emailBody/gi,'body');
     $('#preheaderBlock').html($('#preheader').val());
     $('#emailPreviewHTML').val(tempHTML);
     populateEmailSource(tempHTML);
