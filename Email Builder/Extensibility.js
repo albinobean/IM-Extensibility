@@ -338,5 +338,13 @@ function replaceMSOPlaceholders(tempHTML){
     // Set text of Start Survey buttons
     tempHTML=tempHTML.replace('[ClosingStartSurveyButtonText]',$('#closingStartSurveyButton').text());
     tempHTML=tempHTML.replace('[ContentStartSurveyButtonText]',$('#contentStartSurveyButton').text());
+
+    // Set width 
+    var QSButtonCount=parseInt($('#buttonCount_question .survey-answer-selected+td .answerText').text());
+    tempHTML=tempHTML.replace('[QuickStartButtonWidth]',Math.floor(600/QSButtonCount));
+    // Start Buttons
+    tempHTML=tempHTML.replace('[StartButtonWidth1]',$('#startButton1').width());
+    tempHTML=tempHTML.replace('[StartButtonWidth2]',$('#startButton2').width());
+    
     return tempHTML;
 }
