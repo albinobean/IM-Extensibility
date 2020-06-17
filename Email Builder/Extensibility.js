@@ -7,25 +7,41 @@ $(document).ready(function(){
     document.title=pageNames['page' + curPage];
     moveHelpTextAfter();
     
-    switch(curPage) {
-        case 1:
-            
-            break;       
-        case 2:
+    
             //    Create preview frame
-            $('#template').append($('<div id="emailPreview"></div>'));
-            retrieveTemplateHTML();     
-            addElementToggleListeners();
-            addToggleListeners();
-            addColorChangeListeners();
-            showCorrectNumberOfButtons();
-            showCorrectNumberOfAnchors();
-            addFontChangeListener();
-            applyHoverColors();
-            refreshPreview();
-            break;
-        }
+        $('#template').append($('<div id="emailPreview"></div>'));
+        retrieveTemplateHTML();     
+        addElementToggleListeners();
+        addEmailTypeChangeListener();
+        addPreviousHTMLListener();
+        addToggleListeners();
+        addColorChangeListeners();
+        showCorrectNumberOfButtons();
+        showCorrectNumberOfAnchors();
+        addFontChangeListener();
+        applyHoverColors();
+        refreshPreview();
 });
+function addEmailTypeChangeListener(){
+    $('input[name="Q000017F0.Q000017F1"]').change(function(){
+        if($(this).val()==0){
+            // Survey Email
+            $('#baseURL_question').val($('#baseURL_question').val().replace(/SURVEY URL/gi,'CASE LINK'));
+        } else {
+            // Case Email
+            $('#baseURL_question').val($('#baseURL_question').val().replace(/CASE LINK/gi,'SURVEY URL'));
+        }
+    });
+}
+function addPreviousHTMLListener(){
+    $('input[name="Q00003D1B.Q00003D1C"]').change(function(){
+        if($(this).attr('value')==0){
+            $("#storedHTML_question").show();
+        } else {
+            $("#storedHTML_question").hide();
+        }
+    });
+}
 function addFontChangeListener(){
     var fontFamily;
     $('input[name="Q000017BE.Q000017BF"]').change(function(){
@@ -39,7 +55,8 @@ function addFontChangeListener(){
         } else {
             fontFamily=$('label[for="' + $(this).attr('id') + '"]').text();
         }
-        $('#emailPreview').html($('#emailPreview').html().replace(/font-family[^;]*/gi,'font-family: ' + fontFamily))
+        
+        $('#emailPreview').html($('#emailPreview').html().replace(/font-family[^;]*/gi,'font-family: ' +fontFamily.replace(/\"/g,"'")));
     });
     $('input[name="Q000017BE.Q000017BF.other"]').change(function(){
         $('input[name="Q000017BE.Q000017BF"]').change();
@@ -48,7 +65,7 @@ function addFontChangeListener(){
 addFontChangeListener();
 function applyHoverColors(){
     $('#buttonBackgroundColorOnHover').change(function(){
-        $('#emailPreview').html().replace(/(:hover[^\{]*\{[^\}]*background:\s?)#?[^;!\s]*/gim,$1 + $('#buttonBackgroundColorOnHover'.val()))
+        $('#emailPreview').html().replace(/(:hover[^\{]*\{[^\}]*background:\s?)#?[^;!\s]*/gim,"$1" + $('#buttonBackgroundColorOnHover').val());
     });
 
 }
@@ -186,7 +203,7 @@ function textBoxChanged(qTag,cssAttr,elementClass){
 
 }
 function addElementToggleListeners(){
-    var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer']
+    var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','footerContent','footerBanner']
     for(var i=0;i<elementToggles.length;i++){
         addElementToggleListener('Q00000004_Q00000005_A' + (i+1),elementToggles[i])
     }
@@ -213,18 +230,16 @@ function togglePageShadow(){
 }
 function retrieveTemplateHTML(){
     if($('storedHTML').val()){
-        var curPage = parseInt($('input[name=currentpage]').val(), 10);
         $('#emailPreview').html($('storedHTML').val());
         refreshPreview();
-        if(curPage>1){initializeHTMLEditors('editableHTML');} // Don't enable HTML editors on page 1
+        initializeHTMLEditors('editableHTML');
     } else {
         $.ajax(templateURL, {
             success: function(response) {
-                var curPage = parseInt($('input[name=currentpage]').val(), 10);
                 templateHTML=response;
                 $('#emailPreview').html(templateHTML);
                 refreshPreview();
-                if(curPage>1){initializeHTMLEditors('editableHTML');} // Don't enable HTML editors on page 1
+                initializeHTMLEditors('editableHTML');
                 
             }
           }); 
@@ -288,6 +303,7 @@ function refreshPreview(){
     $('input[name="Q0000003E.Q0000003F"]').change(); //Refresh the number of answer options to show
     $('input[name="Q0000009C.Q0000009D"]').change(); //Refresh the number of anchors to show    
     $('input[name="Q000017BE.Q000017BF"]').change(); //Refresh the font family
+    $('input[name="Q00003D1B.Q00003D1C"]').change(); //Set visibility of storedHTML question
 }
 function populateHTMLQuestions(){
     var tempHTML=$('#emailPreview').html();
@@ -306,16 +322,20 @@ function replaceMSOPlaceholders(tempHTML){
     var placeholders={};
     // Placeholder text is in brackets in the HTML set to equal the tag of the question textbox that holds the replacement value
     placeholders['ButtonColor']='buttonBackgroundColor'; //This finds [ButtonColor] in the HTML and replaces it with the value of the buttonBackgroundColor question
-    placeholders['ButtonFontColor']='';
+    placeholders['ButtonFontColor']='buttonFontColor';
     
     
     for(var placeholder in placeholders){
         var reg=new RegExp('\\[' + placeholder + '\\]','gi')
         tempHTML=tempHTML.replace(reg,$('#' + placeholders[placeholder]).val())
     }
+    // Set text of quick start buttons
     for(var i=0;i<11;i++){
         var reg=new RegExp('\\[ButtonText' + i + '\\]','gi')
         tempHTML=tempHTML.replace(reg,$('#Button' + i).text().trim());
     }
+    // Set text of Start Survey buttons
+    tempHTML=tempHTML.replace('[ClosingStartSurveyButtonText]',$('#closingStartSurveyButton').text());
+    tempHTML=tempHTML.replace('[ContentStartSurveyButtonText]',$('#contentStartSurveyButton').text());
     return tempHTML;
 }

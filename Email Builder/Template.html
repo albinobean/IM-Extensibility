@@ -270,6 +270,17 @@
                                 <td style="padding: 10px 20px 20px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 150%; color: #333333;">
                                     <div id="emailContentText" class="editableHTML">
                                         Type your email content here
+                                        <div id='contentStartSurveyButton'>
+                                            <!--[if mso]>
+                                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=10&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
+                                                <w:anchorlock/>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ContentStartSurveyButtonText]</center>
+                                                </v:roundrect>
+                                            <![endif]-->
+                                            <!--[if !mso]><!-->
+                                                <a contenteditable="true" class="button-a button-a-secondary" href="[SURVEY URL]" style="background: #8AC452; border: 1px solid #8AC452; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 250%; font-weight: normal; text-decoration: none; padding: 0px; color: #fff; border-radius: 3px; display: inline-block; text-align: center; text-decoration:none; width: 88%; height: auto; -webkit-text-size-adjust:none; mso-hide: all;">Start Survey</a>
+                                            <!--><![endif]-->
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -277,21 +288,21 @@
                                 <td style="padding: 0 20px;">
                                     
                         <!-- Quick Start NPS : BEGIN -->
-                        <table id="" align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto; border-collapse: separate!important;">
+                        <table id="Quickstart" align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto; border-collapse: separate!important;">
                             <tbody>
                                 <tr id='questionRow'>
-                                    <td class="question editableHTML"><span style="color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 140%; font-weight: bold;">Based on your recent interaction with [COMPANY], how likely are you to recommend their services to a friend or family member?</span></td>
+                                    <td class="question"><span class="editableHTML" style="color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 140%; font-weight: bold;">Based on your recent interaction with [COMPANY], how likely are you to recommend their services to a friend or family member?</span></td>
                                 </tr>
                                 
                                 <tr>
                                     <td style="width: 100%;" width="100%">
-                                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate !important;margin-bottom: 5px !important;" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate !important;margin-bottom: 5px !important;margin-top: 10px;" width="100%">
                                             <tr id="scaleAnchorContainer">
-                                                <td class="scaleAnchor" id="leftScaleAnchor" style="text-align: left;">Left Anchor</td>
-                                                <td class="scaleAnchor" id="scaleAnchor2" style="text-align: center;">2nd Anchor</td>
-                                                <td class="scaleAnchor" id="scaleAnchor3" style="text-align: center;">Center Anchor</td>
-                                                <td class="scaleAnchor" id="scaleAnchor4" style="text-align: center;">4th Anchor</td>
-                                                <td class="scaleAnchor" id="rightScaleAnchor" style="text-align: right;">Right Anchor</td>
+                                                <td contenteditable="true" class="scaleAnchor" id="leftScaleAnchor" style="text-align: left;">Left Anchor</td>
+                                                <td contenteditable="true" class="scaleAnchor" id="scaleAnchor2" style="text-align: center;">2nd Anchor</td>
+                                                <td contenteditable="true" class="scaleAnchor" id="scaleAnchor3" style="text-align: center;">Center Anchor</td>
+                                                <td contenteditable="true" class="scaleAnchor" id="scaleAnchor4" style="text-align: center;">4th Anchor</td>
+                                                <td contenteditable="true" class="scaleAnchor" id="rightScaleAnchor" style="text-align: right;">Right Anchor</td>
                                             </tr>
                                         </table>
                                     </td>
@@ -453,6 +464,7 @@
                                         <!-- Button 10 : END -->
                                     </tr></tbody></table>
                                 </tr>
+                                </tr>
                             </tbody>
                         </table>
                         <!-- Quick Start NPS : END -->
@@ -460,10 +472,37 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td style="padding: 10px 20px 20px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 150%; color: inherit;">
+                                    <div id="emailClosingText" class="editableHTML">
+                                        Your closing comments here
+                                        
+                                    </div>
+                                    <div id='closingStartSurveyButton'>
+                                        <!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=10&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
+                                            <w:anchorlock/>
+                                            <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ClosingStartSurveyButtonText]</center>
+                                            </v:roundrect>
+                                        <![endif]-->
+                                        <!--[if !mso]><!-->
+                                            <a contenteditable="true" class="button-a button-a-secondary" href="[SURVEY URL]" style="background: #8AC452; border: 1px solid #8AC452; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 250%; font-weight: normal; text-decoration: none; padding: 0px; color: #fff; border-radius: 3px; display: inline-block; text-align: center; text-decoration:none; width: 88%; height: auto; -webkit-text-size-adjust:none; mso-hide: all;">Start Survey</a>
+                                        <!--><![endif]-->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td style="padding: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 150%; color: #333333;">
-                                    <p>Thank you for your feedback.</p>
-                                    <p>Best regards,</p>
-                                    <p>[COMPANY]</p>
+                                    <table id="signatureSection" width="100%" style="width: 100%;"><tbody><tr>
+                                        <td id='signatureImage' style="width: 85px;">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/1024px-Placeholder_no_text.svg.png" style="width: 75px; height:auto;" />
+                                        </td>
+                                        <td>
+                                            <p>Thank you for your feedback.<br>
+                                            Best regards,<br>
+                                            [COMPANY]</p>
+                                        </td>
+                                    </tr></tbody></table>
+                                    
                                 </td>
                             </tr>
                         </table>
@@ -486,10 +525,10 @@
             <!-- Email Footer : BEGIN -->
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 auto;">
                 <tr>
-                    <td class="editableHTML" style="padding: 0px 20px 0px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 160%; text-align: left; color: #555555;">
-                        <p style="margin: 0;" class="footer">This email was sent to: <a href="[EMAIL ADDRESS]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[EMAIL ADDRESS]</a>. If the above link does not work, copy and paste the following URL into your web browser: <a href="[SURVEY URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[SURVEY URL]</a></p>
-                        <p style="margin: 10px 0px 0px 0px;" class="footer">If you would no longer like to receive these types of emails, please <a href="[OPTOUT URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">opt out</a>.</p>
-                        <p style="margin: 10px 0px 0px 0px;" class="footer">Please do not reply directly to this invitation.</p>
+                    <td style="padding: 0px 20px 0px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 160%; text-align: left; color: #555555;">
+                        <p style="margin: 0;" class="editableHTML footer">This email was sent to: <a href="[EMAIL ADDRESS]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[EMAIL ADDRESS]</a>. If the above link does not work, copy and paste the following URL into your web browser: <a href="[SURVEY URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[SURVEY URL]</a><br>
+                        If you would no longer like to receive these types of emails, please <a href="[OPTOUT URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">opt out</a>.<br>
+                        Please do not reply directly to this invitation.</p>
                     </td>
                 </tr>
                 <tr>
@@ -506,9 +545,11 @@
         </div>
         <table role="presentation" id="footerContainer" width=100% style="width: 100%;background-color: #ededed; padding:10px;"><tbody>
         <tr>
-            <td id='footerContent'  class="editableHTML" style="padding:20px; font-size: .8em; color:#555555;">
-                <p style="font-weight: bold;">Note on data protection</p>
+            <td id='footerContent' style="padding:20px; font-size: .8em; color:#555555;">
+                <p class="editableHTML" style="font-weight: bold;">Note on data protection</p>
+                <br>
                 <p>This E-Mail was sent on behalf of [COMPANY] by MaritzCX Limited („MaritzCX“), a Customer Experience and Market Research company. The above-mentioned survey is carried out by MaritzCX within the scope of a data processing contract according to the applicable legal data protection regulations. <a href="https://www.maritzcx.com/privacy-policy/" style="font-family: Arial, Helvetica, sans-serif; color: #888888; text-decoration: underline;" target="_blank" title="MaritzCX Privacy Policy">MaritzCX Privacy Policy</a></p>
+                <br>
                 <p>Information for the recipient: The information contained in this e-mail is intended only for the natural or legal person to whom it is addressed and may contain confidential and/or privileged material. If you are not the intended recipient, you are hereby informed that any publication, duplication, distribution or taking any action whatsoever in reference to the content of this information is strictly prohibited and may be illegal. If you are not the intended recipient, please notify the sender immediately by returning this e-mail and delete this message. [COMPANY] branches and/or employees or contractors are not liable for any incorrect or incomplete transmission of the contents of this email and its attachments or their timely receipt.</p>
             </td>
         </tr>
