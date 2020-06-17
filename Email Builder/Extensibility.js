@@ -20,17 +20,39 @@ $(document).ready(function(){
             addColorChangeListeners();
             showCorrectNumberOfButtons();
             showCorrectNumberOfAnchors();
+            addFontChangeListener();
+            applyHoverColors();
             refreshPreview();
             break;
         }
 });
-function addButtonConfigListeners(){
-    for(var i=0;i<12;i++){
-        $('#button' + i + 'Config_row input[title="Button Text"]').change(function(){
+function addFontChangeListener(){
+    var fontFamily;
+    $('input[name="Q000017BE.Q000017BF"]').change(function(){
 
-        });
-    }
+        if($('label[for="' + $(this).attr('id') + '"]').text()=='Other'){
+            if($('input[name="Q000017BE.Q000017BF.other"]').val()==''){
+                fontFamily='Arial, Helvetica, sans-serif';
+            } else {
+                fontFamily=$('input[name="Q000017BE.Q000017BF.other"]').val();
+            }
+        } else {
+            fontFamily=$('label[for="' + $(this).attr('id') + '"]').text();
+        }
+        $('#emailPreview').html($('#emailPreview').html().replace(/font-family[^;]*/gi,'font-family: ' + fontFamily))
+    });
+    $('input[name="Q000017BE.Q000017BF.other"]').change(function(){
+        $('input[name="Q000017BE.Q000017BF"]').change();
+    });
 }
+addFontChangeListener();
+function applyHoverColors(){
+    $('#buttonBackgroundColorOnHover').change(function(){
+        $('#emailPreview').html().replace(/(:hover[^\{]*\{[^\}]*background:\s?)#?[^;!\s]*/gim,$1 + $('#buttonBackgroundColorOnHover'.val()))
+    });
+
+}
+
 function addColorChangeListeners(){
     var elementId;
     $('.alleg-backgroundColorSelector').each(function(){
@@ -265,6 +287,7 @@ function refreshPreview(){
     $('input[title="Button Text"]').change();
     $('input[name="Q0000003E.Q0000003F"]').change(); //Refresh the number of answer options to show
     $('input[name="Q0000009C.Q0000009D"]').change(); //Refresh the number of anchors to show    
+    $('input[name="Q000017BE.Q000017BF"]').change(); //Refresh the font family
 }
 function populateHTMLQuestions(){
     var tempHTML=$('#emailPreview').html();

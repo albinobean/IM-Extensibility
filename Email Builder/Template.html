@@ -68,7 +68,7 @@
             color: inherit !important;
             text-decoration: none !important;
             font-size: inherit !important;
-            font-family: inherit !important;
+            font-family: Arial, Helvetica, sans-serif;
             font-weight: inherit !important;
             line-height: inherit !important;
         }
@@ -142,18 +142,11 @@
         }
         
         .button-td-primary:hover,  /* Button for single Button link */
-        .button-a-primary:hover {
+        .button-a-primary:hover, .button-a-secondary:hover {
             background: #70a043 !important;
             border-color: #70a043 !important;
             color: #fff !important;
         }
-        
-        .button-a-secondary:hover {  /* Buttons for Quick Start question */
-            background: #70a043 !important;
-            border-color: #70a043 !important;
-            color: #fff !important;
-        }
-
         /* Media Queries */
         @media screen and (max-width: 600px) {
 
@@ -228,9 +221,9 @@
         <!-- Preview Text Spacing Hack : END -->
         
         <table id="bannerContainer" width=100% style="width: 100%;background-color: #dddddd;"><tbody><tr>
-            <td class="logoContainer" id="bannerLeftLogoContainer" style="padding: 20px; text-align: left; background: inherit;width: 10px;"><img id="bannerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #444;" width="120" /></td>
+            <td class="logoContainer" id="bannerLeftLogoContainer" style="padding: 20px; text-align: left; background: inherit;width: 10px;"><img id="bannerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 15px; color: #444;" width="120" /></td>
             <td style="text-align: center;font-size: 20px;font-weight: bold;"><div id="bannerText" class="editableHTML"><h1 style="text-align: center;">Banner</span></div></td>
-            <td class="logoContainer" id="bannerRightLogoContainer" style="padding: 20px; text-align: right; background:inherit;width: 10px;"><img id="bannerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #444;float:right" width="120" /></td>
+            <td class="logoContainer" id="bannerRightLogoContainer" style="padding: 20px; text-align: right; background:inherit;width: 10px;"><img id="bannerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 15px; color: #444;float:right" width="120" /></td>
         </tr></tbody></table>
         
         <!--
@@ -251,9 +244,9 @@
                 <tr>
                     <td>
                         <table id="contentBannerContainer" width=100% style="width: 100%;background-color: #aaaaaa;"><tbody><tr>
-                            <td class="logoContainer" style="padding: 20px; text-align: left; background: inherit;width: 10px;"><img id="contentRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #444;" width="120" /></td>
+                            <td class="logoContainer" style="padding: 20px; text-align: left; background: inherit;width: 10px;"><img id="contentRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 15px; color: #444;" width="120" /></td>
                             <td style="text-align: center;font-size: 20px;font-weight: bold;"><div id="contentBannerText" class="editableHTML"><h1 style="text-align: center;">Content Banner</span></div></td>
-                            <td class="logoContainer" style="padding: 20px; text-align: right; background:inherit;width: 10px;"><img id="contentRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #444;float:right" width="120" /></td>
+                            <td class="logoContainer" style="padding: 20px; text-align: right; background:inherit;width: 10px;"><img id="contentRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 15px; color: #444;float:right" width="120" /></td>
                         </tr></tbody></table>
                         
                     </td>
@@ -310,7 +303,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=0&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText0]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText0]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -324,7 +317,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=1&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText1]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText1]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -338,7 +331,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=2&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText2]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText2]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -352,7 +345,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=3&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText3]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText3]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -366,7 +359,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=4&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText4]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText4]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -380,7 +373,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=5&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText5]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText5]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -394,7 +387,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=6&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText6]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText6]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -408,7 +401,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=7&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText7]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText7]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -422,7 +415,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=8&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText8]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText8]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -436,7 +429,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=9&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText9]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText9]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -450,7 +443,7 @@
                                             <!--[if mso]>
                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="[SURVEY URL]&amp;Quickstart=10&amp;hidepreview=1" style="height:40px;v-text-anchor:middle;width:49px;" arcsize="3%" strokecolor="[ButtonColor]" fillcolor="[ButtonColor]">
                                                 <w:anchorlock/>
-                                                <center style="color:[ButtonFontColor];font-family:[Font-Family];font-size:12px;font-weight:normal;">[ButtonText10]</center>
+                                                <center style="color:[ButtonFontColor];font-family: Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;">[ButtonText10]</center>
                                                 </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
@@ -486,38 +479,21 @@
                 </tr>
                 <!-- Clear Spacer : END -->
 
-                <!-- 1 Column Text : BEGIN -->
-                <tr>
-                    <td style="background-color: #f7f7f7;">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                            <tr>
-                                <td style="padding: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 150%; color: #666666;">
-                                    <p style="margin: 0;" class="footer">This email was sent to: <a href="[EMAIL ADDRESS]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[EMAIL ADDRESS]</a>. If the above link does not work, copy and paste the following URL into your web browser: <a href="[SURVEY URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[SURVEY URL]</a></p>
-                                    <p style="margin: 10px 0px 0px 0px;" class="footer">If you would no longer like to receive these types of emails, please <a href="[OPTOUT URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">opt out</a>.</p>
-                                    <p style="margin: 10px 0px 0px 0px;" class="footer">Please do not reply directly to this invitation.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- 1 Column Text : END -->
-
+                
             </table>
             <!-- Email Body : END -->
 
             <!-- Email Footer : BEGIN -->
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 auto;">
                 <tr>
-                    <td style="padding: 0px 20px 0px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 160%; text-align: left; color: #555555;">
-                        <p class="footer" style="font-weight: bold; margin-top: 30px;">Note on data protection</p>
-                        <p class="footer">This E-Mail was sent on behalf of [COMPANY] by MaritzCX Limited („MaritzCX“), a Customer Experience and Market Research company. The above-mentioned survey is carried out by MaritzCX within the scope of a data processing contract according to the applicable legal data protection regulations. <a href="https://www.maritzcx.com/privacy-policy/" style="font-family: Arial, Helvetica, sans-serif; color: #888888; text-decoration: underline;" target="_blank" title="MaritzCX Privacy Policy">MaritzCX Privacy Policy</a></p>
-                        <p class="footer">Information for the recipient: The information contained in this e-mail is intended only for the natural or legal person to whom it is addressed and may contain confidential and/or privileged material. If you are not the intended recipient, you are hereby informed that any publication, duplication, distribution or taking any action whatsoever in reference to the content of this information is strictly prohibited and may be illegal. If you are not the intended recipient, please notify the sender immediately by returning this e-mail and delete this message. [COMPANY] branches and/or employees or contractors are not liable for any incorrect or incomplete transmission of the contents of this email and its attachments or their timely receipt.</p>
+                    <td class="editableHTML" style="padding: 0px 20px 0px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 160%; text-align: left; color: #555555;">
+                        <p style="margin: 0;" class="footer">This email was sent to: <a href="[EMAIL ADDRESS]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[EMAIL ADDRESS]</a>. If the above link does not work, copy and paste the following URL into your web browser: <a href="[SURVEY URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">[SURVEY URL]</a></p>
+                        <p style="margin: 10px 0px 0px 0px;" class="footer">If you would no longer like to receive these types of emails, please <a href="[OPTOUT URL]" style="font-family: Arial, Helvetica, sans-serif; color: #8AC452; text-decoration: underline;">opt out</a>.</p>
+                        <p style="margin: 10px 0px 0px 0px;" class="footer">Please do not reply directly to this invitation.</p>
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding: 0px 20px 20px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 160%; text-align: left; color: #333333; font-weight: bold;">
-                        <p class="footer" style="margin-top: 20px;"><span class="unstyle-auto-detected-links">MaritzCX</span>, <a href="https://www.maritzcx.com/" style="font-family: Arial, Helvetica, sans-serif; color: #888888; text-decoration: underline;" target="_blank" title="www.maritzcx.com">www.maritzcx.com</a></p>
-                    </td>
+                    
                 </tr>
             </table>
             <!-- Email Footer : END -->
@@ -528,10 +504,21 @@
             </table>
             <![endif]-->
         </div>
-        <table id="footerContainer" width=100% style="width: 100%;background-color: green;"><tbody><tr>
-            <td class="logoContainer" id="footerLeftLogoContainer" style="padding: 20px; text-align: left; background: inherit;width: 10px;"><img id="footerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #444;" width="120" /></td>
-            <td style="text-align: center;font-size: 20px;font-weight: bold;"><div id="footerText" class="editableHTML"><h1 style="text-align: center;">Banner</span></div></td>
-            <td class="logoContainer" id="footerRightLogoContainer" style="padding: 20px; text-align: right; background:inherit;width: 10px;"><img id="footerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #444;float:right" width="120" /></td>
+        <table role="presentation" id="footerContainer" width=100% style="width: 100%;background-color: #ededed; padding:10px;"><tbody>
+        <tr>
+            <td id='footerContent'  class="editableHTML" style="padding:20px; font-size: .8em; color:#555555;">
+                <p style="font-weight: bold;">Note on data protection</p>
+                <p>This E-Mail was sent on behalf of [COMPANY] by MaritzCX Limited („MaritzCX“), a Customer Experience and Market Research company. The above-mentioned survey is carried out by MaritzCX within the scope of a data processing contract according to the applicable legal data protection regulations. <a href="https://www.maritzcx.com/privacy-policy/" style="font-family: Arial, Helvetica, sans-serif; color: #888888; text-decoration: underline;" target="_blank" title="MaritzCX Privacy Policy">MaritzCX Privacy Policy</a></p>
+                <p>Information for the recipient: The information contained in this e-mail is intended only for the natural or legal person to whom it is addressed and may contain confidential and/or privileged material. If you are not the intended recipient, you are hereby informed that any publication, duplication, distribution or taking any action whatsoever in reference to the content of this information is strictly prohibited and may be illegal. If you are not the intended recipient, please notify the sender immediately by returning this e-mail and delete this message. [COMPANY] branches and/or employees or contractors are not liable for any incorrect or incomplete transmission of the contents of this email and its attachments or their timely receipt.</p>
+            </td>
+        </tr>
+        <tr id='footerBanner'>
+            <table role="presentation" id="footerContainer" width=100% style="width: 100%;background-color: #ededed; padding:10px;"><tbody><tr>
+                <td class="logoContainer" id="footerLeftLogoContainer" style="padding: 20px; text-align: left; background: inherit;width: 10px;"><img id="footerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 15px; color: #444;" width="120" /></td>
+                <td style="text-align: center;font-size: 20px;font-weight: bold;"><div id="footerBannerText" class="editableHTML"><h1 style="text-align: center;">Banner</span></div></td>
+                <td class="logoContainer" id="footerRightLogoContainer" style="padding: 20px; text-align: right; background:inherit;width: 10px;"><img id="footerRighttLogo" class="rightLogo logo" alt="Logo" border="0" height="30" src="https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/header_logo_mcx2019.png" style="height: auto; background: transparent; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 15px; color: #444;float:right" width="120" /></td>    
+            </tr></tbody></table>
+            
         </tr></tbody></table>
     <!--[if mso | IE]>
     </td>
