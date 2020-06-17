@@ -288,6 +288,7 @@ function initializeHTMLEditors(cls){
             var quillContainer='<div class="quillContainer" id="' + quillContainerId + '">' + $(this).html() + '</div>';
             $(this).html(quillContainer);   
         }
+        console.log(quillContainerId);
         quills.push(new Quill('#' + quillContainerId,{
             modules:{
                 toolbar:toolbarOptions
