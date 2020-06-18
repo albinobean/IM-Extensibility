@@ -1,6 +1,7 @@
 var templateHTML;
 var templateURL='https://raw.githubusercontent.com/albinobean/IM-Extensibility/master/Email%20Builder/Template.html'
 var colorValidation=/(inherit|#([\da-f]{3}){1,2}|rgba?\((\d{1,3},\W?){2}\d{1,3}(,\W?([\d\.]){1,4})?\)|hsla?\([0123]\d{0,2},\W?(0|(100|\d{1,2})%),\W?(0|(100|\d{1,2})%)()(,\W?([\d\.]){1,4})?\))/i
+var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','footer','footerBanner']
 $(document).ready(function(){
 
     var curPage = parseInt($('input[name=currentpage]').val(), 10);
@@ -78,10 +79,11 @@ function addColorChangeListeners(){
         var backgroundElementIds={
             banner:'bannerContainer',
             contentBanner:'contentBannerContainer',
-            emailBackgroundColor:'emailBody'
+            emailBackgroundColor:'emailBody',
+            buttonContainerBackgroundColor:'QSButtonTable'
         }
         var backgroundClasses={
-            buttonBackgroundColor:'',
+            buttonBackgroundColor:'button-td',
             buttonContainerBackgroundColor:''
         }
         if($(this).attr('id')!=''){
@@ -203,10 +205,11 @@ function textBoxChanged(qTag,cssAttr,elementClass){
 
 }
 function addElementToggleListeners(){
-    var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','footerContent','footerBanner']
     for(var i=0;i<elementToggles.length;i++){
         addElementToggleListener('Q00000004_Q00000005_A' + (i+1),elementToggles[i])
     }
+    
+
 }
 function addElementToggleListener(answerTag,elementTag){
     $('#' + answerTag).click(function(){
@@ -288,7 +291,6 @@ function initializeHTMLEditors(cls){
             var quillContainer='<div class="quillContainer" id="' + quillContainerId + '">' + $(this).html() + '</div>';
             $(this).html(quillContainer);   
         }
-        console.log(quillContainerId);
         quills.push(new Quill('#' + quillContainerId,{
             modules:{
                 toolbar:toolbarOptions
@@ -298,9 +300,19 @@ function initializeHTMLEditors(cls){
     });
 }
 function refreshPreview(){
+    // var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','footer','footerBanner']
+    for(var i=0;i<elementToggles.length;i++){
+        if($('#Q00000004_Q00000005_A' + (i+1)).is(':checked')){
+            
+            $('#' + elementToggles[i]).show();
+        } else {
+            
+            $('#' + elementToggles[i]).hide();
+        }
+    }
+    
     $('.alleg-backgroundColorSelector input[type=text]').change();
     $('.alleg-fontColorSelector input[type=text]').change();
-    $('input[title="Button Text"]').change();
     $('input[name="Q0000003E.Q0000003F"]').change(); //Refresh the number of answer options to show
     $('input[name="Q0000009C.Q0000009D"]').change(); //Refresh the number of anchors to show    
     $('input[name="Q000017BE.Q000017BF"]').change(); //Refresh the font family
@@ -347,4 +359,20 @@ function replaceMSOPlaceholders(tempHTML){
     tempHTML=tempHTML.replace('[StartButtonWidth2]',$('#startButton2').width());
     
     return tempHTML;
+}
+function removeUnusedElements(){
+    $('.ql-toolbar').remove();
+    $('.ql-clipboard').remove();
+    $('.ql-tooltip').remove();
+    $('.quillContainer').removeClass('quillContainer');
+    $('.ql-snow').removeClass('ql-snow');
+    $('.ql-container').removeClass('ql-container');
+    $('.ql-container').each(function(){
+        $(this).replaceWith($(this).find('.ql-editor').html());
+    });
+    $('#emailPreview').find("[contenteditable='true']").each(function() {
+        $(this).removeAttr("contenteditable");
+    });
+
+
 }
