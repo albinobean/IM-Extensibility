@@ -7,6 +7,7 @@ $(document).ready(function(){
     var curPage = parseInt($('input[name=currentpage]').val(), 10);
     document.title=pageNames['page' + curPage];
     moveHelpTextAfter();
+    addPreviewOnlyToggle();
     
     
             //    Create preview frame
@@ -19,10 +20,29 @@ $(document).ready(function(){
         addColorChangeListeners();
         showCorrectNumberOfButtons();
         showCorrectNumberOfAnchors();
+        showCorrectNumberOfPrepopColumns();
         addFontChangeListener();
+        setPrepopTableHeaders();
         applyHoverColors();
+        $('input[name="Q0000007C.Q0000007D"]').change(); //Show the correct number of prepop table columns
         refreshPreview();
+        $('.nextButton').unbind();
+        $('.nextButton').click(function(){
+            populateHTMLQuestions();
+            nextButtonClicked();
+        });
 });
+function setPrepopTableHeaders(){
+    for(var i=1;i<4;i++){
+        $('#Prepop' + i + '_row input').change(function(){
+            var prepopNum=parseInt($(this).closest('tr').attr('id').substring(6,7));
+            // console.log(prepopNum);
+            // console.log('CURR: ' + $('#Q00000049_S' + i + ' .scaleText').html());
+            $('#Q00000049_S' + prepopNum + ' .scaleText').html($(this).val());
+        });
+    }
+}
+setPrepopTableHeaders();
 function addEmailTypeChangeListener(){
     $('input[name="Q000017F0.Q000017F1"]').change(function(){
         if($(this).val()==0){
@@ -129,6 +149,7 @@ function addColorChangeListeners(){
     });
     
 }
+
 function showCorrectNumberOfAnchors(){
     $('input[name="Q0000009C.Q0000009D"]').change(function(){
         // Hide all anchors to start
@@ -161,27 +182,30 @@ function showCorrectNumberOfButtons(){
         
     });
 }
-function showCorrectNumberOfPrepopColumns(colsToShow){
-    for(var i=3;i<6;i++){
-        setTableColumnVisibility('button1Config',i,i<=colsToShow+1)
-    }
+function showCorrectNumberOfPrepopColumns(){
+    $('input[name="Q0000007C.Q0000007D"]').change(function(){
+        var colsToShow=$(this).val();
+        for(var i=3;i<=4;i++){
+            setTableColumnVisibility('button1Config',i,i-1<=colsToShow)
+        }
+    });
 }
 function setTableColumnVisibility(questionTagInTable,colNumber,visible){
     var tbl=$('#' + questionTagInTable + '_row').parent();
-    // console.log('TABLE: ' + tbl.children().length);
     tbl.children().each(function(){
         var rw=$(this);
-        // console.log('ROW: ' + rw.children().length)
-        for(var i=0;i<rw.children().length;i++){
-            if(i==colNumber){
-                // console.log(i);
+        var i=1
+        rw.children().each(function(){
+            if(colNumber==i){
+
                 if(visible){
-                    $(rw.children()[i]).show();
+                    $(this).show();
                 } else {
-                    $(rw.children()[i]).hide();
+                    $(this).hide();
                 }
             }
-        }
+            i++;
+        });
     });
 }
 showCorrectNumberOfPrepopColumns();
@@ -318,16 +342,30 @@ function refreshPreview(){
     $('input[name="Q000017BE.Q000017BF"]').change(); //Refresh the font family
     $('input[name="Q00003D1B.Q00003D1C"]').change(); //Set visibility of storedHTML question
 }
+function addPreviewOnlyToggle(){
+    if($('#TestModeBanner').length>0 && $('.alleg-previewOnly').length>0){
+        var toggle=$('<span id="previewOnlyToggle" style="margin-right:5px;">Show Preview-only fields</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label>')
+        toggle.click(function(){
+            localStorage.setItem('showPreviewOnlyQuestions',$(this).children('input:checked').length)
+            if($(this).children('input:checked').length==1){$('.alleg-previewOnly').show();} else {$('.alleg-previewOnly').hide();}
+        });
+        $('#TestModeBanner').children('tbody').children('tr').children('td').prepend(toggle);
+        if(localStorage.getItem('showPreviewOnlyQuestions')==1){
+            toggle.children('input').prop('checked',true);
+            $('.alleg-previewOnly').show();
+        }
+    }
+}
 function populateHTMLQuestions(){
     var tempHTML=$('#emailPreview').html();
     tempHTML=replaceMSOPlaceholders(tempHTML);
-    tempHTML.replace(/emailBody/gi,'body');
+    tempHTML=tempHTML.replace(/emailBody/gi,'body');
     $('#preheaderBlock').html($('#preheader').val());
     $('#emailPreviewHTML').val(tempHTML);
     populateEmailSource(tempHTML);
 }
 function populateEmailSource(tempHTML){
-    var URLBase=''
+    var URLBase=$('#baseURL').val();
     var reg=/\[SURVEY URL\]/gi;
     $('#emailSource').val(tempHTML.replace(reg,URLBase))
 }
