@@ -23,6 +23,7 @@ $(document).ready(function(){
         showCorrectNumberOfPrepopColumns();
         addFontChangeListener();
         setPrepopTableHeaders();
+        addPageWidthListener();
         applyHoverColors();
         $('input[name="Q0000007C.Q0000007D"]').change(); //Show the correct number of prepop table columns
         refreshPreview();
@@ -32,6 +33,22 @@ $(document).ready(function(){
             nextButtonClicked();
         });
 });
+function addImageURLChangeListeners(){
+    $('#signatoryImageURL').change(function(){
+        $('#signatoryImage').attr('src',$(this).val());
+    });
+    $('#heroImageURL').change(function(){
+        $('#heroImage').attr('src',$(this).val());
+    });
+}
+function addPageWidthListener(){
+    $('#pageWidth').change(function(){
+        var width=$(this).val();
+        $('.email-container').css('max-width',width + 'px');
+        $('#heroImage').width(width);
+        $('#heroImage').css('max-width',width + 'px');
+    });
+}
 function setPrepopTableHeaders(){
     for(var i=1;i<4;i++){
         $('#Prepop' + i + '_row input').change(function(){
@@ -76,7 +93,7 @@ function addFontChangeListener(){
         } else {
             fontFamily=$('label[for="' + $(this).attr('id') + '"]').text();
         }
-        
+        console.log(fontFamily);
         $('#emailPreview').html($('#emailPreview').html().replace(/font-family[^;]*/gi,'font-family: ' +fontFamily.replace(/\"/g,"'")));
     });
     $('input[name="Q000017BE.Q000017BF.other"]').change(function(){
@@ -337,10 +354,13 @@ function refreshPreview(){
     
     $('.alleg-backgroundColorSelector input[type=text]').change();
     $('.alleg-fontColorSelector input[type=text]').change();
+    $('.alleg-imageURL input[type=text]').change();
     $('input[name="Q0000003E.Q0000003F"]').change(); //Refresh the number of answer options to show
     $('input[name="Q0000009C.Q0000009D"]').change(); //Refresh the number of anchors to show    
     $('input[name="Q000017BE.Q000017BF"]').change(); //Refresh the font family
     $('input[name="Q00003D1B.Q00003D1C"]').change(); //Set visibility of storedHTML question
+    $('#pageWidth').change();
+
 }
 function addPreviewOnlyToggle(){
     if($('#TestModeBanner').length>0 && $('.alleg-previewOnly').length>0){
@@ -357,16 +377,18 @@ function addPreviewOnlyToggle(){
     }
 }
 function populateHTMLQuestions(){
-    var tempHTML=$('#emailPreview').html();
+    var tempHTML=$('#emailPreview').html().trim().replace(/\s{4}/gm,'\t');
     tempHTML=replaceMSOPlaceholders(tempHTML);
     tempHTML=tempHTML.replace(/emailBody/gi,'body');
+    removeUnusedElements();
     $('#preheaderBlock').html($('#preheader').val());
     $('#emailPreviewHTML').val(tempHTML);
+    tempHTML=tempHTML.replace(/\s?contenteditable=true\s?/gim,' ');
     populateEmailSource(tempHTML);
 }
 function populateEmailSource(tempHTML){
     var URLBase=$('#baseURL').val();
-    var reg=/\[SURVEY URL\]/gi;
+    var reg=/\[(SURVEY URL|CASE LINK)\][^\'\"]*/gim;
     $('#emailSource').val(tempHTML.replace(reg,URLBase))
 }
 function replaceMSOPlaceholders(tempHTML){
@@ -374,7 +396,7 @@ function replaceMSOPlaceholders(tempHTML){
     // Placeholder text is in brackets in the HTML set to equal the tag of the question textbox that holds the replacement value
     placeholders['ButtonColor']='buttonBackgroundColor'; //This finds [ButtonColor] in the HTML and replaces it with the value of the buttonBackgroundColor question
     placeholders['ButtonFontColor']='buttonFontColor';
-    
+    placeholders['pageWidth']='pageWidth';
     
     for(var placeholder in placeholders){
         var reg=new RegExp('\\[' + placeholder + '\\]','gi')
@@ -389,7 +411,7 @@ function replaceMSOPlaceholders(tempHTML){
     tempHTML=tempHTML.replace('[ClosingStartSurveyButtonText]',$('#closingStartSurveyButton').text());
     tempHTML=tempHTML.replace('[ContentStartSurveyButtonText]',$('#contentStartSurveyButton').text());
 
-    // Set width 
+    // Set button width 
     var QSButtonCount=parseInt($('#buttonCount_question .survey-answer-selected+td .answerText').text());
     tempHTML=tempHTML.replace('[QuickStartButtonWidth]',Math.floor(600/QSButtonCount));
     // Start Buttons
@@ -408,9 +430,7 @@ function removeUnusedElements(){
     $('.ql-container').each(function(){
         $(this).replaceWith($(this).find('.ql-editor').html());
     });
-    $('#emailPreview').find("[contenteditable='true']").each(function() {
-        $(this).removeAttr("contenteditable");
-    });
+    
 
 
 }
