@@ -25,6 +25,7 @@ $(document).ready(function(){
         setPrepopTableHeaders();
         addPageWidthListener();
         applyHoverColors();
+
         $('input[name="Q0000007C.Q0000007D"]').change(); //Show the correct number of prepop table columns
         refreshPreview();
         $('.nextButton').unbind();
@@ -61,14 +62,18 @@ function setPrepopTableHeaders(){
 }
 setPrepopTableHeaders();
 function addEmailTypeChangeListener(){
-    $('input[name="Q000017F0.Q000017F1"]').change(function(){
+    $('#emailType_question input[type="radio"]').change(function(){
         if($(this).val()==0){
             // Survey Email
-            $('#baseURL_question').val($('#baseURL_question').val().replace(/SURVEY URL/gi,'CASE LINK'));
+            $('#baseURL').val($('#baseURL').val().replace(/CASE LINK/gi,'SURVEY URL'));
+            $('emailBody').removeClass('caseTemplate');
+            $('emailBody').addClass('surveyTemplate');
         } else {
             // Case Email
-            $('#baseURL_question').val($('#baseURL_question').val().replace(/CASE LINK/gi,'SURVEY URL'));
-        }
+            $('#baseURL').val($('#baseURL').val().replace(/SURVEY URL/gi,'CASE LINK'));
+            $('emailBody').removeClass('surveyTemplate');
+            $('emailBody').addClass('caseTemplate');
+        }        
     });
 }
 function addPreviousHTMLListener(){
@@ -426,10 +431,10 @@ function removeUnusedElements(){
     $('.ql-tooltip').remove();
     $('.quillContainer').removeClass('quillContainer');
     $('.ql-snow').removeClass('ql-snow');
-    $('.ql-container').removeClass('ql-container');
     $('.ql-container').each(function(){
         $(this).replaceWith($(this).find('.ql-editor').html());
     });
+    $('.ql-container').removeClass('ql-container');
     
 
 

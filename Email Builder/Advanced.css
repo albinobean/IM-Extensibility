@@ -160,5 +160,8 @@ BUTTON.minimal{
     margin:5px 0;
     display: block;
 }
-/*Disable links in the preview */
-#emailPreview a{pointer-events: none;} 
+/* Format preview */
+    /*Disable links in the preview */
+    #emailPreview a{pointer-events: none;} 
+
+    .caseTemplate #Quickstart{display:none !important}
