@@ -6,7 +6,13 @@
    float:right;
    top:-90px;
 }
-
+.questionDescription{
+    color: #888;
+    font-size: .8em;
+    font-style: italic;
+    margin:5px 0;
+}
+div#keywordPrompt_question .help-text-link {display:none !important;}
 /* Modal */
 #modalFrame .alleg-modalElement, .alleg-modalImage{
     display:none;

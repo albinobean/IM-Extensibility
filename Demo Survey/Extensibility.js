@@ -73,10 +73,32 @@ $(document).ready(function () {
                 $(this).parent().append($(this));
             });
             break;
+        case 10:
+            moveHelpTextAfter();
+            $('input[type="text"]').change(function(){
+                setSmartProbeConfiguration('smartProbeConfig',$('#numberOfWords').val(),$('#tooShortPrompt').val(),$('#keywordsConfig').val(),$('#keywordsNumberOfWords').val(),$('#keywordPrompt').val());
+            });
+            break;
 
     }
 });
-
+function setSmartProbeConfiguration(qTag,numberOfWords,tooLittlePrompt,keywords,keywordNumberOfWords,keywordPrompt){
+    if(numberOfWords){
+        $('#' + qTag + '_too-little').attr('data-number-of-words',numberOfWords);
+    }
+    if(tooLittlePrompt){
+        $('#' + qTag + '_too-little .smart-probe-message-source').html(tooLittlePrompt);
+    }
+    if(keywords){
+        $('#' + qTag + '_not-specific').attr('data-keywords',keywords);
+    }
+    if(keywordNumberOfWords){
+        $('#' + qTag + '_not-specific').attr('data-number-of-words',keywordNumberOfWords);
+    }
+    if(keywordPrompt){
+        $('#' + qTag + '_not-specific .smart-probe-message-source').html(keywordPrompt);
+    }
+}
 // Randomly select answer code
 function SelectFirstRadio(qTag,SamePageDisplayLogic){
     //The HTML of the question is different if it is using same-page display logic
@@ -257,4 +279,9 @@ function addPreviewOnlyToggle(){
             $('.alleg-previewOnly').show();
         }
     }
+}
+function moveHelpTextAfter(){
+    $('.help-text-link').each(function(){
+        $(this).closest('.questionText').append("<p class='questionDescription'>" + $(this).children('img').attr('aria-label') + "</p>")
+    });
 }

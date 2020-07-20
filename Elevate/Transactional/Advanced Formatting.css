@@ -1,0 +1,30 @@
+#Q00000541_first, #Q000004DE_first, #Q00000541_last, #Q000004DE_last{
+    text-align: center !important;
+ }
+ #headerLogoImage{
+     max-width: 30%;
+     background-size: 100% auto;
+     margin:0;
+     position: relative;
+ }
+ #headerLogoContainer{
+    position: relative;
+ }
+ #alleg-footer{
+     padding: 10px;
+     vertical-align: middle;
+     table-layout: fixed;
+     display:table;
+     position: relative;
+ 
+ }
+ #footerLogoCell{
+     text-align: left;
+     width: 50%;
+ }
+ #privacyLinkCell{
+     text-align: right;
+ }
+ 
+ 
+ 
