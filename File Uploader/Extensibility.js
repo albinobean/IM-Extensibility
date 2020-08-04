@@ -2,7 +2,7 @@ $(document).ready(function(){
     var curPage = parseInt($('input[name=currentpage]').val(), 10);
     switch(curPage){
         case 1:
-            $('.alleg-uploader').html('<input id="fileUploader" type="file">');
+            $('.alleg-uploader').html('<input id="fileUploader" type="file"><label for="fileUploader">Drop Files Here</label>');
             $('.nextButton').unbind();
             $('.nextButton').click(function(){
                 uploadPhoto();
@@ -20,7 +20,7 @@ function uploadPhoto(){
     
     var bucketName = "uploadtester";
     var bucketRegion = 'us-east-2';
-    var IdentityPoolId ='us-east-2:d3fa98ff-a4c7-44bc-a923-d0c65d5d1457' ;
+    var IdentityPoolId ='us-east-2:d3fa98ff-a4c7-44bc-a923-d0c65d5d1457' 
     
     AWS.config.update({
       region: bucketRegion,

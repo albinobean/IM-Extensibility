@@ -1,7 +1,13 @@
 var templateHTML;
 var templateURL='https://raw.githubusercontent.com/albinobean/IM-Extensibility/master/Email%20Builder/Template.html'
 var colorValidation=/(inherit|#([\da-f]{3}){1,2}|rgba?\((\d{1,3},\W?){2}\d{1,3}(,\W?([\d\.]){1,4})?\)|hsla?\([0123]\d{0,2},\W?(0|(100|\d{1,2})%),\W?(0|(100|\d{1,2})%)()(,\W?([\d\.]){1,4})?\))/i
-var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','footer','footerBanner']
+var elementToggles={
+    Q00000004_Q00000005_A:['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','footer','footerBanner'], //Main
+    Q0000000E_Q0000000F_A:['bannerLeftLogoContainer','bannerText','bannerRightLogoContainer'], //banner
+    Q00000013_Q00000014_A:['contentLeftLogoContainer','contentBannerText','contentRightLogoContainer'], //content banner
+    Q00008A9C_Q00008A9D_A:['contentFooterLeftLogoContainer','contentFooterBannerText','contentFooterRightLogoContainer'], //content footer
+    Q00008AA1_Q00008AA2_A:['footerLeftLogoContainer','footerBannerText','footerRightLogoContainer'] //footer banner
+}
 $(document).ready(function(){
 
     var curPage = parseInt($('input[name=currentpage]').val(), 10);
@@ -26,7 +32,6 @@ $(document).ready(function(){
         addPageWidthListener();
         applyHoverColors();
 
-        $('input[name="Q0000007C.Q0000007D"]').change(); //Show the correct number of prepop table columns
         refreshPreview();
         $('.nextButton').unbind();
         $('.nextButton').click(function(){
@@ -98,7 +103,7 @@ function addFontChangeListener(){
         } else {
             fontFamily=$('label[for="' + $(this).attr('id') + '"]').text();
         }
-        console.log(fontFamily);
+        // console.log(fontFamily);
         $('#emailPreview').html($('#emailPreview').html().replace(/font-family[^;]*/gi,'font-family: ' +fontFamily.replace(/\"/g,"'")));
     });
     $('input[name="Q000017BE.Q000017BF.other"]').change(function(){
@@ -251,14 +256,30 @@ function textBoxChanged(qTag,cssAttr,elementClass){
 
 }
 function addElementToggleListeners(){
-    for(var i=0;i<elementToggles.length;i++){
-        addElementToggleListener('Q00000004_Q00000005_A' + (i+1),elementToggles[i])
+    for(var q in elementToggles){
+        var elements=elementToggles[q];
+        for(var i=0;i<elements.length;i++){
+            addElementToggleListener(q + (i+1),elements[i])
+        }
     }
+    
+    // Banner elements
+    
+    // Content Banner Elements
+    
+    $('#contentBannerElements_question input[type="checkbox"]').each(function(){
+        var elements=['contentLeftLogoContainer','contentBannerText','contentRightLogoContainer'];
+        addElementToggleListener($(this).attr('id'),elements[$(this).attr('value')]);
+    });
+    // Content Footer Elements
+
+    // Footer Banner Elements
     
 
 }
 function addElementToggleListener(answerTag,elementTag){
-    $('#' + answerTag).click(function(){
+    $('#' + answerTag).change(function(){
+        // console.log(answerTag + ' clicked');
         if($('#' + answerTag).is(':checked')){
             $('#' + elementTag).show();
         } else {
@@ -346,24 +367,26 @@ function initializeHTMLEditors(cls){
     });
 }
 function refreshPreview(){
-    // var elementToggles=['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','footer','footerBanner']
-    for(var i=0;i<elementToggles.length;i++){
-        if($('#Q00000004_Q00000005_A' + (i+1)).is(':checked')){
-            
-            $('#' + elementToggles[i]).show();
-        } else {
-            
-            $('#' + elementToggles[i]).hide();
+    for(var q in elementToggles){
+        var elements=elementToggles[q];
+        for(var i=0;i<elements.length;i++){
+            if($('#' + q + (i+1)).is(':checked')){
+                $('#' + elements[i]).show();
+            }  else {
+                $('#' + elements[i]).hide();
+            }
         }
     }
     
     $('.alleg-backgroundColorSelector input[type=text]').change();
     $('.alleg-fontColorSelector input[type=text]').change();
     $('.alleg-imageURL input[type=text]').change();
+    $('input[name="Q0000007C.Q0000007D"]').change(); //Show the correct number of prepop table columns
     $('input[name="Q0000003E.Q0000003F"]').change(); //Refresh the number of answer options to show
     $('input[name="Q0000009C.Q0000009D"]').change(); //Refresh the number of anchors to show    
     $('input[name="Q000017BE.Q000017BF"]').change(); //Refresh the font family
     $('input[name="Q00003D1B.Q00003D1C"]').change(); //Set visibility of storedHTML question
+    $('#contentBannerElements_question input[type="checkbox"]').change();
     $('#pageWidth').change();
 
 }
@@ -435,7 +458,4 @@ function removeUnusedElements(){
         $(this).replaceWith($(this).find('.ql-editor').html());
     });
     $('.ql-container').removeClass('ql-container');
-    
-
-
 }

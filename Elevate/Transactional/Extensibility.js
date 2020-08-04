@@ -1,12 +1,21 @@
 var InMomentFavIcon='https://maritzcxenterpriseoperations.allegiancetech.com/surveys/images/VW8KA6/Preview/favicon16x16.png';
-
 $(document).ready(function () {
+    var curPage = parseInt($('input[name=currentpage]').val());
     setFavicon(InMomentFavIcon);
     centerHeaders("#Q00000458",9,9);
     centerHeaders("#Q000004CD",9,9);
     centerHeaders("#Q00000532",9,9);
     centerHeaders("#Q0001087C",9,9);
     addFooter();
+
+    switch(curPage){
+        case 4:
+            var transactionTypes=$('#mcx-tag-Transaction_Type').val();
+            if(transactionTypes.indexOf('5')>=0){
+                $('.nextButton').text(navigationState.finishButtonCaption);
+            }
+            break;
+    }
 });
 function setFavicon(iconUrl){
     var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
@@ -40,5 +49,4 @@ function addFooter() {
     }
     toInsert.innerHTML = "<table id='alleg-footer'><tbody><tr><td id='footerLogoCell'><img id=footerLogo src='https://maritzcxenterpriseoperations.allegiancetech.com/surveys/images/DPNK87/Preview/inmoment.png' style='width:200px; height:auto;' /></td><td id='privacyLinkCell'><a id='privacyLink' href='" + privacyLink + "' target='_blank' title='" + privacyText + "'>" + privacyText + "</a></td></tr></tbody></table>";
     document.body.appendChild(toInsert);
-
 }
