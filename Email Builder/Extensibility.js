@@ -2,7 +2,7 @@ var templateHTML;
 var templateURL='https://raw.githubusercontent.com/albinobean/IM-Extensibility/master/Email%20Builder/Template.html'
 var colorValidation=/(inherit|#([\da-f]{3}){1,2}|rgba?\((\d{1,3},\W?){2}\d{1,3}(,\W?([\d\.]){1,4})?\)|hsla?\([0123]\d{0,2},\W?(0|(100|\d{1,2})%),\W?(0|(100|\d{1,2})%)()(,\W?([\d\.]){1,4})?\))/i
 var elementToggles={
-    Q00000004_Q00000005_A:['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','footer','footerBanner'], //Main
+    Q00000004_Q00000005_A:['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','contentFooterBanner','footerContainer','footerBannerRow'], //Main
     Q0000000E_Q0000000F_A:['bannerLeftLogoContainer','bannerText','bannerRightLogoContainer'], //banner
     Q00000013_Q00000014_A:['contentLeftLogoContainer','contentBannerText','contentRightLogoContainer'], //content banner
     Q00008A9C_Q00008A9D_A:['contentFooterLeftLogoContainer','contentFooterBannerText','contentFooterRightLogoContainer'], //content footer
