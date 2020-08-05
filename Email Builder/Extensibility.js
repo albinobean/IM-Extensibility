@@ -2,11 +2,19 @@ var templateHTML;
 var templateURL='https://raw.githubusercontent.com/albinobean/IM-Extensibility/master/Email%20Builder/Template.html'
 var colorValidation=/(inherit|#([\da-f]{3}){1,2}|rgba?\((\d{1,3},\W?){2}\d{1,3}(,\W?([\d\.]){1,4})?\)|hsla?\([0123]\d{0,2},\W?(0|(100|\d{1,2})%),\W?(0|(100|\d{1,2})%)()(,\W?([\d\.]){1,4})?\))/i
 var elementToggles={
-    Q00000004_Q00000005_A:['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','contentFooterBanner','footerContainer','footerBannerRow'], //Main
-    Q0000000E_Q0000000F_A:['bannerLeftLogoContainer','bannerText','bannerRightLogoContainer'], //banner
-    Q00000013_Q00000014_A:['contentLeftLogoContainer','contentBannerText','contentRightLogoContainer'], //content banner
-    Q00008A9C_Q00008A9D_A:['contentFooterLeftLogoContainer','contentFooterBannerText','contentFooterRightLogoContainer'], //content footer
-    Q00008AA1_Q00008AA2_A:['footerLeftLogoContainer','footerBannerText','footerRightLogoContainer'] //footer banner
+    Q00000004_Q00000005_A:['bannerContainer','contentBannerContainer','heroImageContainer','contentStartSurveyButton','Quickstart','emailClosingText','closingStartSurveyButton','signatureSection','contentFooter','contentFooterContainer','footerContainer','footerBannerContainer'] //Main
+}
+var imageURLMap={
+    signatoryImageURL:'signatoryImage',
+    heroImageURL:'heroImage',
+    bannerLeftLogoURL:'bannerLeftLogo',
+    bannerRightLogoURL:'bannerRightLogo',
+    contentBannerLeftLogoURL:'contentLeftLogo',
+    contentBannerRightLogoURL:'contentRighttLogo',
+    contentFooterLeftLogoURL:'contentFooterLeftLogo',
+    contentFooterRightLogoURL:'contentFooterRightLogo',
+    footerLeftLogoURL:'footerLeftLogo',
+    footerRightLogoURL:'footerRightLogo'
 }
 $(document).ready(function(){
 
@@ -23,6 +31,7 @@ $(document).ready(function(){
         addEmailTypeChangeListener();
         addPreviousHTMLListener();
         addToggleListeners();
+        addImageURLChangeListeners();
         addColorChangeListeners();
         showCorrectNumberOfButtons();
         showCorrectNumberOfAnchors();
@@ -31,6 +40,7 @@ $(document).ready(function(){
         setPrepopTableHeaders();
         addPageWidthListener();
         applyHoverColors();
+        
 
         refreshPreview();
         $('.nextButton').unbind();
@@ -40,12 +50,17 @@ $(document).ready(function(){
         });
 });
 function addImageURLChangeListeners(){
-    $('#signatoryImageURL').change(function(){
-        $('#signatoryImage').attr('src',$(this).val());
-    });
-    $('#heroImageURL').change(function(){
-        $('#heroImage').attr('src',$(this).val());
-    });
+    for(var q in imageURLMap){
+        $('#' + q + '_question input[type="text"]').change(function(){
+            $('#' + imageURLMap[q]).attr('src',$(this).val());
+        });
+    }
+    // $('#signatoryImageURL').change(function(){
+    //     $('#signatoryImage').attr('src',$(this).val());
+    // });
+    // $('#heroImageURL').change(function(){
+    //     $('#heroImage').attr('src',$(this).val());
+    // });
 }
 function addPageWidthListener(){
     $('#pageWidth').change(function(){
@@ -264,7 +279,10 @@ function addElementToggleListeners(){
     }
     
     // Banner elements
-    
+    $('#bannerElements_question input[type="checkbox"]').each(function(){
+        var elements=['bannerLeftLogoContainer','bannerText','bannerRightLogoContainer'];
+        addElementToggleListener($(this).attr('id'),elements[$(this).attr('value')]);
+    });
     // Content Banner Elements
     
     $('#contentBannerElements_question input[type="checkbox"]').each(function(){
@@ -272,9 +290,15 @@ function addElementToggleListeners(){
         addElementToggleListener($(this).attr('id'),elements[$(this).attr('value')]);
     });
     // Content Footer Elements
-
+    $('#contentFooterElements_question input[type="checkbox"]').each(function(){
+        var elements=['contentFooterLeftLogoContainer','contentFooterBannerText','contentFooterRightLogoContainer'];
+        addElementToggleListener($(this).attr('id'),elements[$(this).attr('value')]);
+    });
     // Footer Banner Elements
-    
+    $('#footerBannerElements_question input[type="checkbox"]').each(function(){
+        var elements=['footerLeftLogoContainer','footerBannerText','footerRightLogoContainer'];
+        addElementToggleListener($(this).attr('id'),elements[$(this).attr('value')]);
+    });
 
 }
 function addElementToggleListener(answerTag,elementTag){
@@ -387,6 +411,9 @@ function refreshPreview(){
     $('input[name="Q000017BE.Q000017BF"]').change(); //Refresh the font family
     $('input[name="Q00003D1B.Q00003D1C"]').change(); //Set visibility of storedHTML question
     $('#contentBannerElements_question input[type="checkbox"]').change();
+    $('#bannerElements_question input[type="checkbox"]').change();
+    $('#contentFooterElements_question input[type="checkbox"]').change();
+    $('#footerBannerElements_question input[type="checkbox"]').change();
     $('#pageWidth').change();
 
 }
