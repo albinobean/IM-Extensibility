@@ -59,12 +59,23 @@ function addImageWidthChangeListeners(){
         $('#' + elementName).attr('height',height);
     });
     $('.alleg-imageMaxWidth input[type="text"]').change(function(){
+        if(/^1?\d{0,2}$/.test($(this).val())) $(this).val($(this).val() + '%');
         var elementName=$(this).attr('id').replace(/MaxWidth$/,'');
         //Max width is relative to the parent, but the user is setting the max width against the full page, not just the table cell
-        var pageWidth=parseInt($('#emailContainer').css('max-width').replace(/px/,''));
+
+        var pageWidth
+        if($('#emailContainer').css('max-width')){
+            pageWidth=parseInt($('#emailContainer').css('max-width').replace(/px/,''));
+        } else {
+            pageWidth=$('#pageWidth').val();
+        }
         var parent=$('#' + elementName).parent();
-        var parentWidth=parseInt(parent.css('width').replace(/px/,''));
-        $('#' + elementName).css('maxWidth',$(this).val()*pageWidth/parentWidth);
+        if(parent.length>0){
+            if(!parent.css('width')) parent.css('width','10px');
+            var parentWidth=parseInt(parent.css('width').replace(/px/,''));
+            $('#' + elementName).css('max-width',parseInt($(this).val())*pageWidth/parentWidth + '%');
+        }
+        
     });
 }
 function addImageURLChangeListeners(){
@@ -86,6 +97,7 @@ function addPageWidthListener(){
         $('.email-container').css('max-width',width + 'px');
         $('#heroImage').width(width);
         $('#heroImage').css('max-width',width + 'px');
+        $('.alleg-imageMaxWidth input[type="text"]').change();
     });
 }
 function setPrepopTableHeaders(){
@@ -270,7 +282,21 @@ function setTableColumnVisibility(questionTagInTable,colNumber,visible){
 }
 showCorrectNumberOfPrepopColumns();
 function addToggleListeners(){
-    addToggleListener('pageShadow',togglePageShadow);
+    // addToggleListener('pageShadow',togglePageShadow);
+    $('#pageShadow').change(function(){
+        if($(this).is(':checked')){
+            $('#emailPage').css('box-shadow','0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)');
+        } else {
+            $('#emailPage').css('box-shadow','');
+        }
+    });
+    $('#signatoryImageToggle').change(function(){
+        if($(this).is(':checked')){
+            $('#signatureImageContainer').show();
+        } else {
+            $('#signatureImageContainer').hide();
+        }
+    });
 }
 function toggleVisibility(inputElement,elementClass){
     if($(inputElement).prop('checked')=='checked'){
@@ -334,11 +360,7 @@ function addToggleListener(tag,callback){
 }
 function togglePageShadow(){
     
-    if($('#pageShadow').is(':checked')){
-        $('#emailPage').css('box-shadow','0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)');
-    } else {
-        $('#emailPage').css('box-shadow','');
-    }
+    
 }
 function retrieveTemplateHTML(){
     if($('storedHTML').val()){
@@ -433,7 +455,8 @@ function refreshPreview(){
     $('#contentFooterElements_question input[type="checkbox"]').change();
     $('#footerBannerElements_question input[type="checkbox"]').change();
     $('.alleg-imageWidth input[type="text"]').change();
-    $('.alleg-imageMaxWidth input[type="text"]').change();
+    $('#signatoryImageToggle').change();
+    // $('.alleg-imageMaxWidth input[type="text"]').change(); //This is called in $('#pageWidth').change();
     $('#pageWidth').change();
 
 }
