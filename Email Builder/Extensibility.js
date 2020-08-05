@@ -9,8 +9,8 @@ var imageURLMap={
     heroImageURL:'heroImage',
     bannerLeftLogoURL:'bannerLeftLogo',
     bannerRightLogoURL:'bannerRightLogo',
-    contentBannerLeftLogoURL:'contentLeftLogo',
-    contentBannerRightLogoURL:'contentRighttLogo',
+    contentLeftLogoURL:'contentLeftLogo',
+    contentRightLogoURL:'contentRightLogo',
     contentFooterLeftLogoURL:'contentFooterLeftLogo',
     contentFooterRightLogoURL:'contentFooterRightLogo',
     footerLeftLogoURL:'footerLeftLogo',
@@ -40,7 +40,7 @@ $(document).ready(function(){
         setPrepopTableHeaders();
         addPageWidthListener();
         applyHoverColors();
-        
+        addImageWidthChangeListeners();
 
         refreshPreview();
         $('.nextButton').unbind();
@@ -49,10 +49,28 @@ $(document).ready(function(){
             nextButtonClicked();
         });
 });
+function addImageWidthChangeListeners(){
+    $('.alleg-imageWidth .questionText').append("<p class='questionDescription'>This is the default width.  Height is automatically relative to the height.</p>")
+    $('.alleg-imageMaxWidth .questionText').append("<p class='questionDescription'>This allows the image to resize dynamically for smaller screens.</p>")
+    $('.alleg-imageWidth input[type="text"]').change(function(){
+        var elementName=$(this).attr('id').replace(/Width$/,'');
+        $('#' + elementName).attr('width',$(this).val());
+        var height=$('#' + elementName).height()/$('#' + elementName).width()*$(this).val(); //Calculates the height for Outlook even if the current view is applying a maxHeight
+        $('#' + elementName).attr('height',height);
+    });
+    $('.alleg-imageMaxWidth input[type="text"]').change(function(){
+        var elementName=$(this).attr('id').replace(/MaxWidth$/,'');
+        //Max width is relative to the parent, but the user is setting the max width against the full page, not just the table cell
+        var pageWidth=parseInt($('#emailContainer').css('max-width').replace(/px/,''));
+        var parent=$('#' + elementName).parent();
+        var parentWidth=parseInt(parent.css('width').replace(/px/,''));
+        $('#' + elementName).css('maxWidth',$(this).val()*pageWidth/parentWidth);
+    });
+}
 function addImageURLChangeListeners(){
     for(var q in imageURLMap){
         $('#' + q + '_question input[type="text"]').change(function(){
-            $('#' + imageURLMap[q]).attr('src',$(this).val());
+            $('#' + imageURLMap[$(this).attr('id')]).attr('src',$(this).val());
         });
     }
     // $('#signatoryImageURL').change(function(){
@@ -414,6 +432,8 @@ function refreshPreview(){
     $('#bannerElements_question input[type="checkbox"]').change();
     $('#contentFooterElements_question input[type="checkbox"]').change();
     $('#footerBannerElements_question input[type="checkbox"]').change();
+    $('.alleg-imageWidth input[type="text"]').change();
+    $('.alleg-imageMaxWidth input[type="text"]').change();
     $('#pageWidth').change();
 
 }
