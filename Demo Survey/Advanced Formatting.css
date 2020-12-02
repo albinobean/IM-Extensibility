@@ -214,3 +214,107 @@ input:checked + .slider:before {
         top:0;
     }
 /* END auto-hide test mode banner */
+/* BEGIN formatting of comment quality progress bar */
+    .progressBarContainer{
+        float: left;
+        height: 135px;
+        width: 1px !important;
+        border: solid #253743 1px;
+        margin-right: 10px;
+        background-color: #253743;
+    }
+    
+    .progressBarContainer div{
+        background-color: #717C7D;
+        max-height: 100%;
+        width: 3px;
+        margin: 0 0 0 -1px;
+        position: relative;
+    }
+    .progressBarContainer div:before{
+        height: 9px;
+        width: 9px;
+        background-color: #253743;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        margin:0;
+        left:-2.5px;
+        bottom:-1px;
+        content:'';
+    }
+/* END formatting of comment quality progress bar */
+/* BEGIN formatting of comment quality related image */
+    .commentWithImageEngagement{
+        float:left;
+    }
+    .commentQualityImage{
+        height:100px !important;
+        width:100px !important;
+        float:left;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+        margin:1px;
+        padding: 10px;
+    }
+/* END formatting of comment quality quality related image */
+/* Google API Chart Formats */
+/* .alleg-WorkRemotelyContainer,.alleg-TransitionRatingContainer{
+    width: 45% !important;
+} */
+.alleg-WorkRemotelyContainer{float: right;}
+.alleg-TransitionRatingContainer{float:left;}
+.alleg-MostChallengingContainer{clear: both;}
+.alleg-digitalTransformation1,.alleg-digitalTransformation2,.alleg-digitalTransformation3,.alleg-digitalTransformation4,.alleg-digitalTransformation5,.alleg-workRemotely1,.alleg-workRemotely2,.alleg-workRemotely3,.alleg-workRemotely4,.alleg-workRemotely5,.alleg-mostChallenging1,.alleg-mostChallenging2,.alleg-mostChallenging3,.alleg-mostChallenging4,.alleg-mostChallenging5,.alleg-mostChallenging6,.alleg-mostChallenging7,.alleg-mostChallenging8,.alleg-transitionRating1,.alleg-transitionRating2,.alleg-transitionRating3,.alleg-transitionRating4,.alleg-transitionRating5{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 350px;
+    margin-top: 10px;
+}
+.alleg-digitalTransformation1>span,.alleg-digitalTransformation2>span,.alleg-digitalTransformation3>span,.alleg-digitalTransformation4>span,.alleg-digitalTransformation5>span,.alleg-workRemotely1>span,.alleg-workRemotely2>span,.alleg-workRemotely3>span,.alleg-workRemotely4>span,.alleg-workRemotely5>span,.alleg-mostChallenging1>span,.alleg-mostChallenging2>span,.alleg-mostChallenging3>span,.alleg-mostChallenging4>span,.alleg-mostChallenging5>span,.alleg-mostChallenging6>span,.alleg-mostChallenging7>span,.alleg-mostChallenging8>span,.alleg-transitionRating1>span,.alleg-transitionRating2>span,.alleg-transitionRating3>span,.alleg-transitionRating4>span,.alleg-transitionRating5>span{
+    display:none;
+}
+.alleg-digitalTransformation1:before,.alleg-digitalTransformation2:before,.alleg-digitalTransformation3:before,.alleg-digitalTransformation4:before,.alleg-digitalTransformation5:before{
+    content: "Digital Transformation";
+}
+.alleg-workRemotely1:before,.alleg-workRemotely2:before,.alleg-workRemotely3:before,.alleg-workRemotely4:before,.alleg-workRemotely5:before{
+    content:"Work Remotely";
+}
+.alleg-mostChallenging1:before,.alleg-mostChallenging2:before,.alleg-mostChallenging3:before,.alleg-mostChallenging4:before,.alleg-mostChallenging5:before,.alleg-mostChallenging6:before,.alleg-mostChallenging7:before,.alleg-mostChallenging8:before{
+    content:"Most Challenging";
+}
+.alleg-transitionRating1:before,.alleg-transitionRating2:before,.alleg-transitionRating3:before,.alleg-transitionRating4:before,.alleg-transitionRating5:before{
+    content:"Transition Rating";
+}
+.alleg-digitalTransformation1:before,.alleg-digitalTransformation2:before,.alleg-digitalTransformation3:before,.alleg-digitalTransformation4:before,.alleg-digitalTransformation5:before,.alleg-workRemotely1:before,.alleg-workRemotely2:before,.alleg-workRemotely3:before,.alleg-workRemotely4:before,.alleg-workRemotely5:before,.alleg-mostChallenging1:before,.alleg-mostChallenging2:before,.alleg-mostChallenging3:before,.alleg-mostChallenging4:before,.alleg-mostChallenging5:before,.alleg-mostChallenging6:before,.alleg-mostChallenging7:before,.alleg-mostChallenging8:before,.alleg-transitionRating1:before,.alleg-transitionRating2:before,.alleg-transitionRating3:before,.alleg-transitionRating4:before,.alleg-transitionRating5:before{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.alleg-digitalTransformation1{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=630844013&format=image');}
+.alleg-digitalTransformation2{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=245029202&format=image');}
+.alleg-digitalTransformation3{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1293382150&format=image');}
+.alleg-digitalTransformation4{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=448867579&format=image');}
+.alleg-digitalTransformation5{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=2071154167&format=image');}
+.alleg-workRemotely1{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=861337032&format=image');}
+.alleg-workRemotely2{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=618481400&format=image');}
+.alleg-workRemotely3{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1095524804&format=image');}
+.alleg-workRemotely4{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1268327120&format=image');}
+.alleg-workRemotely5{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1351717735&format=image');}
+.alleg-mostChallenging1{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=353890277&format=image');}
+.alleg-mostChallenging2{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1415582228&format=image');}
+.alleg-mostChallenging3{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1238855826&format=image');}
+.alleg-mostChallenging4{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=410701001&format=image');}
+.alleg-mostChallenging5{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1094814404&format=image');}
+.alleg-mostChallenging6{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=882488579&format=image');}
+.alleg-mostChallenging7{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1127645290&format=image');}
+.alleg-mostChallenging8{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1054115999&format=image');}
+.alleg-transitionRating1{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=887900070&format=image');}
+.alleg-transitionRating2{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=2125969727&format=image');}
+.alleg-transitionRating3{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=635263967&format=image');}
+.alleg-transitionRating4{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1600702423&format=image');}
+.alleg-transitionRating5{background-image: url('https://docs.google.com/spreadsheets/d/e/2PACX-1vTNHjNEUT_ktKqDa0QfDdQvcGQ8R6ayWpPlnXZSyAA_E4S30MBvL6kSSsLnjYgPINUWvMwPb0fqExTp/pubchart?oid=1497981166&format=image');}

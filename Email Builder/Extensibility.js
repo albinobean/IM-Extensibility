@@ -226,7 +226,7 @@ function showCorrectNumberOfAnchors(){
     $('input[name="Q0000009C.Q0000009D"]').change(function(){
         // Hide all anchors to start
         $('.scaleAnchor').hide();
-        switch($(this).attr('value')){
+        switch(parseInt($(this).attr('value'))){
             case 3: //Show all 5 anchors
                 $('.scaleAnchor').show();
                 break;

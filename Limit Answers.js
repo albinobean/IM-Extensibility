@@ -1,5 +1,4 @@
 function LimitAnswers(qTag,mx){
-
     var boxes=$('#' + qTag + '_question input:checkbox');
     if($('#' + qTag + '_question input:checkbox:checked').length>=mx){
         for(i=0;i<boxes.length;i++){
@@ -15,7 +14,6 @@ function LimitAnswers(qTag,mx){
             $('#' + qTag + '_question input:checkbox')[i].disabled=false;
         }
     }
-
 }
 
 function limitRowAnswers(rowTag,mx){

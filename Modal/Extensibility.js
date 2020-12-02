@@ -3,7 +3,7 @@ $(document).ready(function(){
     switch(curPage) {
         case 3:
             
-            showModalBeforeExit(1);
+            showModalBeforeExit(1); //The 1 indicates the maximum times the modal will be called per session
             break;
     }
 });

@@ -1,3 +1,4 @@
+// Must include a reference to Google Chart APIs in the "External Javascript Files" section under Client Extensibility: https://www.gstatic.com/charts/loader.js
 var InMomentFavIcon='https://maritzcxenterpriseoperations.allegiancetech.com/surveys/images/VW8KA6/Preview/favicon16x16.png'
 $(document).ready(function () {
     setFavicon(InMomentFavIcon);
@@ -58,30 +59,96 @@ $(document).ready(function () {
         case 6:
             $('.nextButton').unbind();
             $('.nextButton').click(function(){
-                logSurveyResponse('LTR',$('#LTR_row .ui-state-active').text());
-                // setTimeout(nextButtonClicked(),3000);
+                var scores=[];
+                // scores.push(logScoreObject('LTR',$('#LTR_row .ui-state-active').text()));
+                scores.push(logScoreObject('Transition Rating',$('#TransitionRating_row .ui-state-active').text()));
+                scores.push(logScoreObject('Most Challenging',$('#mostChallenging_question .survey-answer-selected+td .answerText').text()));
+                scores.push(logScoreObject('Work Remotely',$('#workRemotelyPercent_question .survey-answer-selected+td .answerText').text()));
+                scores.push(logScoreObject('Digital Transformation',$('#digitalTransformation_question .survey-answer-selected+td .answerText').text()));
+                logSurveyResults(scores);
+                setTimeout(nextButtonClicked(),3000);
             });
+            // $('#LTR_row').click(function(){
+            //     logSurveyResponse('LTR',$('#LTR_row .ui-state-active').text());
+            // })
+            // $('.nextButton').unbind();
+            // $('.nextButton').click(function(){
+            //     logSurveyResponse('LTR',$('#LTR_row .ui-state-active').text());
+            //     logSurveyResponse('Transition Rating',$('#TransitionRating_row .ui-state-active').text());
+            //     logSurveyResponse('Most Challenging',$('#mostChallenging_question .survey-answer-selected input').val());
+            //     logSurveyResponse('Work Remotely',$('#workRemotelyPercent_question .survey-answer-selected input').val());
+            //     logSurveyResponse('Digital Transformation',$('#digitalTransformation_question .survey-answer-selected input').val());
+            //     setTimeout(nextButtonClicked(),3000);
+            // });
             break;
-        case 8:
+        case 7:
+            prepareCharts();
+            break;
+        case 9:
             $('#buttonToRadio_row').closest('table').addClass('last2ButtonsToRadios');
             $('#multiQuestion7_row').closest('table').addClass('last2ButtonsToRadios');
             $('#multiQuestion11_row').closest('table').addClass('last2ButtonsToRadios');
             multiQuestion7
             break;
-        case 9:
+        case 10:
             $('.alleg-smartProbeBelow .smart-probe-container').each(function(){
                 $(this).parent().append($(this));
             });
             break;
-        case 10:
+        case 11:
             moveHelpTextAfter();
             $('input[type="text"]').change(function(){
                 setSmartProbeConfiguration('smartProbeConfig',$('#numberOfWords').val(),$('#tooShortPrompt').val(),$('#keywordsConfig').val(),$('#keywordsNumberOfWords').val(),$('#keywordPrompt').val());
             });
             break;
+        case 12:
+            createCommentProgressBar('inputEncouragement',30);
+            var imageUrls=[];
+            for(var i=0;i<11;i++){
+                imageUrls.push('https://dell.inquisiteasp.com/surveys/images/KRYF39/Preview/button_' + i + '_53.jpg');
+            }
+            changeImagesBasedOnCommentProgress('inputEncouragement',imageUrls,30);
+            break;
 
     }
 });
+
+function changeImagesBasedOnCommentProgress(commentTag,imageUrlArray,targetWords){
+    var comment=$('#' + commentTag);
+    comment.addClass('commentWithImageEngagement');
+    var imgContainer=$('<div id="' + commentTag + 'EngagementImage" class="commentQualityImage"></div>')
+    var commentQuestion=$('#' + commentTag + '_question');
+    commentQuestion.append(imgContainer);
+    comment.on('input',function(){
+        setImageByWordCount(imgContainer,commentTag,imageUrlArray,targetWords);
+    });
+    setImageByWordCount(imgContainer,commentTag,imageUrlArray,targetWords);
+}
+function setImageByWordCount(imgContainer,commentTag,imageUrlArray,targetWords){
+    var ndx=Math.floor(countWords(commentTag)/targetWords * imageUrlArray.length);
+    if(ndx>=imageUrlArray.length) ndx=imageUrlArray.length-1;
+    imgContainer.css('background-image','url(' + imageUrlArray[ndx] + ')');
+}
+function countWords(questionTag){
+    return $('#' + questionTag).val().replace(/\s\s*/g,' ').split(' ').length;
+}
+function setProgressBar(progressBar,commentTag,targetWords){
+    progressBar.css('height',(1 - countWords(commentTag)/targetWords) * 100 + '%');
+}
+function createCommentProgressBar(commentTag,targetWords){
+    var progressBarContainer=$('<div id="' + commentTag + 'ProgressBarContainer" class="progressBarContainer"></div>');
+    var progressBar=$('<div id="' + commentTag + 'ProgressBar class="progressBarForComment" style="height:100%;"></div>');
+    progressBarContainer.append(progressBar);
+    var comment=$('#' + commentTag);
+    comment.addClass('commentWithProgressBar')
+    comment.css('float','left');
+    $('#' + commentTag + '_question').prepend(progressBarContainer);
+    comment.on('input',function(){
+        setProgressBar(progressBar,commentTag,targetWords);
+    });
+    setProgressBar(progressBar,commentTag,targetWords);
+}
+
 function setSmartProbeConfiguration(qTag,numberOfWords,tooLittlePrompt,keywords,keywordNumberOfWords,keywordPrompt){
     if(numberOfWords){
         $('#' + qTag + '_too-little').attr('data-number-of-words',numberOfWords);
@@ -100,7 +167,7 @@ function setSmartProbeConfiguration(qTag,numberOfWords,tooLittlePrompt,keywords,
     }
 }
 // Randomly select answer code
-function SelectFirstRadio(qTag,SamePageDisplayLogic){
+function SelectFirstRadio(qTag,SamePageDisplayLogic,allowAnswerChange){
     //The HTML of the question is different if it is using same-page display logic
     //This should be true if the answers' display logic is based on previous questions on the same page
     var answerSelected=false;
@@ -111,7 +178,7 @@ function SelectFirstRadio(qTag,SamePageDisplayLogic){
         var visibleRowsIdentifier='#' + qTag + '_question .question table tr';
     }
     //See if one of the visible answers is already selected -- don't change if one has already been selected
-    answerSelected=$(visibleRowsIdentifier + ' .checked').length>0;
+    answerSelected=$(visibleRowsIdentifier + ' .checked').length>0 && !allowAnswerChange;
     $(visibleRowsIdentifier).each(function(){
         if($(this).css('display')!='none' && !answerSelected){
             $(this).find('.iCheck-helper').click();
@@ -242,18 +309,38 @@ function showModalBeforeExit(MaxTimesToShow){
     });
 }
 // End Modal code
+async function logSurveyResults(scores){
+    var url='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev'
+    var data={
+        scores:JSON.stringify(scores),
+        callType:'addScores',
+        survey:$('input[name=id]').val(),
+        authKey:$('input[name="respondent"]').val()
+    }
+    $.get(url,data,function(status){
+        nextButtonClicked();
+    });
+}
+function logScoreObject(question,score){
+    return {
+        survey:$('input[name=id]').val(),
+        authKey:$('input[name="respondent"]').val(),
+        question:question,
+        score:score,
+        callType:'addScore'
+    }
+}
 function logSurveyResponse(question,score){
     var url='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev'
     var data={
         survey:$('input[name=id]').val(),
-        authKey:'Demo',
+        authKey:$('input[name="respondent"]').val(),
         question:question,
         score:score,
         callType:'addScore'
     }
     $.get(url,data,function(status){
-        console.log(status);
-        nextButtonClicked();
+        // nextButtonClicked();
     });
 }
 function checkNextButtonEligibility(questionTag,validAnswers){
@@ -284,4 +371,129 @@ function moveHelpTextAfter(){
     $('.help-text-link').each(function(){
         $(this).closest('.questionText').append("<p class='questionDescription'>" + $(this).children('img').attr('aria-label') + "</p>")
     });
+}
+
+// Report back to respondents - draw charts
+var returnedChartData;
+var googleAPI='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev';
+function getGoogleDataTable(questionTag,selectedAnswer,showAsPercent,showLabels){
+    var barColor='#C8C9C7';
+    var highlightBarColor='#00447C';
+    var rawData=returnedChartData[questionTag];
+    var data=[['Answer','Score',{role:'style'},{role:'annotation'}]];
+    
+    if(showLabels) {
+        var data=[['Answer','Score',{role:'style'},{role:'annotation'}]];
+    } else {
+        var data=[['Answer','Score',{role:'style'}]];
+    }
+    
+    for(var i=0;i<rawData.length;i++){
+        if(rawData[i][0] && rawData[i][0].length>0){
+            if(rawData[i][0]==selectedAnswer){
+                var color=highlightBarColor;
+            } else {
+                var color=barColor;
+            }
+            var values=[];
+            if(showAsPercent){
+                values=[rawData[i][0],rawData[i][2],color];
+                if(showLabels) values.push(rawData[i][2]);
+            } else {
+                values= [rawData[i][0],rawData[i][1],color];
+                if(showLabels) values.push(rawData[i][1]);
+            }
+            data.push(values);
+        }
+    }
+    console.log(data);
+
+    // console.log(JSON.stringify(data));
+    var dataTable=google.visualization.arrayToDataTable(data);   
+    if(showAsPercent){
+        var formatter=new google.visualization.NumberFormat({pattern:'#.#%'});
+        formatter.format(dataTable,1);
+        // if(showLabels) formatter.format(dataTable,3);
+    }    
+    if(showLabels){
+        var view = new google.visualization.DataView(dataTable);
+        view.setColumns([0, 1,
+                        { calc: "stringify",
+                            sourceColumn: 1,
+                            type: "string",
+                            role: "annotation" },
+                        2]);
+                        formatter.format(view,3);
+        return view;       
+    }
+    return dataTable;
+}
+
+function drawBarChart(questionTag,elementId,chartOptions,selectedAnswer,showAsPercent,showLabels,chartTitle){   
+    var chart= new google.visualization.BarChart(document.getElementById(elementId));
+    if(!chartOptions) chartOptions={};
+    if(!chartOptions['legend']) chartOptions['legend']={}
+    chartOptions['legend']['position']='none';
+    if(showAsPercent){
+
+        if(!chartOptions['hAxis']) chartOptions['hAxis']={};
+        chartOptions['hAxis']['format']='percent';
+        if(!chartOptions['vAxis']) chartOptions['vAxis']={};
+        chartOptions['vAxis']['format']='percent';
+    }
+    if(chartTitle) chartOptions.title=chartTitle;
+    console.log(chartOptions);
+    chart.draw(getGoogleDataTable(questionTag,selectedAnswer,showAsPercent,showLabels),chartOptions);
+    $('#' + elementId).show();
+}
+// This is the function that should be called on the appropriate page to start the process of getting data and then drawing charts
+function prepareCharts(){
+    google.charts.load('current',{'packages':['corechart']});
+    google.charts.setOnLoadCallback(retrieveChartData);
+}
+function retrieveChartData(){
+    if(!returnedChartData){
+        var data={
+            survey:$('input[name=id]').val(),
+            callType:'dataSummary'
+        }
+        $.get(googleAPI,data,function(data,status){
+            console.log(data);
+            data=JSON.parse(data);
+            returnedChartData=data['dataSummary'];
+            // console.log(returnedChartData);
+            drawCharts();
+        });
+    } else {
+        drawCharts();
+    }
+}
+// This is fired after the data is received.  Call your drawChart functions from here
+function drawCharts(){
+    var chartOptions={
+        width:$('#survey').width() * .45,
+        height:450,
+        backgroundColor: 'none',
+        titleTextStyle:{fontSize:16}
+    }
+    // drawBarChart('LTR',$('.alleg-LTRContainer').attr('id'),chartOptions,$('#mcx-tag-LTR').val(),true);
+    
+    if($('#mcx-tag-TransitionRating').val()){
+        selectedAnswer=parseInt($('#mcx-tag-TransitionRating').val()) + 1;
+        drawBarChart('Transition Rating',$('.alleg-TransitionRatingContainer').attr('id'),chartOptions,selectedAnswer,true,true,'Transition Rating')
+    }
+    if($('#mcx-tag-workRemotelyPercent').val()){
+        selectedAnswer=['0% - 25%','26% - 50%','51% - 75%','76% - 99%','100%'][parseInt($('#mcx-tag-workRemotelyPercent').val())];
+        drawBarChart('Work Remotely',$('.alleg-WorkRemotelyContainer').attr('id'),chartOptions,selectedAnswer,true,true,'Percent Working Remotely')
+    }
+    chartOptions.width=$('#survey').width();
+    if($('#mcx-tag-mostChallenging').val()){
+        selectedAnswer=['Provision of equipment','Security of data or information','Providing support','Speed of access to tools / software needed','Staffing and resource management within IT','Lack of collaboration tools','Training of staff to use new tools','Communication to remote workforces'][parseInt($('#mcx-tag-mostChallenging').val())];
+        drawBarChart('Most Challenging',$('.alleg-MostChallengingContainer').attr('id'),chartOptions,selectedAnswer,true,true,'Most Challenging')
+    }
+    chartOptions.height=600;
+    if($('#mcx-tag-digitalTransformation').val()){
+        var selectedAnswer=['No digital plans; limited initiatives','Ad hoc/siloed digital projects only','Coordinated digital initiatives in place','Company-wide digital transformation in progress','Digital is fully embedded in everything we do'][parseInt($('#mcx-tag-digitalTransformation').val())];
+        drawBarChart('Digital Transformation',$('.alleg-DigitalTransformationContainer').attr('id'),chartOptions,selectedAnswer,true,true,'Digital Transformation Stage')
+    }
 }
