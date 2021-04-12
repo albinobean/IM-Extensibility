@@ -102,12 +102,13 @@ $(document).ready(function () {
             });
             break;
         case 12:
-            createCommentProgressBar('inputEncouragement',30);
+            createCommentProgressBar('inputEncouragement',30,0.5,0.7);
             var imageUrls=[];
             for(var i=0;i<11;i++){
                 imageUrls.push('https://dell.inquisiteasp.com/surveys/images/KRYF39/Preview/button_' + i + '_53.jpg');
             }
             changeImagesBasedOnCommentProgress('inputEncouragement',imageUrls,30);
+            activeSmartProbe('inputEncouragement');
             break;
 
     }
@@ -119,7 +120,7 @@ function changeImagesBasedOnCommentProgress(commentTag,imageUrlArray,targetWords
     var imgContainer=$('<div id="' + commentTag + 'EngagementImage" class="commentQualityImage"></div>')
     var commentQuestion=$('#' + commentTag + '_question');
     commentQuestion.append(imgContainer);
-    comment.on('input',function(){
+    comment.on('keyup',function(){
         setImageByWordCount(imgContainer,commentTag,imageUrlArray,targetWords);
     });
     setImageByWordCount(imgContainer,commentTag,imageUrlArray,targetWords);
@@ -132,10 +133,23 @@ function setImageByWordCount(imgContainer,commentTag,imageUrlArray,targetWords){
 function countWords(questionTag){
     return $('#' + questionTag).val().replace(/\s\s*/g,' ').split(' ').length;
 }
-function setProgressBar(progressBar,commentTag,targetWords){
-    progressBar.css('height',(1 - countWords(commentTag)/targetWords) * 100 + '%');
+function setProgressBar(progressBar,commentTag,targetWords,yellowThreshold,greenThreshold){
+    const progress=countWords(commentTag)/targetWords;
+    const container=progressBar.parent();
+    console.log(`Progress: ${progress}`);
+    container.removeClass('yellowProgressBar');
+    container.removeClass('greenProgressBar');
+    if(yellowThreshold && progress>=yellowThreshold) {
+        console.log('Yellow');
+        container.addClass('yellowProgressBar');
+    }
+    if(greenThreshold && progress>=greenThreshold) {
+        console.log('Green');
+        container.addClass('greenProgressBar');
+    }
+    progressBar.css('height',(1 - progress) * 100 + '%');
 }
-function createCommentProgressBar(commentTag,targetWords){
+function createCommentProgressBar(commentTag,targetWords,yellowThreshold,greenThreshold){
     var progressBarContainer=$('<div id="' + commentTag + 'ProgressBarContainer" class="progressBarContainer"></div>');
     var progressBar=$('<div id="' + commentTag + 'ProgressBar class="progressBarForComment" style="height:100%;"></div>');
     progressBarContainer.append(progressBar);
@@ -143,10 +157,10 @@ function createCommentProgressBar(commentTag,targetWords){
     comment.addClass('commentWithProgressBar')
     comment.css('float','left');
     $('#' + commentTag + '_question').prepend(progressBarContainer);
-    comment.on('input',function(){
-        setProgressBar(progressBar,commentTag,targetWords);
+    comment.on('keyup',function(){
+        setProgressBar(progressBar,commentTag,targetWords,yellowThreshold,greenThreshold);
     });
-    setProgressBar(progressBar,commentTag,targetWords);
+    setProgressBar(progressBar,commentTag,targetWords,yellowThreshold,greenThreshold);
 }
 
 function setSmartProbeConfiguration(qTag,numberOfWords,tooLittlePrompt,keywords,keywordNumberOfWords,keywordPrompt){
@@ -309,14 +323,14 @@ function showModalBeforeExit(MaxTimesToShow){
     });
 }
 // End Modal code
-async function logSurveyResults(scores){
-    var url='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev'
+function logSurveyResults(scores){
+    var url='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev';
     var data={
         scores:JSON.stringify(scores),
         callType:'addScores',
         survey:$('input[name=id]').val(),
         authKey:$('input[name="respondent"]').val()
-    }
+    };
     $.get(url,data,function(status){
         nextButtonClicked();
     });
@@ -328,17 +342,17 @@ function logScoreObject(question,score){
         question:question,
         score:score,
         callType:'addScore'
-    }
+    };
 }
 function logSurveyResponse(question,score){
-    var url='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev'
+    var url='https://script.google.com/macros/s/AKfycbwU4n30OecLCtAvKsM02WDVhzHcXeCnWN7QnIkWt95-KoDPEbY/dev';
     var data={
         survey:$('input[name=id]').val(),
         authKey:$('input[name="respondent"]').val(),
         question:question,
         score:score,
         callType:'addScore'
-    }
+    };
     $.get(url,data,function(status){
         // nextButtonClicked();
     });
@@ -355,7 +369,7 @@ function setFavicon(iconUrl){
 }
 function addPreviewOnlyToggle(){
     if($('#TestModeBanner').length>0 && $('.alleg-previewOnly').length>0){
-        var toggle=$('<span id="previewOnlyToggle" style="margin-right:5px;">Show Preview-only fields</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label>')
+        var toggle=$('<span id="previewOnlyToggle" style="margin-right:5px;">Show Preview-only fields</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label>');
         toggle.click(function(){
             localStorage.setItem('showPreviewOnlyQuestions',$(this).children('input:checked').length)
             if($(this).children('input:checked').length==1){$('.alleg-previewOnly').show();} else {$('.alleg-previewOnly').hide();}
@@ -496,4 +510,25 @@ function drawCharts(){
         var selectedAnswer=['No digital plans; limited initiatives','Ad hoc/siloed digital projects only','Coordinated digital initiatives in place','Company-wide digital transformation in progress','Digital is fully embedded in everything we do'][parseInt($('#mcx-tag-digitalTransformation').val())];
         drawBarChart('Digital Transformation',$('.alleg-DigitalTransformationContainer').attr('id'),chartOptions,selectedAnswer,true,true,'Digital Transformation Stage')
     }
+}
+function moveSmartProbeBelow(){
+    $('.smart-probe-container').each(function(){
+        $(this).parent().append($(this));
+    });
+}
+function activeSmartProbe(qTag){
+    $(`#${qTag}_question .smart-probe-container`).each(function(){
+        $(this).parent().append($(this));
+        $(this).addClass('active-smart-probe-container');
+    })
+    $(`#${qTag}_too-little`).attr('data-number-of-words',0); //Disables the too little words or else it will immediately pop up
+    const keywords=$(`#${qTag}_not-specific`).attr('data-keywords').split(',');
+    $(`#${qTag}_question textarea`).on('keyup',function(){
+        const response=$(this).val();
+        for(let i=0;i<keywords.length;i++){
+            if(response.indexOf(keywords[i])>=0){
+                Allegiance.validateSmartProbe();
+            }
+        }
+    });
 }
