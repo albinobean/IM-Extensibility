@@ -1,0 +1,2442 @@
+#Q000087CF_Q7 > span:nth-child(1) > span:nth-child(1) {
+    font-size: 80% !important;
+}
+#Q000087CF_Q7 > span:nth-child(1) > span:nth-child(2) {
+    font-size: 80% !important;
+}
+#Q00008833_text > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > strong:nth-child(1) {
+    font-weight: 500 !important;
+    font-size: 22px;
+}
+
+#Q00342314_image {
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.page2 .backButton {display: none !important;}
+
+/*.Scale1Cell {
+    line-height: 10px !important;
+}*/
+
+/*ADD TO THEME*/
+
+.alleg-hide{
+   display:none;
+}
+
+/*#Status_question {display:none;}
+
+.first.percentComplete10.done, .percentComplete20.done, .percentComplete30.ready, .percentComplete40.ready, .percentComplete50.ready, .percentComplete60.ready, .percentComplete70.ready, .percentComplete80.ready, .percentComplete90.ready, .last.percentComplete100.ready
+{
+   width:9%;
+}*/
+
+#survey > fieldset > div.right.topNavigation > table > tbody > tr > td > div.minimal.progressBar > ul
+{
+   overflow:hidden;
+}
+
+.percentComplete{
+    float: right;
+    padding: 0px 0px 0px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-right: 5px;
+    color: #000; /*defaults to black, update the color here per the theme design*/
+    background-color: #fff;
+}
+
+.clearcell {
+border: solid 0px #fff !important;
+}
+
+#placeholder > form > table {
+   width: 700px !important;
+}
+
+#placeholder .questionText {
+  line-height: 2;
+}
+
+.\<\!--OPT_OUT_BUTTON_THEME--\> {
+    background: #f1891f;
+    border: 0px;
+    height: 25px;
+    border-radius: 4px;
+    color: white;
+    width: 100px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/*THEME START */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+/* START classes for all devices */
+#headerTextContainer {
+   display: none !important;
+}
+.alleg-naLastCol td:nth-child(13) .checked {
+    border-color: gray !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-size: 115% !important;
+    color: #4d5259;
+}
+
+
+tbody#undefined {
+    display: none !important;
+} 
+
+.page0 *,
+.page0 *::before,
+.page0 *::after,
+#mainForm *,
+#mainForm *::before,
+#mainForm *::after,
+.canvasContainer #canvas *,
+.canvasContainer #canvas *::before,
+.canvasContainer #canvas *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#mainForm {
+    min-height: 100%;
+    position: relative;
+}
+
+#template {
+    min-height: calc(100vh - 9.7rem);
+    background-image: url('https://thomsonreuters.allegiancetech.com/surveys/images/MHWN7B/Preview/tr_h_lg_rgb_ps01.png?cacheToken=20210305120637');
+    background-position: calc(50% - 350px) top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 300px auto;
+}
+
+:focus {
+    outline: none !important;
+}
+
+.heading1 {
+    font: 700 2.2rem / 130% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #2b2a29;
+    text-transform: none;
+    font-style: normal;
+}
+
+.heading2 {
+    font: 700 1.9rem / 130% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #2b2a29;
+    text-transform: none;
+    font-style: normal;
+}
+
+.heading3 {
+    font: 400 1.5rem / 130% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #2b2a29;
+    text-transform: none;
+    font-style: normal;
+}
+
+.normal {
+    font: 400 1rem / 150% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #404040;
+}
+
+#survey a {
+    color: #fb7100;
+    text-decoration: none;
+    font-family: inherit;
+    border-bottom: 1px solid #fb7100;
+    transition: border-bottom .3s ease, color .3s ease;
+}
+    
+#survey a:hover {
+    color: #fb7100;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+    
+border {
+    border-color: #4d5259 !important;
+}
+
+.object { /* removes outline for focused objects */
+    outline: 0;
+    margin: 10px 0px;
+    background-color: transparent !important;
+    padding: 0px 0px 18px 0px !important;
+    border-radius: 0px;
+    border-bottom: 1px solid #cecece;
+}
+
+#placeholder { /* handles the styles for error and opt out messages */
+    font: 400 1rem / 160% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    padding: 0px 0px 45px 0px;
+    margin-left: 0;
+}
+
+#placeholder table {
+    width: 100% !important;
+}
+
+.pageBackground {
+    background-color: #fff;
+}
+
+#survey {
+    margin: 0 auto;
+    width: 100% !important;
+    max-width: 976px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 46px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+   position: relative;
+   top: 90px;
+}
+
+.surveyBackground {
+    background-color: #fff;
+}
+
+#survey #canvas {   /* removes default margin-left */
+    width: 976px;
+    margin: 0 auto;
+    min-height: 100px;
+    background-color: transparent;
+    padding: 15px 40px 10px 40px;
+}
+
+.topNavigation {    /* use first 3 to define color & last value to set transparency (0 = 100% transparent) */
+    background-color: #ffffff;
+    text-align: right !important;
+    padding: 0px !important;
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin: 0 auto;
+    border-top: 0px solid #fff;
+    border-bottom: 0px solid #eee;
+    max-width: 976px;
+}
+
+.topNavigation .navigationContainer {
+    width: 896px;
+    margin: 0 auto;
+    float: none !important;
+    padding: 0;
+    background-color: transparent;
+    border-bottom: 0px solid #e9e9e9;
+    height: 4.2rem;
+}
+
+.bottomNavigation {
+    background-color: #fff;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.bottomNavigation .navigationContainer {
+    width: 896px;
+    background-color: transparent;
+    border-top: 0px solid #efefef;
+    margin-bottom: 36px;
+    height: auto;
+}
+
+.tableDescription,
+.questionText {
+    font: 400 1.15rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #2b2a29;
+}
+
+.questionText,
+.tableDescription {     
+    margin-bottom: 15px !important;   /* defines white space between text and next element */
+}
+
+.tableQuestion,
+.answerText {
+    display: inline-block;
+    margin: 0px;
+    font: 400 1rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #2b2a29;
+}
+
+.answerText {
+    margin-left: 8px;   /* defines white space between form elements and text */
+}
+
+.answerText:hover {
+    color: #fb7100;
+}
+
+.question .other input[type="text"] {
+    margin-left: 10px !important;
+}
+
+.question label {
+    vertical-align: middle;
+}
+
+.questionText.checkbox {
+    margin-left: 12px !important;
+    vertical-align: middle !important;
+}
+
+/* START Header */
+
+#header {
+    height: 200px;
+    background-image: url('https://thomsonreuters.allegiancetech.com/surveys/images/MHWN7B/Preview/survey_7.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    background-color: #fff;
+    padding: 0;
+    max-width: 976px;
+    margin: 0 auto;
+}
+
+#headerLogoContainer {
+    height: 84px;
+    width: 100%;
+    background: rgba(255,255,255,1);
+    position: fixed;
+    z-index: 99;
+    max-width: 976px;
+    border-bottom: 1px solid #fff;
+}
+
+#headerLogoImage {
+    /*background-image: url(https://junipernetworks.allegiancetech.com/surveys/images/QADDCD/Preview/logo_header_juniper.png);*/
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: scroll;
+    -webkit-background-size: 146px auto;
+    -moz-background-size: 146px auto;
+    -o-background-size: 146px auto;
+    background-size: 146px auto;
+    width: 896px;
+    height: 90px;
+    margin: 0 auto;
+    display: block;
+}
+
+#headerTextContainer {
+    display:none;
+}
+
+#headerText {
+    background-color: transparent;
+    color: #fff;
+    font: 700 2.2rem / 1 Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    text-transform: none;
+    width: 100%;
+    padding: 10px 190px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#headerTextContainer div {
+    text-align: left;
+}
+
+/* END Header */
+
+/* START Footer */
+
+#alleg-footer {
+    width: 100%;
+    background: transparent;
+    border-top: 0px solid #fff;
+    position: relative;
+    height: 5rem;
+    display: flex;
+        display: -ms-flexbox;
+    align-items: center;
+        -ms-flex-align: center;
+    max-width: 976px;
+    margin: 0 auto;
+}
+
+#alleg-footer .container {
+    width: 940px;
+    height: auto;
+    padding: 0 30px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background: #f0f3f5;
+    font: 300 .95rem / 140% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    display: flex;
+        display: -ms-flexbox;
+    flex-direction: row;
+        -ms-flex-direction: row;
+    justify-content: space-between;
+        -ms-flex-pack: justify;
+    flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+}
+
+#alleg-footer .footer1,
+#alleg-footer .footer2 {
+    display: inline-block;
+    align-self: center;
+}
+
+#alleg-footer .footer2 {
+    background: url(https://junipernetworks.allegiancetech.com/surveys/images/QADDCD/Preview/logo_footer_juniper.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: scroll;
+    -webkit-background-size: 110px auto; 
+    -moz-background-size: 110px auto;
+    -o-background-size: 110px auto;
+    background-size: 110px auto;
+    width: 110px;
+    height: 6rem;
+    order: -1;
+}
+
+#alleg-footer a {
+    color: #4d5259;
+    text-decoration: none;
+    margin: 0px 20px;
+    font-weight: 300;
+    text-transform: none;
+    border-bottom: 1px solid #a5aab3;
+    transition: border-bottom .3s ease-in-out;
+}
+
+#alleg-footer a:hover {
+    color: #4d5259;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+#alleg-footer a:first-of-type {
+    margin-left: 0px;
+}
+
+#alleg-footer a:last-of-type {
+    margin-right: 0px;
+}
+
+/* END Footer */
+
+/* START powered by */
+
+#alleg-poweredBy {
+    width: 100%;
+    background: #fff;
+    border-top: 0px solid #fff;
+    position: relative;
+    height: 3.7rem;
+    display: flex;
+        display: -ms-flexbox;
+    flex-direction: column;
+        -ms-flex-direction: column;
+    justify-content: center;
+        -ms-flex-pack: center;
+}
+
+#alleg-poweredBy .container {
+    width: 896px;
+    padding: 0 30px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font: 300 .9rem / 140% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    display: flex;
+        display: -ms-flexbox;
+    flex-direction: row;
+        -ms-flex-direction: row;
+    justify-content: flex-end;
+        -ms-flex-pack: end;
+    flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+    height: auto;
+}
+
+#alleg-poweredBy .poweredBy {
+    background: url(https://alias.mcxplatform.de/surveys/images/BMPX2F/Preview/maritzcx_logo_green.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: scroll;
+    -webkit-background-size: 94px auto; 
+    -moz-background-size: 94px auto;
+    -o-background-size: 94px auto;
+    background-size: 94px auto;
+    width: 165px;
+    height: 50px;
+    display: inline-block;
+    align-self: center;
+}
+
+#alleg-poweredBy .poweredBy::before {
+    content: 'Powered by ';
+    position: relative;
+    float: left;
+    color: #4b4b4b;
+    font-size: .8rem;
+    margin-top: 1.18rem;
+}
+
+/* END powered by */
+
+/* START table-checkmark */
+
+.alleg-table-checkmark .question table {
+    border: 1px solid #dbdbdb;
+    border-radius: 0px;
+}
+
+.alleg-table-checkmark .question table tr:hover  {
+    background-color: rgba(230,230,230,.5);
+}
+
+.alleg-table-checkmark .question table tr:not(:first-of-type) .ControlCell {
+    border-top: 1px solid #dbdbdb;
+}
+
+.alleg-table-checkmark .ControlCell {
+    padding: 10px 3px 10px 10px;
+    box-sizing: content-box !important;
+}
+
+.alleg-table-checkmark .question table td[data-column-type="answer"] {
+    border-top: 1px solid #dbdbdb;
+}
+
+.alleg-table-checkmark .question table td[data-display-sequence="0"] {
+    border-top: 0px solid #fff;
+}
+
+.alleg-table-checkmark .answerText {
+    padding: 8px 0px;
+}
+
+/* END table-checkmark */
+
+/* START Page Numbering */
+
+#mainForm .alleg-pages {
+    width: 896px !important;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 1rem !important;
+}
+
+#mainForm .alleg-pages .normal {
+    text-align: right;
+    font-size: 1.15rem !important;
+}
+
+/* END Page Numbering */
+
+/* START error message headerbar handling */
+
+div.validationError {
+    width: 100%;
+    position: fixed;
+    background-color: #fb7100 !important;
+    font: 400 1.15rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #fff !important;
+    padding: 0px !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 1000;
+}
+
+div.validationMessageIcon {
+    display: none !important;
+}
+
+div.validationCloseIcon {
+    margin-right: 10px !important;
+    margin-top: 10px !important;
+    border: 1px solid white;
+    padding: 2px 0px 0px 2px !important;
+    position: absolute;
+    right: 0;
+}
+
+div.validationMessageText {
+    margin: 2%;
+    padding-right: 4%;
+}
+
+.validationMessageText ul {
+    padding-left: 15px !important;
+}
+
+div.validationError .message {
+    color: #fff !important;
+    font: 700 1rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div.validationError .message:hover {
+    color: #e5e5e5 !important;
+    text-decoration: none !important;
+}
+
+div.validationMessageShadow {
+    display: none;
+}
+
+/* END error message headerbar handling */
+
+/* START error message text box questions */
+
+.answerText.requiredErrorText, 
+.answerText.requiredErrorText:hover { /* Formatting of error text above unanswered question */
+    margin-left: 0px;
+    font: 400 .9rem / 140% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #fff;
+    background-color: #fb7100;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.answerText.requiredErrorText::before, 
+.answerText.requiredErrorText:hover::before { /* Adding a FontAwesome icon to the above error text */
+    content: '\f071';
+    font-family: FontAwesome;
+    position: relative;
+    padding-right: 5px;
+    color: #fff;
+    font-size: 1.15rem;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#canvas input[type="text"].other-not-answered,
+#canvas .requiredErrorQuestionBackground textarea { /* Colouring of the text field with error */
+    background-color: rgba(86,152,197,.25) !important;
+    border-color: #fb7100 !important;
+    -webkit-box-shadow: 0 0 0 0px rgba(86,152,197,.25);
+    -moz-box-shadow: 0 0 0 0px rgba(86,152,197,.25);
+    box-shadow: 0 0 0 0px rgba(86,152,197,.25); /* offset-x, offset-y, blur-radius, spread-radius */
+}
+
+/* END error message text box questions */
+
+/* START Info Text Icon replacement */ 
+
+.hyperlink.help-text-link {
+    text-decoration: none !important;
+}
+
+.help-text-link::after {
+    content: '';
+    background-image: url(https://mcx.allegiancetech.de/surveys/images/HF2DBT/Preview/info_slb.png);
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 20px;
+    height: 22px;
+    position: absolute;
+    display: inline-block;
+}
+
+img.help-text-icon {
+    display: none !important;
+}
+
+.qtip-default {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff !important;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(65,65,65,.35);
+    padding: 7px;
+}
+
+.help-text.normal {
+    font-size: .9rem !important;
+}
+
+/* END Info Text Icon replacement */ 
+
+/* START checkbox & radio question styles */
+
+.ScaleHeader, 
+.multiScaleTableHeader {
+    line-height: 0;
+}
+
+.bonfire-header-text {
+    font: 400 .8rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #4d5259;
+    text-transform: none;
+}
+
+.scaleText {
+    font-family: Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #4d5259;
+    text-transform: none !important;
+}
+
+.question td {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.question .alt td {     /* defines color of alternate rows */
+    background-color: rgba(221, 221, 221, 0);
+}
+
+.alt {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* START table question styles */
+
+.table .alt {
+    background-color: rgba(255,255,255,0);
+}
+
+.table .scale .QuestionCell {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid transparent !important;
+}
+
+.table .Scale1Cell, 
+.table .Scale2Cell, 
+.table .Scale3Cell, 
+.table .Scale4Cell {
+    background-color: rgba(230,230,230,.5);
+    padding: 8px 2px !important;
+}
+
+.table .QuestionCell {
+    background-color: rgba(230,230,230,.5);
+    padding: 8px 0 8px 8px !important;
+}
+
+.table .alt .QuestionCell {
+    background-color: transparent !important;
+}
+
+.table .alt .Scale1Cell, 
+.table .alt .Scale2Cell, 
+.table .alt .Scale3Cell, 
+.table .alt .Scale4Cell {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.table .scale .Scale1Cell, 
+.table .scale .Scale2Cell, 
+.table .scale .Scale3Cell, 
+.table .scale .Scale4Cell { /* removes border and sets ALL table headers BG to white / transparent - if needed as non global add question id(s)*/
+    border: 0px solid blue !important;
+    border-top: 0px solid blue !important;
+    border-left: 0px solid blue !important;
+    border-right: 0px solid white !important;
+    border-bottom: 1px solid transparent !important;
+    background-color: transparent!important;
+    padding: 2px !important;
+}
+    
+.Scale1Cell .scaleText, 
+.Scale2Cell .scaleText, 
+.Scale3Cell .scaleText, 
+.Scale4Cell .scaleText { /* sets font to normal ALL table questions - if needed as non global add question id(s)*/     
+    font-weight: 500 !important;
+    background-color: transparent !important;
+    text-transform: none !important;
+    font-size: .8rem;
+    color: #4d5259;
+   line-height: 15px;
+}
+
+.multiScaleTableHeader td {
+    border-bottom: 0px solid #dbdbdb !important;
+}
+
+.multiScaleTableHeader .scaleText {
+    font-weight: 400 !important;
+    font-size: .9rem !important;
+}
+
+.table th, 
+.table td { /* border styles for ALL table questions - if needed as non global add question id(s)*/
+    border: 0px 0px 0px 0px solid blue !important;
+    border-top: 0px solid blue !important;
+    border-left: 0px solid blue !important;
+    border-right: 0px solid blue !important;
+    border-bottom: 1px solid transparent !important;
+    background-color: transparent;
+}
+
+tr.SingleScaleHeader td {
+    border: 0px !important;
+}
+
+.iradio_flat-blue {
+    margin: 2px !important;
+}
+
+/* END table question styles */
+
+/* START alleg-classes (.alleg-classes need to be referenced per question in Edit Question) */
+
+.alleg-text { /* descriptive text */
+    width: auto !important;
+}
+
+/* END alleg-classes */
+
+/* START 5 Point & 10 Point + NA & fix for regular single-button scales */
+
+.alleg-single-button label,
+.alleg-single-button-5na label,
+.alleg-single-button-10na label {
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+.alleg-single-button .button-set-cell.ui-buttonset .ui-button,
+.alleg-single-button-5na .button-set-cell.ui-buttonset .ui-button, 
+.alleg-single-button-10na .button-set-cell.ui-buttonset .ui-button {
+    margin: 0px;
+    display: block;
+}
+
+.alleg-single-button .ScaleHeaderCenter,
+.alleg-single-button-5na .ScaleHeaderCenter,
+.alleg-single-button-10na .ScaleHeaderCenter { /* aligns center table header for a 11 point scale when single-button is used */
+    padding-right: 0% !important; /* use 2.64% for a 7 point scale */
+}
+
+.alleg-single-button .table .QuestionCell,
+.alleg-single-button-5na .table .QuestionCell,
+.alleg-single-button-10na .table .QuestionCell {
+    padding: 8px 8px 8px 0 !important;
+}
+ 
+.alleg-single-button .scaleText, .alleg-single-button-5na .scaleText, .alleg-single-button-10na .scaleText {
+    text-transform: none;
+    font-weight: 500 !important;
+    font-size: .9rem !important;
+    color: #fb7100 !important;
+    line-height: 15px;
+}
+ 
+.alleg-single-button .table .scale .Scale1Cell,
+.alleg-single-button-5na .table .scale .Scale1Cell,
+.alleg-single-button-10na .table .scale .Scale1Cell {
+    border-bottom: 0px solid white !important;
+    border: 0px solid white !important;
+    background: transparent !important;
+    line-height: 18px !important;
+}
+ 
+.alleg-single-button .table th, .alleg-single-button .table td,
+.alleg-single-button-5na .table th, .alleg-single-button-5na .table td,
+.alleg-single-button-10na .table th, .alleg-single-button-10na .table td {        
+    border: 0px 0px 0px 0px solid blue !important;
+    border-top: 0px solid blue !important;
+    border-left: 0px solid blue !important;
+    border-right: 0px solid blue !important;
+    border-bottom: 0px solid #000 !important;
+    background-color: rgba (247, 247, 247, 0); 
+}
+ 
+.alleg-single-button .table .scale .QuestionCell,
+.alleg-single-button-5na .table .scale .QuestionCell,
+.alleg-single-button-10na .table .scale .QuestionCell {
+    border-bottom: none !important;
+}
+.alleg-single-button tr.SingleScaleHeader td,
+.alleg-single-button-5na tr.SingleScaleHeader td,
+.alleg-single-button-10na tr.SingleScaleHeader td {
+    border: 0px !important;  
+}
+ 
+.alleg-single-button .table .Scale1Cell,
+.alleg-single-button-5na .table .Scale1Cell,
+.alleg-single-button-10na .table .Scale1Cell {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 2px !important;
+}
+ 
+.alleg-single-button .table .alt,
+.alleg-single-button .table .alt .QuestionCell,
+.alleg-single-button .table .QuestionCell,
+.alleg-single-button-5na .table .alt,
+.alleg-single-button-5na .table .alt .QuestionCell,
+.alleg-single-button-5na .table .QuestionCell,
+.alleg-single-button-10na .table .alt,
+.alleg-single-button-10na .table .alt .QuestionCell,
+.alleg-single-button-10na .table .QuestionCell {
+    background-color: rgba(0,0,0,0) !important;
+}
+ 
+.alleg-single-button-5na .multiScaleTableHeader .ScaleHeaderLeft {
+    text-align: left;
+}
+.alleg-single-button-5na .multiScaleTableHeader .ScaleHeaderRight {
+    text-align: right;
+}
+
+.alleg-single-button-5na .multiScaleTableHeader {
+    width: 79.5%;
+}
+ 
+.alleg-single-button-10na .multiScaleTableHeader {
+    width: 89.5%;
+}
+ 
+.alleg-single-button-5na .Scale1Cell.button-set-cell.last .ui-button.ui-state-default,
+.alleg-single-button-10na .Scale1Cell.button-set-cell.last .ui-button.ui-state-default {
+    background: #e6e6e6;
+}
+
+.alleg-single-button-5na .Scale1Cell.button-set-cell.last .ui-button.ui-state-hover,
+.alleg-single-button-10na .Scale1Cell.button-set-cell.last .ui-button.ui-state-hover {
+    background: rgba(0,51,102,.1);
+}
+
+.alleg-single-button-5na .Scale1Cell.button-set-cell.last .ui-button.ui-state-active, 
+.alleg-single-button-5na .Scale1Cell.button-set-cell.last .ui-button.ui-state-active.ui-state-hover,
+.alleg-single-button-10na .Scale1Cell.button-set-cell.last .ui-button.ui-state-active, 
+.alleg-single-button-10na .Scale1Cell.button-set-cell.last .ui-button.ui-state-active.ui-state-hover {
+    background: #fb7100;
+}
+ 
+/*.alleg-single-button-5na .table .Scale1Cell.last {
+    width: 13.1%;
+}*/
+ 
+.alleg-5-point-scale .ScaleHeaderLeft { /* table question with a 5 point scale */
+    padding-left: 8% !important;
+}
+ 
+.alleg-5-point-scale .ScaleHeaderRight { /* table question with a 5 point scale */
+    padding-right: 8% !important;
+}
+ 
+.alleg-7-point-scale .ScaleHeaderLeft { /* table question with a 7 point scale */
+    padding-left: 5% !important; 
+}
+ 
+.alleg-7-point-scale .ScaleHeaderRight { /* table question with a 7 point scale */
+    padding-right: 5% !important;
+}
+
+/* END 5 Point & 10 Point + NA & fix for regular single-button scales */
+
+/* START form-classes */
+
+#mainForm select[multiple=""] {
+    padding: 5px;
+    min-width: 50%;
+    height: auto !important;
+    background: #fff;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    color: #4d5259;
+}
+
+#mainForm select[multiple=""]:hover, 
+#mainForm select[multiple=""]:focus, 
+#mainForm select[multiple=""]:active {
+    background: #fff;
+}
+
+#mainForm select[multiple=""] option {
+    background-color: #fff;
+    padding: 5px;
+    font: inherit;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+#mainForm select::-ms-expand { /* removes initial arrow in IE */
+    display: none;
+}
+
+#mainForm select:focus::-ms-value {
+    background-color: transparent;
+}
+
+#mainForm select:active::-moz-focus-inner, 
+#mainForm select:focus::-moz-focus-inner {
+    border: none;
+    outline: none;
+}
+
+#mainForm select {
+	min-width: 50%;
+	background: #fff url(https://junipernetworks.allegiancetech.com/surveys/images/QADDCD/Preview/adown_juniper.png) no-repeat 100%;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	background-position: right 0px bottom 0px;
+    text-overflow: '';
+    font: 400 1.1rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #4d5259;
+	cursor: pointer;
+	padding: 7px 45px 7px 8px;
+    display: block;
+    height: auto !important;
+    min-height: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 1px solid #dbdbdb;
+    outline: none;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none;
+    box-shadow: none; /* offset-x, offset-y, blur-radius, spread-radius */
+    -webkit-transition: border-color .3s ease, box-shadow .3s ease;
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+#mainForm select:hover {
+    border-color: #fb7100;
+}
+
+#mainForm select:active, 
+#mainForm select:focus {
+    border-color: #fb7100 !important;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0 0px rgba(0,51,102,.25);
+    -moz-box-shadow: 0 0 0 0px rgba(0,51,102,.25);
+    box-shadow: 0 0 0 0px rgba(0,51,102,.25); /* offset-x, offset-y, blur-radius, spread-radius */
+}
+
+#mainForm select option {
+    padding: 2px 4px;
+    font: inherit;
+}
+
+#mainForm input[type="text"], 
+#mainForm textarea { /* default styles for text fields & text areas */
+    padding: 7px 8px !important;
+    font: 400 1.1rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #4d5259 !important;
+    border: 2px solid #dbdbdb !important;
+    background: #fff;
+    height: auto;
+    min-height: 65px;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    vertical-align: middle;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; /* offset-x, offset-y, blur-radius, spread-radius */
+    -webkit-transition: border-color .3s ease, box-shadow .3s ease;
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+#mainForm input[type="text"]:hover, 
+#mainForm textarea:hover { /* active styles for text fields & text areas */
+    border: 2px solid #fb7100 !important;
+}
+
+#mainForm input[type="text"]:focus, 
+#mainForm textarea:focus { /* active styles for text fields & text areas */
+    background: #fff !important;
+    border: 2px solid #fb7100 !important;
+    outline: none !important;
+    -webkit-box-shadow: 0 0 0 0px rgba(0,51,102,.25);
+    -moz-box-shadow: 0 0 0 0px rgba(0,51,102,.25);
+    box-shadow: 0 0 0 0px rgba(0,51,102,.25); /* offset-x, offset-y, blur-radius, spread-radius */
+}
+
+#mainForm input[class="hasDatepicker"] {
+	background: #fff url(https://junipernetworks.allegiancetech.com/surveys/images/QADDCD/Preview/calendar_juniper.png) no-repeat 100%;
+    -webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	background-position: right 0px bottom 0px;
+    image-rendering: optimizequality;
+	text-overflow: '';
+    cursor: pointer;
+    display: block;
+}
+
+#mainForm input[class="hasDatepicker"]:active::-moz-focus-inner, 
+#mainForm input[class="hasDatepicker"]:focus::-moz-focus-inner {
+    border: 0;
+    outline: none;
+    background-color: #fff !important;
+}
+
+/* END form-classes */
+
+/* START button question styles (classes also apply for the .alleg-single-button) */
+
+.ui-buttonset .answerText {
+    margin: 0px;
+    font: 400 .9rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #fff;
+}
+    
+.ui-buttonset .ui-button.ui-state-default {
+    border: 2px solid #ccc !important;
+    border-bottom: 2px solid #ccc !important;
+    background-color: #ccc;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+    padding: 3px;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ui-buttonset .ui-button.ui-state-hover {
+    border: 2px solid #fb7100 !important;
+    border-bottom: 2px solid #fb7100 !important;
+    background-color: rgba(0,51,102,.1);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ui-buttonset .ui-button.ui-state-active, 
+.ui-buttonset .ui-button.ui-state-active.ui-state-hover {
+    border: 2px solid #fb7100 !important;
+    border-bottom: 2px solid #fb7100 !important;
+    background: #fb7100;
+}
+
+.ui-buttonset .ui-button.ui-state-hover .answerText {
+    color: #fb7100;
+}
+
+.ui-buttonset .ui-button.ui-state-active .answerText {
+    color: #fff !important;
+}
+
+/* END button question styles */
+
+/* Slider question styles */
+
+.ui-slider-wrapper {
+    width: 100% !important;
+}
+
+.ui-slider-labels .answerText {
+    font: 400 .9rem / 115% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    color: #4d5259;
+}
+
+.horizontal .ui-slider-labels {
+    top: 0;
+}
+
+.ui-slider .ui-slider-handle, 
+.ui-slider .ui-slider-handle.ui-state-hover, 
+.ui-slider .ui-slider-handle.ui-state-focus {
+    background-color: #fff !important;
+    /*background-image: url() !important;*/
+    background-repeat: no-repeat !important;
+    background-size: 23px 23px !important;
+    border: 2px solid #4d5259 !important;
+    border-radius: 20px;
+    width: 22px;
+    height: 22px;
+    outline: none !important;
+    margin-top: -2px;
+    margin-left: -10px !important;
+    cursor: pointer !important;
+    transition: none;
+}
+
+.ui-slider {
+    border: 0px solid #4d5259 !important;
+    border-radius: 0px !important;
+    cursor: pointer !important;
+}
+
+.ui-slider-wrapper.horizontal {
+    margin-left: 0px;
+    margin-top: 25px;
+}
+
+.ui-slider.ui-slider-horizontal {
+    background: #ccc !important;
+    height: 8px;
+    border-radius: 4px !important;
+}
+
+.ui-slider .ui-slider-range {
+    border-radius: 4px !important;
+    background: #fb7100 !important;
+    /*background-color: #005157 !important;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent) !important;
+    background-size: 20px 19px !important;*/
+}
+
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-first, 
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-middle, 
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-last {
+    border-left: 0px solid #4d5259 !important;
+}
+
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-first {
+    text-align: center;
+    text-align: center;
+    width: 5.8em;
+    margin-left: -3em;
+    border-left: 0px solid #4d5259 !important;
+}
+
+.horizontal .ui-slider-label-ticks span.ui-slider-label-tick-middle {
+    text-align: center;
+    width: 3em;
+    margin-left: -1.6em;
+    border-left: 0px solid #4d5259 !important;
+}
+
+.horizontal .ui-slider-label-ticks {
+    border-left: 1px solid #B6CDCF !important;
+}
+
+.horizontal .ui-slider-label-ticks.first {
+    border-left: none !important;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: -.7em;
+}
+
+span.ui-slider-label-tick-first, 
+span.ui-slider-label-tick-middle, 
+span.ui-slider-label-tick-last {
+    padding-top: 5px;
+}
+
+/* END Slider question styles */
+
+.right table {
+    float: right !important;
+}
+
+.textCounter {
+    padding-top: 5px;
+    font: 300 .77rem / 115% 'Lato', Arial, Helvetica, sans-serif;
+    color: #4d5259;
+}
+
+.hyperlink {
+    vertical-align: middle;
+}
+
+/* START progress bar styles SPRINGGREEN set in designer */
+
+/*.progressBar::before {
+    content: '0%';
+    margin-right: 5px;
+}
+
+.progressBar::after {
+    content: '100%';
+    margin-left: 5px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .progressBar::after {
+      width: 232px;
+  }
+}*/
+
+.progressBar {
+    float: right;
+    margin-left: 0px;
+    font: 300 .77rem / 1 'Lato', Arial, Helvetica, sans-serif;
+    color: #fb7100;
+    display: flex;
+        display: -ms-flexbox;
+    align-items: center;
+        -ms-flex-align: center;
+    width: 100%;
+    top: 30px;
+    position: relative;
+}
+
+.progressBar.springgreen LI {
+	list-style-type: none;
+	width: 10%;
+	height: 9px;
+    margin-right: 0px;
+}
+
+.progressBar.springgreen UL {
+    padding: 0px;
+    border: 1px solid #fff;
+    overflow: auto;
+    background-color: #dbdbdb;
+    overflow: hidden;
+    border-radius: 1rem;
+    height: 14px;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.0);
+}
+.progressBar.springgreen .done {
+    background-color: #fb7100;
+    height: 13px;
+    background-image: none !important;
+}
+
+/* END progress bar styles */
+
+/* START date picker styles */
+
+.ui-datepicker.ui-widget {
+    background-color: #fff;
+    border: 2px solid #dbdbdb;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.25);
+    border-radius: 4;
+}
+
+.ui-datepicker-header.ui-widget-header {
+    background-color: #eee;
+    border: 1px solid transparent;
+    font: 700 .9rem / 1 'Lato', Arial, Helvetica, sans-serif;
+    color: #4d5259;
+}
+
+.ui-datepicker th {
+    font: 400 .9rem / 1 'Lato', Arial, Helvetica, sans-serif;
+    color: #4d5259;
+}
+
+.ui-datepicker .ui-state-default {
+    font: 400 .9rem / 140% 'Lato', Arial, Helvetica, sans-serif;
+    color: #4d5259;
+    border: 1px solid transparent;
+    background: #eee;
+}
+
+.ui-datepicker-today a.ui-state-highlight,
+.ui-datepicker-today a.ui-state-highlight.ui-state-hover {
+    font: 400 .9rem / 140% 'Lato', Arial, Helvetica, sans-serif;
+    color: #4d5259;
+    border: 1px solid transparent;
+    background: #ccc;
+}
+
+.ui-datepicker-calendar .ui-state-hover, 
+.ui-datepicker-calendar .ui-state-focus {
+    font: 400 .9rem / 140% 'Lato', Arial, Helvetica, sans-serif;
+    color: #fff;
+    border: 1px solid #fb7100;
+    background: #fb7100;
+}
+
+.ui-corner-all, 
+.ui-corner-bottom, 
+.ui-corner-right, 
+.ui-corner-br, 
+.ui-corner-all, 
+.ui-corner-bottom, 
+.ui-corner-left, 
+.ui-corner-bl, 
+.ui-corner-all, 
+.ui-corner-top, 
+.ui-corner-right, 
+.ui-corner-tr, 
+.ui-corner-all, 
+.ui-corner-top, 
+.ui-corner-left, 
+.ui-corner-tl {
+    border-radius: 0px;
+}
+
+.ui-datepicker .ui-datepicker-prev span, 
+.ui-datepicker .ui-datepicker-next span {
+    display: none;
+}
+
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-datepicker .ui-datepicker-next::after {
+    content: '\f138';
+    font-family: FontAwesome;
+    font-size: 1.3rem;
+    font-weight: normal;
+    position: absolute;
+    color: #fb7100;
+    transition: all 0.8s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+.ui-datepicker .ui-datepicker-prev::before {
+    content: '\f137';
+    font-family: FontAwesome;
+    font-size: 1.3rem;
+    font-weight: normal;
+    position: absolute;
+    color: #fb7100;
+    transition: all 0.8s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+.ui-datepicker .ui-datepicker-next:hover::after,
+.ui-datepicker .ui-datepicker-prev:hover::before {
+    color: #00254a;
+}
+
+.ui-widget-header .ui-state-hover {
+    border: none;
+    background: transparent;
+}
+
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 2px;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 2px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover, 
+.ui-datepicker .ui-datepicker-next-hover {
+    top: 2px;
+}
+
+/* END date picker styles */
+.ControlCell {
+    width: 33px !important;
+}
+
+button {
+    color: #4d5259;
+    font: 400 .9rem / 1 'Lato', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    border: 2px solid #dbdbdb;
+    border-radius: 4px;
+    margin-bottom: 2px !important;
+    margin-left: 0px
+}
+
+button:active, 
+button:focus, 
+button:hover, 
+button:visited, 
+button:checked {
+    color: #fb7100;
+    font-weight: 500;
+    background-color: #fcfcfc;
+    border: 2px solid #fb7100;
+}
+
+/* START navigation button style (CLEANGREY set in designer) */
+
+BUTTON.cleangray, 
+.\<\!--OPT_OUT_BUTTON_THEME--\> {
+	background-color: #fb7100;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb7100), color-stop(100%, #fb7100));
+	background-image: -webkit-linear-gradient(to bottom, #fb7100, #fb7100);
+	background-image: -moz-linear-gradient(to bottom, #fb7100, #fb7100);
+	background-image: -ms-linear-gradient(to bottom, #fb7100, #fb7100);
+	background-image: -o-linear-gradient(to bottom, #fb7100, #fb7100);
+	background-image: linear-gradient(to bottom, #fb7100, #fb7100);
+	border: 1px solid #fb7100;
+	border-bottom: 1px solid #fb7100;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+    color: #fff;
+	padding: 12px 0px;
+    margin: 25px 0;
+	font: 400 1.0rem / 100% Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+    text-transform: uppercase;
+    width: auto;
+    min-width: 120px;
+    text-shadow: none;
+	-webkit-text-shadow: none;
+    -moz-text-shadow: none;
+    -ms-text-shadow: none;
+    -o-text-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    float: right;
+    cursor: pointer !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.\<\!--OPT_OUT_BUTTON_THEME--\> {
+    width: auto;
+    float: none;
+}
+
+.nextButton::after {
+    content: '\f105';
+    font-family: FontAwesome;
+    position: relative;
+    padding-left: 8px;
+    color: #fff;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+BUTTON.cleangray:hover, BUTTON.cleangray:active, .\<\!--OPT_OUT_BUTTON_THEME--\>:hover, .\<\!--OPT_OUT_BUTTON_THEME--\>:active {
+    background-color: #fb71005e;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb7100), color-stop(100%, #fb7100));
+    background-image: -webkit-linear-gradient(to bottom, #fb7100, #fb7100);
+    background-image: -moz-linear-gradient(to bottom, #fb7100, #fb710087);
+    background-image: -ms-linear-gradient(to bottom, #fb7100, #fb7100);
+    background-image: -o-linear-gradient(to bottom, #fb7100, #fb7100);
+    background-image: linear-gradient(to bottom, #fb71008c, #fb7100);
+    border: 1px solid #fb7100;
+        border-bottom-color: rgb(251, 113, 0);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    border-bottom-color: rgb(251, 113, 0);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom: 1px solid #fb7100;
+    color: #fff;
+    text-shadow: none;
+    -webkit-text-shadow: none;
+    -moz-text-shadow: none;
+    -ms-text-shadow: none;
+    -o-text-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    cursor: pointer !important;
+}
+.nextButton:hover::after {
+    color: #fff;
+}
+
+Button.backButton {
+    background-color: #b5b8b9;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b5b8b9), color-stop(100%, #b5b8b9));
+	background-image: -webkit-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+	background-image: -moz-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+	background-image: -ms-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+	background-image: -o-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+	background-image: linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+    color: #fff;
+    background-image: none;
+    border: 1px solid #b5b8b9;
+	border-bottom: 1px solid #b5b8b9;
+    margin-right: 20px;
+    float: left;
+}
+
+.backButton::before {
+    content: '\f104';
+    font-family: FontAwesome;
+    position: relative;
+    padding-right: 8px;
+    color: #fff;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+    
+Button.backButton:hover, 
+Button.backButton:active {
+    background-color: #888D90;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #888D90), color-stop(100%, #888D90));
+	background-image: -webkit-linear-gradient(to bottom, #888D90, #888D90);
+	background-image: -moz-linear-gradient(to bottom, #888D90, #888D90);
+	background-image: -ms-linear-gradient(to bottom, #888D90, #888D90);
+	background-image: -o-linear-gradient(to bottom, #888D90, #888D90);
+	background-image: linear-gradient(to bottom, #888D90, #888D90);
+	border: 1px solid #888D90;
+	border-bottom: 1px solid #888D90;
+    color: #fff;
+    background-image: none;
+}
+
+.backButton:hover::before {
+    color: #fff;
+}
+
+/* END button style CLEANGREY set in designer */
+
+/* START changing smart probe error look */
+
+.smart-probe-container {
+    left: 0px !important;
+    top: 0px !important;
+    position: inherit !important;
+    width: 100% !important;
+    min-height: 60px !important;
+    padding-bottom: 0px;
+}
+
+.smart-probe-arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fb7100;
+    float: left;
+    margin-top: -3px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-left: 20px;
+}
+
+.smart-probe-message {
+    color: #fff;
+    font: 400 1rem / 140% Knowledge2017,Helvetica Neue,Arial,sans-serif !important; 
+    float: left; 
+    padding: 15px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    max-width: 100%;
+    width: 100%;
+    position: inherit;
+    top: -6px;
+    background-color: #fb7100;
+    border: 1px solid #fb7100;
+}
+
+/* END changing smart probe error look */
+
+/* END classes for all devices */
+
+/* START media queries to style per breakpoint */
+
+/* Start media query max width 1280px */
+
+@media screen and (max-width: 1280px) { 
+    
+    #headerTextContainer {
+        width: 100%;
+        max-width: 1280px;
+        height: 68%;
+        display: flex;
+        display: -ms-flexbox;
+        align-items: flex-end;
+        -ms-flex-align: end;
+        justify-content: flex-start;
+        -ms-flex-pack: start;
+        margin: 0 auto;
+        max-height: 400px;
+    }
+    
+    #headerText {
+        background-color: transparent;
+        color: #fff;
+        font: 700 2.2rem / 1 Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+        text-transform: none;
+        width: 100%;
+        padding: 10px 14%;
+        margin: 0 auto;
+        text-align: left;
+    }
+}
+
+/* START media query max width 992px (max-width value needs to be set in theme editor as well) */
+
+@media screen and (max-width: 992px) {
+    #template {
+        background-position: 0 top;
+    }
+    .surveyBackground {
+        min-height: inherit;
+    }
+    
+    .element.style {
+        width: 100% !important;
+    }
+    
+    .pageBackground {
+        background-size: 100%;
+    }
+    
+    #survey #canvas {   /* removes default margin-left */
+        margin-top: 0%;
+        padding-left: 4%;
+        padding-right: 4%;
+        border: none;
+        width: 100%;
+    }
+
+    :focus {
+        outline-color: #cecece;
+    }
+
+    .ui-buttonset {
+        margin-right: 0px;
+    }
+    
+    .mobileTable TD, 
+    .mobileTable TH {
+        padding: 0px !important;   
+    }
+    
+    table[data-question-new-row-on-mobile="true"] .QuestionCell, 
+    table[data-question-new-row-on-tablet="true"] .QuestionCell {
+        padding-top: 15px !important;
+        padding-left: 0 !important;
+    }
+    
+    table[data-question-new-row-on-mobile="true"] .scaleText, 
+    table[data-question-new-row-on-tablet="true"] .scaleText {
+        margin-bottom: 0px !important;
+    }
+    
+    table[data-question-new-row-on-mobile="true"] .table th, 
+    table[data-question-new-row-on-tablet="true"] th.Scale1Cell {
+        border-bottom: none !important;
+        background-color: transparent !important;
+    }
+    
+    .table[data-drop-down-on-tablet="true"] td, 
+    .table[data-drop-down-on-mobile="true"] td {
+        border-bottom: none !important;
+        width: 100%;
+    }
+    
+    .table[data-drop-down-on-tablet="true"] .alt, 
+    .table[data-drop-down-on-mobile="true"] .alt {
+        background-color: transparent;
+    }
+    
+    .table[data-drop-down-on-tablet="true"] .tableQuestion, 
+    .table[data-drop-down-on-mobile="true"] .tableQuestion {
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .table[data-drop-down-on-tablet="true"] select, 
+    .table[data-drop-down-on-mobile="true"] select {
+        margin-top: 5px !important;
+    }
+    
+    BUTTON.cleangray:hover, 
+    BUTTON.cleangray:active, 
+    .\<\!--OPT_OUT_BUTTON_THEME--\>:hover, 
+    .\<\!--OPT_OUT_BUTTON_THEME--\>:active {
+        background-color: #fb7100;
+	   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb7100), color-stop(100%, #fb7100));
+	   background-image: -webkit-linear-gradient(to bottom, #fb7100, #fb7100);
+	   background-image: -moz-linear-gradient(to bottom, #fb7100, #fb7100);
+	   background-image: -ms-linear-gradient(to bottom, #fb7100, #fb7100);
+	   background-image: -o-linear-gradient(to bottom, #fb7100, #fb7100);
+	   background-image: linear-gradient(to bottom, #fb7100, #fb7100);
+	   border: 1px solid #fb7100;
+	   border-bottom: 1px solid #fb7100;
+	   color: #fff;
+    }
+    
+    .nextButton:hover::after {
+        color: #fff;
+    }
+    
+    Button.backButton:hover, 
+    Button.backButton:active {
+        background-color: #b5b8b9;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b5b8b9), color-stop(100%, #b5b8b9));
+        background-image: -webkit-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+        background-image: -moz-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+        background-image: -ms-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+        background-image: -o-linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+        background-image: linear-gradient(to bottom, #b5b8b9, #b5b8b9);
+        color: #fff;
+        background-image: none;
+        border: 1px solid #b5b8b9;
+        border-bottom: 1px solid #b5b8b9;
+    }
+    
+    .backButton:hover::before {
+        color: #fff;
+    }
+    
+    .mobileTable .Scale1Cell .scaleText {
+        font-size: .9rem;
+        line-height: 115%;
+    }
+    
+    .alleg-single-button .mobileTable .QuestionCell,
+    .alleg-single-button-5na .mobileTable .QuestionCell,
+    .alleg-single-button-10na .mobileTable .QuestionCell {
+        padding-top: 15px !important;
+    }
+    
+    .alleg-single-button .mobileTable,
+    .alleg-single-button-5na .mobileTable,
+    .alleg-single-button-10na .mobileTable {
+        margin-top: -5px;
+    }
+    
+    .mobileTable .QuestionCell .questionText {
+        font-size: 1.2rem !important;
+        font-weight: 400 !important;
+        color: #2b2a29;
+    }
+    
+    .mobileTable th.Scale1Cell {
+        vertical-align: top;
+    }
+    
+    .progressBar.springgreen .done {
+        background-size: 10vw 7vw;
+    }
+    
+    #template {
+        min-height: auto;
+    }
+    
+    .topNavigation .navigationContainer,
+    .bottomNavigation .navigationContainer,
+    #headerLogoImage,
+    #alleg-pages .container,
+    #mainForm .alleg-pages {
+        width: 92% !important;
+    }
+    
+    #alleg-footer .container, #alleg-poweredBy .container {
+        width:100% !important;
+    }
+    
+    #headerLogoContainer {
+        background: rgba(255,255,255,1);
+        position: relative;
+    }
+    
+    #headerTextContainer {
+        width: 100%;
+        max-width: 976px;
+        height: 50%;
+        display: flex;
+        display: -ms-flexbox;
+        align-items: flex-end;
+        -ms-flex-align: end;
+        justify-content: flex-start;
+        -ms-flex-pack: start;
+        margin: 0 auto;
+        max-height: 400px;
+    }
+    
+    #headerText {
+        background-color: transparent;
+        color: #fff;
+        font: 700 2.2rem / 1 Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+        text-transform: none;
+        width: 100%;
+        padding: 10px 4%;
+        margin: 0 auto;
+        text-align: left;
+    }    
+}
+
+/* END media query max width 992px */
+
+/* START media query max width 768px */
+
+@media screen and (max-width:768px) { 
+    #template {
+        background-size: 250px auto; 
+    }
+    .navigationContainer {
+        top: -30px !important;
+        position: relative;
+    }
+    .element.style {
+        width: 100% !important;
+    }
+    
+    #survey #canvas { 
+        padding-top: 20px !important;
+    }
+    
+    .ui-button-text-only .ui-button-text {
+        padding: .3em !important;
+    }
+
+    .ui-buttonset .ui-button.ui-state-default {
+        padding: 0px;
+    }
+    
+    .button-set-container.ui-buttonset .ui-button {
+        margin-right: 0px;
+    }
+
+    .button-set-image-container {
+        min-width: 80%;
+        width: 100% !important;
+    }
+
+    .ui-buttonset {
+        margin-right: 0px;
+    }
+
+    :focus {
+        outline-color: #cecece;
+    }
+    
+    .mobileTable TD, 
+    .mobileTable TH {
+        padding: 0px !important;   
+    }
+  
+    .bonfire-header-text {
+        font-size: .9rem !important;
+    }
+    
+    .object {
+        padding-bottom: 10px !important;
+    }
+    
+    .alleg-single-button-10na .multiScaleTableHeader {
+        width: 87%;
+    }
+    
+    .alleg-single-button-5na .multiScaleTableHeader {
+        width: 75%;
+    }
+    
+    .hidden-for-aria {
+        height: 1px !important;
+        width: 1px !important;
+    }
+    #canvas {
+        top: -40px;
+        position: relative;
+    } 
+    #header {
+        height: 130px;
+        background-image: url(https://thomsonreuters.allegiancetech.com/surveys/images/MHWN7B/Preview/survey_7.jpg);
+        background-position: center top -1vw;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        background-size: 100% auto;
+        top: -30px;
+    }
+    
+    #headerLogoContainer {
+        height: 90px;
+    }
+    
+    #headerLogoImage {
+        -webkit-background-size: 140px auto;
+        -moz-background-size: 140px auto;
+        -o-background-size: 140px auto;
+        background-size: 140px auto;
+        height: 82px;
+    }
+    
+    #headerTextContainer {
+        width: 100%;
+        max-width: 976px;
+        height: 50%;
+        display: flex;
+        display: -ms-flexbox;
+        align-items: flex-end;
+        -ms-flex-align: end;
+        justify-content: flex-start;
+        -ms-flex-pack: start;
+        margin: 0 auto;
+        max-height: 400px;
+    }
+    
+    #headerText {
+        background-color: transparent;
+        color: #fff;
+        font: 700 2.2rem / 1 Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+        text-transform: none;
+        width: 100%;
+        padding: 10px 4%;
+        margin: 0 auto;
+        text-align: left;
+    }    
+    
+}
+
+/* END media query max width 768px */
+
+/* START media query max width 576px */
+
+@media screen and (max-width:576px) {
+    
+    html, body {
+        font-size: 15.5px !important;
+    }
+    
+    #mainForm select, 
+    #mainForm input[type="text"], 
+    #mainForm textarea {
+        width: 100% !important;
+    }
+    
+    #mainForm .other input[type="text"], 
+    #mainForm .other textarea, 
+    #mainForm .controll-cell input[type="text"], 
+    #mainForm .controll-cell textarea/*, #mainForm textarea[data-smart-probe="true"]*/ {
+        width: inherit !important;
+    }
+    
+    Button.backButton {
+        margin-right: 10px;
+    }
+    
+    .smart-probe-container {
+        width: 100% !important;
+    }
+    
+    .ui-buttonset .answerText {
+        font-size: .9rem !important;
+    }
+    
+    BUTTON.cleangray, .\<\!--OPT_OUT_BUTTON_THEME--\> {
+        padding: 12px 18px;
+    }
+    
+    #alleg-footer a {
+        margin: 0 10px;
+    }
+    
+    #alleg-footer {
+        height: 5rem;
+    }
+    
+    #alleg-footer .container {
+        font-size: .85rem !important;
+    }
+    
+    #alleg-footer .footer2 {
+        -webkit-background-size: 90px auto;
+        -moz-background-size: 90px auto;
+        -o-background-size: 90px auto;
+        background-size: 90px auto;
+        width: 90px;
+        height: 5rem;
+    }
+    
+    #header {
+        height: 130px;
+        background-position: center top +3vw;
+    }
+    
+    #headerTextContainer {
+        width: 100%;
+        max-width: 976px;
+        height: 50%;
+        display: flex;
+        display: -ms-flexbox;
+        align-items: flex-end;
+        -ms-flex-align: end;
+        justify-content: flex-start;
+        -ms-flex-pack: start;
+        margin: 0 auto;
+        max-height: 400px;
+    }
+    
+    #headerText {
+        background-color: transparent;
+        color: #fff;
+        font: 700 2.2rem / 1 Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+        text-transform: none;
+        width: 100%;
+        padding: 10px 4%;
+        margin: 0 auto;
+        text-align: center;
+    } 
+    
+    #headerTextContainer div {
+        text-align:center;
+    }
+}
+
+/* END media query max width 576px */
+
+/* START media query max width 380px */
+
+@media screen and (max-width: 380px) {  
+    
+    *  {
+        overflow-x:inherit !important;
+    }
+    
+    .element.style {
+        width: 100% !important;
+    }
+    
+    #survey #canvas {   /* removes default margin-left */
+        padding: 25px 5% 10px 5% !important;
+    }
+
+    :focus {
+        outline-color: #cecece;
+    }
+
+    .button-set-image-container {
+        min-width: 80%;
+        width: 100% !important;
+    }
+
+    .ui-buttonset {
+        margin-right: 0px;
+    }
+    
+    .alleg-single-button .table .Scale1Cell,
+    .alleg-single-button-5na .table .Scale1Cell,
+    .alleg-single-button-10na .table .Scale1Cell {
+        padding: 0.05rem !important;
+    }
+    
+    .mobileTable TD, 
+    .mobileTable TH {
+        padding: 0px !important;   
+    }
+    
+    .topNavigation .navigationContainer,
+    .bottomNavigation .navigationContainer,
+    #headerLogoImage,
+    #alleg-pages .container,
+    #mainForm .alleg-pages {
+        width: 90% !important;
+    }
+    
+    #alleg-footer .container, #alleg-poweredBy .container {
+        width:100% !important;
+    }
+    
+    .topNavigation {
+        display: none;
+    }
+    
+    #header {
+        height: 100px;
+        background-position: center top +8vw;
+        background-size: 100% auto;
+        top: -30px;
+    }
+    
+    /*#headerTextContainer {
+        width: 100%;
+        max-width: 976px;
+        height: 50%;
+        display: flex;
+        display: -ms-flexbox;
+        align-items: flex-end;
+        -ms-flex-align: end;
+        justify-content: flex-start;
+        -ms-flex-pack: start;
+        margin: 0 auto;
+        max-height: 400px;
+    }
+    
+    #headerText {
+        background-color: transparent;
+        color: #fff;
+        font: 700 2.2rem / 1 Knowledge2017,Helvetica Neue,Arial,sans-serif !important;
+        text-transform: none;
+        width: 100%;
+        padding: 10px 4%;
+        margin: 0 auto;
+        text-align: center;
+    } 
+    
+    #headerTextContainer div {
+        text-align:center;
+    }*/
+    
+}
+
+/* END media query max width 380px */
+
+/* START media queery for devices 320 or lower */
+
+@media screen and (max-width: 320px) { /* fit 11 point scale using alleg-single-button to 320px screenwidth */    
+    .ui-buttonset .ui-button.ui-state-default {
+        margin: 0px 0px 4px 0px !important;
+    }
+    
+    .ui-button-text-only .ui-button-text {
+        padding: .2em .4em;
+    }
+}
+
+/* END media query max width 320px */
+
+/* END all media queries to style per breakpoint */
+
+/* START custom controls */
+
+/* #mainForm input[type="radio"],
+#mainForm input[type="checkbox"] {
+    opacity: 0;
+}  */
+
+ .iradio_minimal,
+ .icheckbox_minimal {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    width: 22px;
+    height: 22px;
+    background: #dbdbdb;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out; 
+    -webkit-transition: all .2s ease-in-out;  
+}
+/* Suspected Cause */
+.iradio_minimal {
+    border-radius: 50%;
+    left: calc(50% - 10px);
+    border: 2px solid #dbdbdb;
+    display: -ms-flexbox;
+    display: flex;
+        -ms-flex-pack: center;
+    justify-content: center;
+        -ms-flex-align: center;
+    align-items: center;
+} 
+
+.iradio_minimal.checked {
+    border-color: #fb7100;
+    background-color: #fb7100;
+    border-width: 11px;
+} 
+ 
+.icheckbox_minimal {
+    border: 2px solid #dbdbdb;
+    border-radius: 0px;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    -ms-border-radius:0px;
+    -o-border-radius:0px;
+} 
+ 
+.icheckbox_minimal.checked {
+    background-color: #fb7100;
+    border-color: #fb7100;
+}
+
+.icheckbox_minimal.checked::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 1px;
+    width: 6px;
+    height: 13px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+} 
+
+@media screen and (min-width: 992px) { 
+    
+    .iradio_minimal.hover,
+    .icheckbox_minimal.hover {
+        border-color: #fb7100;
+        background-color: #fff;
+    }
+    
+    .iradio_minimal.checked.hover,
+    .icheckbox_minimal.checked.hover {
+        border-color: #fb7100;
+    }
+    
+    .icheckbox_minimal.checked.hover {
+        background-color: #fb7100;
+    }
+    
+}
+
+.ControlCell .icheckbox_minimal {
+    margin: 3px 0;
+}
+
+/* END custom controls */
+
+/* START fix for survey editor */
+
+.canvasContainer.pageBackground {
+    background: #fff !important;
+}
+
+.webBuilderContainer #canvas {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    background-color: #fff;
+}
+
+#TestModeBanner {
+    z-index: 1000;
+    position: fixed;
+}
+
+/* END fix for survey editor */
+
+/* START survey specific styles */
+
+.optoutpage #template {
+    height: auto;
+}
+
+.optoutpage #alleg-footer {
+    display: none;
+}
+
+#modStars { 
+    margin-top: -15px; 
+}
+
+#modStars img { 
+    padding-right: 10px; 
+    box-sizing: content-box;
+}
+
+.questionText span[style="color:#4d5259"],
+.tableDescription span[style="color:#4d5259"],
+.questionText span[style="color: rgb(68, 68, 68);"],
+.tableDescription span[style="color: rgb(68, 68, 68);"] {
+    font-size: 1.2rem !important;
+    display: block;
+    margin-top: 5px;
+}
+
+.progressBar.springgreen .done {
+    transform: skew(-30deg);
+    width: 12%;
+    right: 4px;
+   position: relative;
+}
+.first.percentComplete10.done {
+    width: 12%;
+    position: relative;
+    right: 4px;
+}
+.percentComplete20.done {
+    right: 5px !important;
+    position: relative;
+}
+.percentComplete30.done {
+    right: 6px !important;
+    position: relative;
+}
+.percentComplete40.done {
+    right: 7px !important;
+    position: relative;
+}
+.percentComplete50.done {
+    right: 8px !important;
+    position: relative;
+}
+.percentComplete60.done {
+    right: 9px !important;
+    position: relative;
+}
+.percentComplete70.done {
+    right: 10px !important;
+    position: relative;
+}
+.percentComplete80.done {
+    right: 11px !important;
+    position: relative;
+}
+.percentComplete90.done {
+    right: 12px !important;
+    position: relative;
+}
+.percentComplete100.done {
+    right: 13px !important;
+    position: relative;
+}
+/* END survey specific styles  */

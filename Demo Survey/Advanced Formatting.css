@@ -235,10 +235,11 @@ input:checked+.slider:before {
 #TestModeBanner {
     position: fixed;
     height: 50px;
+    /* Use the next 2 lines if you want a mostly transparent test banner that appears when you hover */
+    top:0;
+    opacity: .02;
     /* use the line below if you want the test banner to slide down/up */
     /*top:-45px; /* This can be set to bottom or top to determine placement of banner, but it must match hover */
-    /* Use the line below if you want a mostly transparent test banner that appears when you hover */
-    opacity: .02;
     transition: 1000ms;
     -webkit-transition: 1000ms;
     -moz-transition: 1000ms;
@@ -534,4 +535,12 @@ input:checked+.slider:before {
 .active-smart-probe-container .smart-probe-message{
     padding:5px;
     font-size: 10px;
+}
+
+/* Draggable Rank */
+.rankBeingDragged{
+    opacity: .4;
+}
+.eligibleToRank td{
+    background: #eeeeee !important;
 }

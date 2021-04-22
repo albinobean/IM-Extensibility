@@ -55,11 +55,13 @@ function addFooter() {
 }
 function calculateRoleDiscrepancy(){
     try{
-        var actual=parseInt($('#Q9_row input[type="radio"]:checked').attr('title'));
-        var desired=parseInt($('#Q10_row input[type="radio"]:checked').attr('title'));
-        if(actual>0 && desired>0){
+        //This will read the value from a radio table--it will need to be updated if they table style is changed
+        var actual=parseInt($('#Q9_row .checked input[type="radio"]').val());
+        var desired=parseInt($('#Q10_row .checked input[type="radio"]:checked').val());
+        // console.log(`${actual}>>${desired}`);
+        if(actual>=0 && desired>=0){
             var discrepancy=actual-desired;
-            console.log(discrepancy);
+            // console.log(discrepancy);
             $('#roleDiscrepancy_question table table tbody tr').eq(discrepancy+4).find('.iCheck-helper').click();
         }
     } catch(e){}

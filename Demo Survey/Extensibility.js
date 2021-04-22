@@ -40,7 +40,6 @@ $(document).ready(function () {
                 localStorage.MCXDesiredLanguage=$('#FakeLanguageSelector option:selected').text();
                 backButtonClicked();
             });
-            addPreviewOnlyToggle();
             showModalBeforeExit(1);
             break;
         case 3:
@@ -110,8 +109,11 @@ $(document).ready(function () {
             changeImagesBasedOnCommentProgress('inputEncouragement',imageUrls,30);
             activeSmartProbe('inputEncouragement');
             break;
-
+        case 13:
+            makeRankDraggable('dragRank',4);
+            break;
     }
+    advancedFormatting();
 });
 
 function changeImagesBasedOnCommentProgress(commentTag,imageUrlArray,targetWords){
@@ -367,17 +369,32 @@ function setFavicon(iconUrl){
     link.href = iconUrl;
     document.getElementsByTagName('head')[0].appendChild(link);
 }
-function addPreviewOnlyToggle(){
-    if($('#TestModeBanner').length>0 && $('.alleg-previewOnly').length>0){
-        var toggle=$('<span id="previewOnlyToggle" style="margin-right:5px;">Show Preview-only fields</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label>');
-        toggle.click(function(){
-            localStorage.setItem('showPreviewOnlyQuestions',$(this).children('input:checked').length)
-            if($(this).children('input:checked').length==1){$('.alleg-previewOnly').show();} else {$('.alleg-previewOnly').hide();}
-        });
-        $('#TestModeBanner').children('tbody').children('tr').children('td').prepend(toggle);
-        if(localStorage.getItem('showPreviewOnlyQuestions')==1){
-            toggle.children('input').prop('checked',true);
-            $('.alleg-previewOnly').show();
+function advancedFormatting(){
+    if($('#TestModeBanner').length>0){
+        // Add the toggle to show hidden questions
+        if($('.alleg-previewOnly').length>0){
+            var toggle=$('<span id="previewOnlyToggle" style="margin-right:5px;">Show Preview-only fields</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label>');
+            toggle.click(function(){
+                localStorage.setItem('showPreviewOnlyQuestions',$(this).children('input:checked').length)
+                if($(this).children('input:checked').length==1){
+                    $('.alleg-previewOnly').show();
+                    $('#template').addClass('showHiddenItems');
+                } else {
+                    $('.alleg-previewOnly').hide();
+                    $('#template').removeClass('showHiddenItems');
+                }
+            });
+            $('#TestModeBanner').children('tbody').children('tr').children('td').prepend(toggle);
+            if(localStorage.getItem('showPreviewOnlyQuestions')==1){
+                toggle.children('input').prop('checked',true);
+                $('.alleg-previewOnly').show();
+            }
+        }
+        // Create a prepop preview link
+        const baseUrl='';
+        const savedAnswers=(/mcx-tag-([^"]*)\"\sname=\"mcx-tag-\1\"\svalue=\"[^"]*\"/g).exec($('#mainForm').html());
+        for(let i=0;i<savedAnswers.length;i++){
+            
         }
     }
 }
@@ -532,3 +549,74 @@ function activeSmartProbe(qTag){
         }
     });
 }
+let itemBeingDragged;
+const classWhileRankIsBeingDragged='rankBeingDragged';
+function makeRankDraggable(qtag,maxScores){
+    const questionTable=$(`#${qtag}_question table.question table`);
+    let answerRows=questionTable.find('tr');
+    let answerValues=answerRows.toArray().map(function(r){return $(r).find('.answerText').text().trim()});
+    sortRankQuestionByScore(qtag);
+    for(let i=0;i<answerRows.length;i++){
+        let rw=answerRows[i];
+        $(rw).attr('draggable','true');
+        $(rw).on('dragstart',function(e){
+            $(this).addClass(classWhileRankIsBeingDragged);
+            itemBeingDragged=$(e.target);
+        });
+        $(rw).on('dragend',function(e){
+            $(`.${classWhileRankIsBeingDragged}`).removeClass(classWhileRankIsBeingDragged);
+
+        });
+        $(rw).on('drop',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if(itemBeingDragged !== this){
+                const movingValue=$(itemBeingDragged).find('.answerText').text().trim();
+                const moveFrom=answerValues.indexOf(movingValue);
+                // console.log(`From: ${movingValue} (${moveFrom})`);
+                const placeOnTopOf=$(e.target).closest('tr').find('.answerText').text().trim();
+                const moveTo=answerValues.indexOf(placeOnTopOf);
+                if(moveTo>moveFrom){
+                    $(e.target).closest('tr').after($(itemBeingDragged));
+                } else {
+                    $(e.target).closest('tr').before($(itemBeingDragged));
+                }
+                fillRankScoresByOrder(qtag,maxScores)
+                // console.log(`To: ${placeOnTopOf} (${moveTo})`);
+                console.log(`${moveFrom} => ${moveTo}`);
+                answerRows=questionTable.find('tr');
+                answerValues=answerRows.toArray().map(function(r){return $(r).find('.answerText').text().trim()});
+            }
+            
+        });
+        $(rw).on('dragover',function(e){
+            e.preventDefault();
+        })
+    }
+}
+const classOfAllowableRanks='eligibleToRank';
+function fillRankScoresByOrder(qtag,maxScores){
+    $(`#${qtag}_question .${classOfAllowableRanks}`).removeClass(classOfAllowableRanks);
+    let inputs=$(`#${qtag}_question table.question table tr input`);
+    inputs.val('');
+    const highlightMax=maxScores ? inputs.length>maxScores : false;
+    for(let i=0;i<inputs.length;i++){
+        if(!maxScores || i<maxScores){
+            if(highlightMax) $(inputs[i]).closest('tr').addClass(classOfAllowableRanks);
+            $(inputs[i]).val(i+1);
+            $(inputs[i]).parent().find('button').text(i + 1);
+        } else {
+            $(inputs[i]).val('');
+            $(inputs[i]).parent().find('button').text('');
+        }
+        
+    }
+}
+function sortRankQuestionByScore(qtag){
+    const questionTable=$(`#${qtag}_question table.question table`);
+    const answerRows=questionTable.find('tr');
+    for(let i=answerRows.length;i>0;i--){
+        questionTable.prepend($(`#${qtag}_question table.question table input[value="${i}"]`).closest('tr'));
+    }
+}
+makeRankDraggable('dragRank');
