@@ -1,0 +1,25 @@
+.page1 #survey {
+    position: absolute;
+    left: -100%;
+    top: -100%;
+}
+
+#fakeLanguageSelector_question .questionText {
+    display: none !important;
+    /* float: right; */
+}
+
+#fakeLanguageSelector {
+    float: right;
+    top: -90px;
+    margin-bottom: 20px;
+    clear: both;
+    margin-right: 10px;
+}
+
+.alleg-clearLanguage{clear:both;}
+.alleg-languageIcon{
+    float: right;
+    margin-top: -25px;
+    margin-right: 10px;
+}

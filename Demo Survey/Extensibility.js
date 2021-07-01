@@ -565,7 +565,6 @@ function makeRankDraggable(qtag,maxScores){
         });
         $(rw).on('dragend',function(e){
             $(`.${classWhileRankIsBeingDragged}`).removeClass(classWhileRankIsBeingDragged);
-
         });
         $(rw).on('drop',function(e){
             e.preventDefault();
@@ -573,7 +572,6 @@ function makeRankDraggable(qtag,maxScores){
             if(itemBeingDragged !== this){
                 const movingValue=$(itemBeingDragged).find('.answerText').text().trim();
                 const moveFrom=answerValues.indexOf(movingValue);
-                // console.log(`From: ${movingValue} (${moveFrom})`);
                 const placeOnTopOf=$(e.target).closest('tr').find('.answerText').text().trim();
                 const moveTo=answerValues.indexOf(placeOnTopOf);
                 if(moveTo>moveFrom){
@@ -581,9 +579,7 @@ function makeRankDraggable(qtag,maxScores){
                 } else {
                     $(e.target).closest('tr').before($(itemBeingDragged));
                 }
-                fillRankScoresByOrder(qtag,maxScores)
-                // console.log(`To: ${placeOnTopOf} (${moveTo})`);
-                console.log(`${moveFrom} => ${moveTo}`);
+                fillRankScoresByOrder(qtag,maxScores);
                 answerRows=questionTable.find('tr');
                 answerValues=answerRows.toArray().map(function(r){return $(r).find('.answerText').text().trim()});
             }
@@ -619,4 +615,26 @@ function sortRankQuestionByScore(qtag){
         questionTable.prepend($(`#${qtag}_question table.question table input[value="${i}"]`).closest('tr'));
     }
 }
-makeRankDraggable('dragRank');
+function amazonLabels(tag){
+    $(`#${tag}_stars`).append(`<span id="${tag}_starContainer" class="starContainer">&nbsp;</span>`);
+    $(`#${tag}_starContainer`).mouseenter(function(){
+        // console.log('Hovering');
+        $(`#${tag}_hoverLabel`).css('display','inline-block');
+        $(`#${tag}_selectedLabel`).hide();
+    });
+    $(`#${tag}_starContainer`).mouseleave(function(){
+        // console.log('Exiting')
+        $(`#${tag}_hoverLabel`).hide();
+        $(`#${tag}_selectedLabel`).css('display','inline-block');
+    });
+    $(`#${tag}_starContainer`).append($(`#${tag}_stars img`));
+    $(`#${tag}_stars`).append(`<span id="${tag}_hoverLabel" class="hoverLabel">&nbsp;</span>`);
+    $(`#${tag}_stars`).append(`<span id="${tag}_selectedLabel" class="selectedLabel">&nbsp;</span>`);
+    $(`#${tag}_stars img`).on('hover',function(){
+        $(`#${tag}_hoverLabel`).html($(this).attr('title'));
+    });
+    $(`#${tag}_stars img`).click(function(){
+        $(`#${tag}_selectedLabel`).html($(this).attr('title'));
+    });
+}
+amazonLabels('amazonLabels');

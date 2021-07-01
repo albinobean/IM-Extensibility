@@ -544,3 +544,26 @@ input:checked+.slider:before {
 .eligibleToRank td{
     background: #eeeeee !important;
 }
+
+/* Amazon Labels */
+.hoverLabel,
+.selectedLabel{
+    display: inline-block;
+    vertical-align: super;
+    padding-left: 10px;
+}
+.starContainer img{
+    margin-left: 5px;
+}
+.hoverLabel{
+    display:none;
+    z-index: 1;
+}
+.stars:hover .hoverLabel{
+    display: inline;
+}
+.selectedLabel{
+    z-index: 0;
+}
+
+/* End Amazon Labels */
