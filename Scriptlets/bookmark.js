@@ -6,3 +6,6 @@ javascript: var r = new XMLHttpRequest(); r.open("GET", "https://raw.githubuserc
 
 Unique Export values
 javascript: var r = new XMLHttpRequest(); r.open("GET", "https://raw.githubusercontent.com/albinobean/IM-Extensibility/master/Scriptlets/Unique%20export%20fields.js", true); r.onloadend = function (oEvent) { new Function(r.responseText)(); }; r.send();
+
+Bulk add CXIC answers(MC)
+javascript: var r = new XMLHttpRequest(); r.open("GET", "https://raw.githubusercontent.com/albinobean/IM-Extensibility/master/Scriptlets/Bulk%20Add%20CXIC%20Answers.js", true); r.onloadend = function (oEvent) { new Function(r.responseText)(); }; r.send();
