@@ -1,0 +1,2140 @@
+@import url('//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('//fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/* XI Survey defined */
+@h1Color: #1c54c6;
+@h1Font: Roboto, Arial, Helvetica, sans-serif;
+@h1Size: 2rem;
+@h1Bold: bold;
+@font-family-base: Roboto, Arial, Helvetica, sans-serif;
+@textColor: #111111;
+@selectedColor: #1c54c6;
+@navButtonBackground: #1c54c6;
+@buttonTextColor: #ffffff;
+@progress-bar: #1c54c6;
+/* End XI Survey defined */
+
+
+/* ================================================
+    Linked variables
+    ================================================ */
+@borderColor: #707070;
+@normalColor: @surveyBgColor;
+@hoverColor: #ececec;
+
+/* Widths */
+@headerWidth: @contentWidth;
+@footerWidth: @contentWidth;
+@headerMaxWidth: @contentMaxWidth;
+@footerMaxWidth: @contentMaxWidth;
+
+/* Text color */
+@promptTextColor: @textColor;
+@optionTextColor: @textColor;
+@optionTextColorHover: @textColor;
+@optionTextColorSelected: @textColor;
+@booleanTextColor: @textColor;
+@booleanTextColorHover: @textColor;
+@booleanTextColorSelected: @textColor;
+@booleanTextColorSelectedHover: @textColor;
+@ratingOptionTextColor: @textColor;
+@ratingOptionTextColorHover: @textColor;
+@ratingNAoptionTextColorMobile: @textColor;
+@darkZebraStripeText: @textColor;
+@lightZebraStripeText: @textColor;
+@entryFieldTextColor: @textColor;
+
+/* Links */
+@linkColor: @h1Color;
+@linkColorHover: @h1Color;
+
+/* Normal color */
+@radioButtonBgColor: @normalColor;
+@checkboxBgColor: @normalColor;
+@ratingRadioButtonBgColor: @normalColor;
+
+/* Hover color */
+@radioButtonBgColorHover: @hoverColor;
+@checkboxBgColorHover: @hoverColor;
+@ratingRadioButtonBgColorHover: @hoverColor;
+
+/* Selected color */
+@linkColor: @selectedColor;
+@linkColorHover: @selectedColor;
+@radioButtonBgColorSelected: @selectedColor;
+@checkboxBgColorSelected: @selectedColor;
+@ratingOptionBgColorSelected: @selectedColor;
+@ratingRadioButtonBgColorSelected: @selectedColor;
+@adaOutline: 2px solid @selectedColor;
+
+/* Selected text color */
+@checkmarkColor: @selectedTextColor;
+@ratingOptionTextColorSelected: @selectedTextColor;
+
+/* Border */
+@radioButtonBorder: 1px solid @borderColor;
+@checkboxBorder: 1px solid @borderColor;
+@ratingRadioButtonBorder: 1px solid @borderColor;
+
+
+/* ================================================
+    Additional variable definitions
+    ================================================ */
+@surveyBgColor: #ffffff;
+@surveyBorderRadius: 12px;
+
+/* Buttons */
+@buttonBgColorHover: lighten(@navButtonBackground, 10%);
+@buttonPadding: 0.625rem 30px; /* 10px */
+@buttonTransition: all 0.2s linear;
+
+/* Progress bar */
+@progressHeight: 0.9375rem; /* 15px */
+@footerPadding: 1.4375rem 0; /* 23px */
+
+/* Date picker */
+@calActiveMonthArrowColor: #000000;
+@calInactiveMonthArrowColor: #000000;
+@calMonthYearTextColor: #000000;
+@calDayHeadersColor: #000000;
+@calAvailableDaysColor: #000000;
+@calUnavailableDaysColor: #000000;
+
+/* Multiple choice and Boolean option widths */
+@optionBgWidth: auto;
+@optionBgMaxWidth: 100%;
+
+/* Radio buttons */
+@radioButtonBorderHover: @radioButtonBorder;
+@radioButtonBorderSelected: @radioButtonBorder;
+@radioButtonBoxShadow: 0 0 0 3px @radioButtonBgColor inset;
+@radioButtonTransition: all 0.2s linear;
+
+/* Input fields, dropdowns, text areas */
+@entryFieldShadow: none;
+@entryFieldShadowHover: 0 0 5px rgba(red(@borderColor),green(@borderColor),blue(@borderColor),0.65);
+@entryFieldShadowFocus: 0 0 7px rgba(red(@entryFieldBorderFocusColor),green(@entryFieldBorderFocusColor),blue(@entryFieldBorderFocusColor),0.75);
+@entryFieldBorderHover: @entryFieldBorder;
+@entryFieldBorderFocusColor: @selectedColor;
+@entryFieldBorderFocus: 1px solid @entryFieldBorderFocusColor;
+@inputIconColor: #949494;
+@commentMeterColor: #8c8c8c;
+
+/* Font sizes */
+@font-size-base: 1rem; /* 16px */
+@buttonFontSize: 1rem; /* 16px */
+@promptTextSize: 1rem; /* 16px */
+@ratingLabelSize: 0.8125rem; /* 13px */
+@ratingLabelSizeMobile: 0.75rem; /* 12px */
+@font-size-base-mobile: @font-size-base;
+@promptTextSize-mobile: @promptTextSize;
+
+/* Headings */
+@h2Color: #707070;
+@h3Color: @textColor;
+
+
+/* ================================================
+    Error area for timeout pages
+    ================================================ */
+.promptArea.errorArea .helpPoint .circle {
+	display: none;
+}
+.promptArea.errorArea {
+	background-color: #ffffff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #111111 !important;
+	margin: 40px auto;
+	max-width: @surveyWidth;
+	position: relative;
+	width: 100%;
+}
+.promptArea.errorArea .timeout ~ h2 {
+	display: inline-block;
+	margin: 20px auto;
+	width: 90%;
+}
+.promptArea.errorArea p {
+	margin: 0 auto;
+	width: 90%;
+}
+.promptArea.errorArea .errorImage.timeout {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.promptArea.errorArea .errorImage {
+	max-width: 312px;
+	width: 100%;
+}
+.promptArea.errorArea #footer {
+	background-color: transparent;
+	border: none;
+	color: #666666 !important;
+	margin-top: 60px;
+}
+.promptArea.errorArea #footer #links {
+	padding: 0 0 30px 0;
+}
+
+
+/* Session timeout modal */
+.jAlert {
+	font-family: @font-family-base;
+}
+.ja_body {
+	color: @textColor;
+}
+
+
+/* ================================================
+   Generic styling
+   ================================================ */
+strong, b { font-weight: bold; }
+
+/* Getting rid of default styling from phones */
+html {
+ 	-webkit-appearance: none;
+ 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/* Setting margin to 0 so that 100% width styles go right to the edge of the browser window */
+body {
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	-webkit-print-color-adjust: exact;
+}
+.bodyContainer {
+	min-width: 0;
+}
+#promptForm {
+	border-radius: @surveyBorderRadius;
+	-moz-border-radius: @surveyBorderRadius;
+	-webkit-border-radius: @surveyBorderRadius;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
+	margin: 0 auto;
+	max-width: @contentMaxWidth;
+	width: 100%;
+}
+@media all and (min-width: 770px) {
+	.bodyContainer {
+		padding: 30px 0;
+	}
+}
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+#promptArea {
+	box-sizing: border-box;
+	padding: 3em 0 0 0;
+}
+
+@media all and (max-width: 480px) {
+	#promptForm {
+		border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+	#promptArea {
+		padding: 2em 0 0 0;
+	}
+}
+
+
+/* Adjusting space underneath prompts */
+.promptContainer {
+	margin-bottom: 0;
+}
+.prompt {
+	margin-bottom: @promptSpacing;
+}
+.prompt textarea {
+	margin-bottom: 0;
+}
+
+
+/* ================================================
+   Cookies bar
+   ================================================ */
+.surveyBanner {
+	background-color: transparent;
+}
+.surveyBanner > div {
+	background-color: #ffffff;
+}
+
+
+/* ================================================
+   Header
+   ================================================ */
+.logoContainer {
+	border-radius: @surveyBorderRadius @surveyBorderRadius 0 0;
+	-moz-border-radius: @surveyBorderRadius @surveyBorderRadius 0 0;
+	-webkit-border-radius: @surveyBorderRadius @surveyBorderRadius 0 0;
+}
+.logoContainer img {
+	max-width: 160px;
+	width: 50%;
+}
+
+@media all and (max-width: 480px) {
+	.logoContainer {
+		border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+	}
+}
+
+
+/* ================================================
+   Footer
+   ================================================ */
+#footer {
+	border-radius: 0 0 @surveyBorderRadius @surveyBorderRadius;
+	-moz-border-radius: 0 0 @surveyBorderRadius @surveyBorderRadius;
+	-webkit-border-radius: 0 0 @surveyBorderRadius @surveyBorderRadius;
+}
+
+#footerBar {
+	margin-top: 0;
+}
+
+#footer #links {
+	
+}
+#footer .leftLinks {
+	padding-top: 0.1875rem; /* 3px */
+	padding-bottom: 0.1875rem; /* 3px */
+}
+#footer .rightLinks {
+	padding-left: 0.9375rem; /* 15px */
+	padding-top: 0;
+}
+#footer #companyLogo {
+	bottom: auto !important;
+	height: 1.1875rem; /* Height of new image - 19px */
+	line-height: 0;
+	max-width: 10rem; /* 160px */
+}
+/* White Powered by InMoment logo */
+#footer #companyLogo img {
+	background: url('http://www.inmoment.com/websurvey/servlet/BlobServlet?s2=16b03372-ee06-4dc5-aad9-756fcd7f6846-99&v=0&type=0&t=poweredByInMomentGreySVG') no-repeat center;
+	box-sizing: border-box;
+	padding-left: 100%; /* Equal to width of new image - 160px */
+	width: 100%; /* Width of new image - 160px */
+	height: 100%;
+}
+
+@media all and (max-width: 600px) {
+	.leftLinks #copyright {
+		display: inline-block;
+	}
+}
+
+@media all and (max-width: 480px) {
+	#footer {
+		border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		font-size: 0.625rem; /* 10px */
+	}
+	#footer .leftLinks {
+		padding-top: 0;
+	}
+	.leftLinks #copyright {
+		display: block;
+	}
+	#footer .leftLinks #copyright,
+	#footer .leftLinks #contestRules,
+	#footer .leftLinks #previousWinners,
+	#footer .leftLinks #privacyPolicy {
+		display: block;
+		margin: 0 0 5px 0;
+	}
+}
+
+
+/* ================================================
+   Generic prompt styling
+   ================================================ */
+.prompt .promptText,
+.prompt .promptText__header,
+.prompt.numericPrompt .promptText,
+.prompt.numericPrompt .promptText__header,
+.prompt.textPrompt .promptText,
+.prompt.textPrompt .promptText__header {
+	line-height: 1.5em;
+	min-width: auto;
+}
+/* Taking off bottom margin from output only prompts */
+.prompt.genericPrompt .prompt .promptText,
+.prompt.genericPrompt .promptText__header {
+	margin-bottom: 0px;
+}
+/* Removing extra indent spacing from prompt inputs */
+.prompt .promptInput {
+	margin: 0 auto;
+	padding-left: 0;
+}
+
+
+/* Triggered prompts */
+.prompt.triggered {
+	overflow: visible;
+}
+/* Hiding flashing selected colour in triggered prompts' bubble */
+.prompt.triggered.ng-hide-remove-active .promptText__header {
+	background-color: transparent;
+}
+/* Hiding flashing selected colour in triggered prompts' arrow */
+.prompt.triggered.ng-hide-remove-active .arrow-down::before {
+	border-top-color: transparent;
+}
+
+
+/* ================================================
+   Error messages
+   ================================================ */
+.errors .errorMsg,
+.errors,
+.errorMsg {
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	width: 100% !important;
+}
+.errors .errorMsg,
+.errorMsg {
+	font-size: 0.75rem; /* 12px */
+}
+
+/* Solid error line
+.field-prompt-error,
+.field-prompt-error-add.field-prompt-error-add-active {
+	border-style: solid !important;
+}
+.prompt input.ng-dirty.ng-invalid,
+.prompt textarea.ng-dirty.ng-invalid {
+	border-style: solid;
+}
+.booleanGroupPrompt .field-prompt-error.first-child {
+	border-top-style: solid !important;
+}
+.booleanGroupPrompt .field-prompt-error.last-child {
+	border-bottom-style: solid !important;
+}
+
+.booleanGroupPrompt .field-prompt-error {
+	min-height: 0;
+}
+.levelData .btn.ui-select.field-prompt-error {
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+} */
+
+/* Fix for error messages overlapping content when it is very long */
+.prompt input ~ .errors .errorMsg,
+.prompt textarea ~ .errors .errorMsg,
+.prompt input ~ .errors.ng-hide .errorMsg,
+.prompt textarea ~ .errors.ng-hide .errorMsg,
+.prompt input.ng-dirty.ng-invalid ~ .errors,
+.prompt textarea.ng-dirty.ng-invalid ~ .errors,
+.field-prompt-error ~ .errors .errorMsg,
+.field-prompt-error-add.field-prompt-error-add-active ~ .errors .errorMsg,
+.field-prompt-error ~ .errors,
+.field-prompt-error-add.field-prompt-error-add-active ~ .errors,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid ~ .errors,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid-minlength ~ .errors .minlength,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid-maxlength ~ .errors .maxlength,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid-email ~ .errors .email,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid-tel ~ .errors .tel,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid-number ~ .errors .number,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid-server ~ .errors .server,
+.prompt .text-segment.noFocus.ng-dirty.ng-invalid-required ~ .errors .required {
+	height: auto;
+}
+
+/* Fix for 40px set height for Boolean/rating group prompt error message box */
+.groupPrompt .field-prompt-error {
+	height: auto;
+}
+
+
+/* ================================================
+   Input fields, drop downs, text areas
+   ================================================ */
+/* Disabled location drop down
+.levelData .btn.ui-select.disabled,
+.levelData .btn.ui-select.disabled:hover {
+	background-color: #999999;
+	border-color: #999999;
+} */
+
+/* Increase speed of focus border transition */
+.prompt input,
+.prompt textarea {
+	-moz-transition: border-color .2s ease;
+	-webkit-transition: border-color .2s ease;
+	-o-transition: border-color .2s ease;
+	-ms-transition: border-color .2s ease;
+	transition: border-color .2s ease;
+}
+
+.prompt input,
+.prompt.textPrompt input,
+.prompt.datePrompt input,
+.prompt.timePrompt input,
+.prompt.numericPrompt input,
+.prompt textarea,
+.prompt .commentArea,
+.prompt .commentPrompt .nudge_sidebar + .commentArea,
+.ui-select,
+.levelData .btn.ui-select,
+.multipleChoiceInput .btn.ui-select {
+	box-shadow: @entryFieldShadow;
+	-moz-box-shadow: @entryFieldShadow;
+	-webkit-box-shadow: @entryFieldShadow;
+	box-sizing: border-box;
+	line-height: 1.5em;
+	padding: 0.3125rem 0.625rem; /* 5px 10px */
+	-webkit-appearance: none;
+}
+/* Overwrite default mobile style */
+@media all and (max-width: 480px) {
+	.commentPrompt .nudge_sidebar + .commentArea {
+		padding: 0.3125rem 0.625rem; /* 5px 10px */
+	}
+}
+
+.prompt input:hover,
+.prompt input.ng-dirty.ng-invalid:hover,
+.prompt.textPrompt input:hover,
+.prompt.textPrompt input.ng-dirty.ng-invalid:hover,
+.prompt.datePrompt input:hover,
+.prompt.timePrompt input:hover,
+.prompt.numericPrompt input:hover,
+.prompt textarea:hover,
+.prompt textarea.ng-dirty.ng-invalid:hover,
+.prompt .commentArea:hover,
+.prompt .commentPrompt .nudge_sidebar + .commentArea:hover,
+.goRecSharePrompt .promptInput .commentArea:hover {
+	border: @entryFieldBorderHover;
+	box-shadow: @entryFieldShadowHover;
+	-moz-box-shadow: @entryFieldShadowHover;
+	-webkit-box-shadow: @entryFieldShadowHover;
+	-webkit-appearance: none;
+}
+
+.prompt input:focus,
+.prompt input.ng-dirty.ng-invalid:focus,
+.prompt .text-segment.inFocus input,
+.prompt.textPrompt input:focus,
+.prompt.textPrompt input.ng-dirty.ng-invalid:focus,
+.prompt.datePrompt input:focus,
+.prompt.timePrompt input:focus,
+.prompt.numericPrompt input:focus,
+.prompt textarea:focus,
+.prompt textarea.ng-dirty.ng-invalid:focus,
+.prompt .commentArea:focus,
+.prompt .commentPrompt .nudge_sidebar + .commentArea:focus,
+.goRecSharePrompt .promptInput .commentArea:focus {
+	border: @entryFieldBorderFocus;
+	box-shadow: @entryFieldShadowFocus;
+	-moz-box-shadow: @entryFieldShadowFocus;
+	-webkit-box-shadow: @entryFieldShadowFocus;
+	outline: 1px;
+	-webkit-appearance: none;
+}
+
+.prompt.datePrompt input,
+.prompt.timePrompt input {
+	padding-right: 2.5rem; /* 40px */
+}
+
+/* Set size for input fields and drop downs */
+.prompt input,
+.prompt.textPrompt input,
+.prompt.datePrompt input,
+.prompt.timePrompt input,
+.prompt.numericPrompt input,
+.prompt input:hover,
+.prompt.textPrompt input:hover,
+.prompt.datePrompt input:hover,
+.prompt.timePrompt input:hover,
+.prompt.numericPrompt input:hover,
+.prompt input:focus,
+.prompt input.ng-dirty.ng-invalid:focus,
+.prompt.textPrompt input:focus,
+.prompt.textPrompt input.ng-dirty.ng-invalid:focus,
+.prompt.datePrompt input:focus,
+.prompt.timePrompt input:focus,
+.prompt.numericPrompt input:focus,
+.ui-select,
+.levelData .btn.ui-select,
+.ui-select:hover,
+.levelData .btn.ui-select:hover,
+.prompt .multipleChoiceInput .btn.ui-select {
+	max-width: 80vw;
+	width: 15.875rem; /* 254px */
+	height: 2.5rem; /* 40px */
+}
+
+/* Drop down arrow */
+.btn .btn-icon {
+	right: 0.5rem; /* 8px */
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	width: 1rem; /* 16px (default */
+	height: 0.875rem; /* 14px (default) */
+}
+.btn .btn-icon::before,
+.btn .btn-icon::after {
+	border: 0.375rem solid transparent; /* 6px (default) */
+}
+.btn .btn-icon::before {
+	border-width: 0.5rem; /* 8px (default) */
+}
+.btn .btn-icon::after {
+	left: 0.125rem; /* 2px (default) */
+}
+/* Removing padding from drop down text and vertically centering text in drop down */
+.btn-inner {
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	height: 1.628rem; /* 26px */
+	line-height: 1.75rem; /* 28px */
+	padding: 0 2rem 0 0; /* 32px */
+}
+/* Removing centering for drop downs */
+.prompt .multipleChoiceInput .btn.ui-select {
+	margin-left: 0;
+}
+
+/* Overwriting 40px max-height for bigger font sizes */
+.levelData .btn.ui-select {
+	max-height: none;
+}
+
+@media all and (max-width: 480px) {
+	/* Taking off mobile centering of drop downs */
+	.prompt .multipleChoiceInput .btn.ui-select,
+	.employeeInput .btn.ui-select {
+		margin-left: 0;
+		max-width: 286px;
+		width: 100%;
+	}
+
+	/* Full width input fields and drop downs on mobile */
+	.prompt input,
+	.prompt.textPrompt input,
+	.prompt.datePrompt input,
+	.prompt.timePrompt input,
+	.prompt input:hover,
+	.prompt.textPrompt input:hover,
+	.prompt.datePrompt input:hover,
+	.prompt.timePrompt input:hover,
+	.prompt input:focus,
+	.prompt input.ng-dirty.ng-invalid:focus,
+	.prompt.textPrompt input:focus,
+	.prompt.textPrompt input.ng-dirty.ng-invalid:focus,
+	.prompt.datePrompt input:focus,
+	.prompt.timePrompt input:focus,
+	.ui-select,
+	.levelData .btn.ui-select,
+	.ui-select:hover,
+	.levelData .btn.ui-select:hover {
+		min-width: 100%;
+	}
+}
+
+
+/* Date/Time popup triangle*/
+.android-ics.light .dw-bubble-top .dw-arr {
+	border-color: #999999 transparent transparent;
+}
+.android-ics.light .dw-bubble-bottom .dw-arr {
+	border-color: transparent transparent #999999;
+}
+/* Hover circle for calender picker dates */
+.mobiscroll.android-ics .dw-cal-row .dw-cal-day:hover .dw-i {
+	background-color: #ececec;
+}
+.mobiscroll.android-ics .dw-cal-week-hl .dw-cal-day.dw-sel .dw-i {
+	background-color: @ratingRadioButtonBgColorSelected;
+	color: @ratingOptionTextColorSelected;
+}
+/* Background colour behind calendar picker month arrows */
+.dw-cal-prev-m.dw-cal-prev.dw-cal-btn.dwb.dwb-e.dwb-a:hover,
+.dw-cal-next-m.dw-cal-next.dw-cal-btn.dwb.dwb-e.dwb-a:hover {
+	background-color: transparent;
+}
+/* Time set hover */
+.mobiscroll.android-ics.light .dwbc .dwb:hover {
+	background-color: #ececec;
+}
+
+/* Time picker background when releasing a click */
+.mobiscroll.android-ics .dww .dw-li.dw-hl {
+	background: transparent;
+}
+/* Date picker month arrow background */
+.mobiscroll.android-ics .dw .dwb-a {
+	background: transparent;
+}
+
+
+/* Adjusting time and date icons after adding box-sizing: border-box; to all input fields */
+.prompt.datePrompt .iconFont,
+.prompt.timePrompt .iconFont {
+	font-size: 1.1875rem; /* 19px */
+}
+.prompt.datePrompt [data-icon]::before,
+.prompt.timePrompt [data-icon]::before {
+	background-color: transparent;
+	position: relative;
+	right: auto; /* Default value of auto */
+	top: 0.1875rem; /* 3px - Default value of 5px */
+	left: -2.1875rem; /* -35px - Default value of -35px */
+}
+@media only screen and (max-width: 480px) {
+	.prompt.datePrompt [data-icon]::before,
+	.prompt.timePrompt [data-icon]::before {
+		margin-bottom: -1.875rem; /* Removing extra space underneath time/date prompts caused by icons - -30px */
+		bottom: 1.8125rem !important; /* Default value of -32px - 29px*/
+		top: auto !important; /* Default value of auto */
+		right: 0.625rem !important; /* Default value of 13px - 10px */
+		left: auto !important; /* Default value of auto */
+	}
+}
+
+
+/* Smart comment overwrites */
+.commentPrompt .commentArea {
+	max-width: 100%;
+	width: calc(~'100% - 3.3125rem') !important; /* 53px */
+}
+.commentPrompt .nudge_sidebar.ng-hide ~ .commentArea {
+	width: 100% !important;
+}
+
+/* Removing margin-left from .commentArea and moving it to the sidebar as margin-right so that the comment box can be flush left when the strength meter is not used */
+.commentPrompt .nudge_sidebar + .commentArea {
+	margin-left: 0;
+	margin-top: 0;
+}
+.commentPrompt .nudge_sidebar {
+	margin-left: 11px;
+	margin-right: 7px;
+}
+.commentPrompt .nudge_sidebar .nudge_meter .nudge_goal,
+.commentPrompt .nudge_sidebar .nudge_meter {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+/* Nuding label down so that it is not as close to the meter bar circle at its initial position */
+.commentPrompt .nudge_sidebar .nudgeLabel {
+	font-size: 0.625rem; /* 10px */
+	left: -17px;
+	line-height: 1.2em;
+	padding-top: 12px;
+}
+/* Arrow */
+.commentPrompt .nudge_arrow {
+	border-width: 7.5px 19px 7.5px 0;
+}
+
+.commentPrompt #hintContainer #hint {
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	font-size: 0.8125rem; /* 13px */
+	line-height: 1.2em;
+	min-height: auto;
+	padding: 0 0 0 15px;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	width: 83%;
+}
+
+@media all and (max-width: 480px) {
+	.commentPrompt #hintContainer #hint {
+		padding: 9px 6px 9px 12px;
+		display: block;
+	}
+}
+.commentPrompt #hintContainer #hint.showHint {
+	width: 100%;
+}
+
+.commentPrompt #hintContainer #hint.showHint #hintText {
+	color: @ratingOptionTextColor;
+	line-height: 1.5em;
+}
+/* Hint bubble closing X */
+.commentPrompt #hintContainer #hint #closeButton::before {
+	bottom: 0px;
+	color: @ratingOptionTextColor;
+	font-size: 0.9375rem; /* 15px */
+	padding-right: 0.25rem; /* 4px */
+	line-height: 2.8125rem; /* 45px */
+	width: 2.8125rem; /* 45px */
+	height: 2.8125rem; /* 45px */
+	position: relative;
+	top: 0px;
+	text-align: center;
+}
+/* Hint bubble */
+.commentPrompt #hintContainer {
+	left: 60px; /* Default 53px */
+	margin-bottom: 0;
+	width: calc(~'90% - 7.0625rem') !important; /* 113px */
+}
+.commentPrompt #hintContainer .hintComponent {
+	background: #f6f6f6;
+	border-color: #b4b4b4;
+}
+
+.commentPrompt .hintEnabled .errors {
+	box-sizing: border-box;
+	left: 0;
+	top: 0;
+}
+.commentPrompt .nudge_sidebar ~ #hintContainer {
+	height: 0;
+	top: 0px;
+}
+.commentPrompt .errors,
+.commentPrompt .strengthMeter .errors {
+	left: 0;
+}
+.commentPrompt .strengthMeter .errors {
+	box-sizing: border-box;
+	padding-left: 53px;
+}
+.commentPrompt .strengthMeter .imageUpload ~ .errors {
+	padding-left: 0;
+}
+.characterCount {
+	font-size: 0.875rem; /* 14px */
+	color: #707070;
+}
+
+
+/* Image upload */
+.commentPrompt .imageUpload {
+	padding: 15px 0 5px 0;
+}
+.commentPrompt .imageUpload > .image-capture > .image-actioned-container {
+	padding-top: 15px;
+}
+.commentPrompt .imageUpload > .image-capture .image-upload-container {
+	background-color: @navButtonBackground;
+	border: @buttonBorder;
+	box-sizing: border-box;
+	color: @textColor;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	-moz-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+.commentPrompt .imageUpload > .image-capture .image-upload-container:hover {
+	background-color: @buttonBgColorHover;
+}
+.commentPrompt .imageUpload [data-icon]::before {
+	color: @buttonTextColor;
+	font-size: 30px;
+	top: 35px;
+	left: 35px;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	-moz-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+.commentPrompt .imageUpload .image-capture .image-upload-container:hover [data-icon]::before {
+	color: @buttonTextColorHover;
+}
+.commentPrompt .imageUpload > .image-capture .image-upload-container > .upload-photo-message {
+	top: 40%;
+}
+/* Uploaded image X */
+.commentPrompt .imageUpload > .image-capture > .image-actioned-container > .image-chosen-container .icon-remove {
+	background-color: #666666;
+	border: 2px solid @surveyBgColor;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.commentPrompt .imageUpload > .image-capture > .image-actioned-container > .image-chosen-container .icon-remove::before {
+	font-size: 16px;
+	color: #ffffff;
+	left: 5px;
+	top: 2px;
+}
+
+/* Upload another photo */
+.commentPrompt .imageUpload > .image-capture .image-upload-more-container {
+	background-color: @navButtonBackground;
+	border: @buttonBorder;
+	padding: 5px;
+	top: -5px;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	-moz-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+.commentPrompt .imageUpload > .image-capture .image-upload-more-container:hover {
+	background-color: @buttonBgColorHover;
+}
+/* Image icon */
+.commentPrompt .imageUpload > .image-capture .image-upload-more-container > div::before {
+	color: @buttonTextColor;
+	font-size: 17px;
+	left: 8px;
+	top: 8px;
+}
+.commentPrompt .imageUpload > .image-capture .image-upload-more-container:hover div::before {
+	color: @buttonTextColorHover;
+}
+
+/* Upload photo progress bar */
+.commentPrompt .imageUpload > .image-capture > .image-progress-container .image-progress-bar {
+	background-color: @progressBgColor;
+	border: @progressBorder;
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	-webkit-opacity: 1;
+	opacity: 1;
+	-ms-filter: progid: DXImageTransform.Microsoft.Alpha(opacity=100);
+	filter: alpha(opacity=100);
+}
+.commentPrompt .imageUpload > .image-capture > .image-progress-container .image-progress-bar > .image-progress-percent {
+	background-color: @progress-bar;
+	border: none;
+}
+
+
+/* ================================================
+   Nav
+   ================================================ */
+#nav {
+	background-color: transparent;
+	box-sizing: border-box;
+	display: table;
+	padding: 10px 0 40px 0;
+}
+
+.navButton.invalidPage,
+.navButton.invalidPage:hover {
+	background-color: @alertColor;
+	border-color: @alertColor;
+	color: #ffffff;
+}
+
+.navButton,
+button,
+input[type="button"],
+.prompt input[type="button"] {
+	box-sizing: border-box;
+	cursor: pointer;
+	font-weight: bold;
+	line-height: 1.2em;
+	padding: @buttonPadding;
+	position: relative;
+	text-align: center;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	-moz-transition: @buttonTransition;
+	transition: @buttonTransition;
+	min-width: auto;
+	width: auto;
+	height: auto;
+	white-space: normal;
+	-webkit-appearance: none;
+}
+.navButton:hover,
+button:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+.prompt input[type="button"]:focus,
+.prompt input[type="button"]:hover {
+	border: @buttonBorder;
+}
+.navButton .arrow.backArrow {
+	right: 0.3125rem; /* 5px */
+}
+.navButton .arrow.nextArrow {
+	left: 0.3125rem; /* 5px */
+	top: 0.0625rem; /* 1px */
+}
+
+.progress {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-sizing: border-box;
+	margin-top: 0.75rem; /* 12px */
+}
+.progress-bar {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+@media all and (max-width: 600px) {
+	.progress {
+		margin-top: 4.25rem; /* 68px */
+		width: 100%;
+	}
+}
+
+.lastPageNav .progress {
+	margin-top: 0;
+}
+
+
+/* ================================================
+   Multiple choice prompts (vertical)
+   ================================================ */
+/* Removing extra indent spacing from vertical multiple choice prompts */
+.multipleChoiceInput .menuItem-container {
+	border: none;
+	max-width: @optionBgMaxWidth;
+	width: @optionBgWidth;
+}
+@media all and (max-width: 480px) {
+	.multipleChoiceInput .menuItem-container {
+		min-width: 100%;
+	}
+}
+/* Width of multiple choice questions */
+@media all and (min-width: 480px) {
+	.multipleChoiceInput .menuItem-container {
+		min-width: 254px;
+	}
+}
+
+
+/* Normal answer choice background */
+.multipleChoiceInput .menuItem {
+	border: none;
+	border-radius: @entryFieldCorners;
+	-moz-border-radius: @entryFieldCorners;
+	-webkit-border-radius: @entryFieldCorners;
+	line-height: 1.5em;
+	margin-bottom: 2px;
+	padding: 0.4375rem 1.25rem 0.4375rem 2.5rem;  /* 7px 20px 7px 40px */
+}
+.multipleChoiceInput .menuItem:last-child {
+	margin-bottom: 0;
+}
+
+/* Normal radio button */
+.multipleChoiceInput .menuItem span {
+	background-clip: border-box;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	box-shadow: @radioButtonBoxShadow;
+	box-sizing: border-box;
+	left: 0.625rem; /* 10px */
+	top: 0.5625rem; /* 9px */
+	-moz-transition: @radioButtonTransition;
+	-webkit-transition: @radioButtonTransition;
+	-o-transition: @radioButtonTransition;
+	transition: @radioButtonTransition;
+	width: 1.25rem; /* 20px */
+	height: 1.25rem; /* 20px */
+}
+/* Hover radio button */
+.multipleChoiceInput .menuItem span:hover,
+.multipleChoiceInput .menuItem:hover span {
+	border: @radioButtonBorderHover;
+}
+/* Selected radio button */
+.multipleChoiceInput .menuItem span.checked,
+.multipleChoiceInput .menuItem:hover span.checked {
+	border: @radioButtonBorderSelected;
+}
+
+/* Adding space between multiple choice and triggered Other box */
+.multipleChoiceInput .categorical:not(.field-prompt-error):not(.field-prompt-error-remove) .menuItem.other {
+	margin-bottom: 3.4375rem; /* 55px */
+}
+.multipleChoiceInput .categorical:not(.field-prompt-error):not(.field-prompt-error-remove) .menuItem.other .otherTextBox {
+	bottom: -3.3125rem; /* -57px */
+	height: 2.5rem; /* 40px */
+	transition: all 0.2s linear;
+	width: 100%;
+}
+@media all and (min-width: 481px) {
+	.multipleChoiceInput .categorical:not(.field-prompt-error):not(.field-prompt-error-remove) .menuItem.other .otherTextBox {
+		max-width: 15.875rem; /* 254px */
+	}
+}
+
+
+/* ================================================
+   Yes/No
+   ================================================ */
+/* Removing extra space */
+.prompt .yesNo {
+	position: relative;
+	top: 0;
+}
+
+/* Fix to accommodate longer answer choice labels that are not Yes/No */
+.prompt .yesNo .promptInput label.y,
+.prompt .yesNo .promptInput label.n,
+.prompt .yesNo .promptInput .yesNo-ada-container label.y,
+.prompt .yesNo .promptInput .yesNo-ada-container label.n {
+	border: @radioButtonBorder !important;
+	box-sizing: border-box;
+	display: table-cell;
+	font-size: @font-size-base;
+	line-height: normal;
+	max-width: 50%;
+	min-width: 92px;
+	padding: 0.5rem 0.625rem; /* 8px 10px */
+	vertical-align: middle;
+}
+/* Adding space between two buttons after changing to table-cell display and taking off the white border */
+.prompt .multipleChoiceInput .yesNo .categorical {
+	box-sizing: border-box;
+	padding-right: 0px;
+	width: 100% !important;
+}
+.prompt .yesNo .promptInput label.y,
+.prompt .yesNo .promptInput .yesNo-ada-container label.y {
+	border-radius: 0 @entryFieldCorners @entryFieldCorners 0;
+	-moz-border-radius: 0 @entryFieldCorners @entryFieldCorners 0;
+	-webkit-border-radius: 0 @entryFieldCorners @entryFieldCorners 0;
+	position: relative;
+	left: -1px;
+}
+.prompt .yesNo .promptInput label.n,
+.prompt .yesNo .promptInput .yesNo-ada-container label.n {
+	border-radius: @entryFieldCorners 0 0 @entryFieldCorners;
+	-moz-border-radius: @entryFieldCorners 0 0 @entryFieldCorners;
+	-webkit-border-radius: @entryFieldCorners 0 0 @entryFieldCorners;
+}
+
+/* Normal button */
+.prompt .yesNo .promptInput label,
+.prompt .yesNo .promptInput:focus label {
+	font-weight: bold;
+}
+.prompt .yesNo .promptInput label.y,
+.prompt .yesNo .promptInput label.n,
+.prompt .yesNo .promptInput .yesNo-ada-container label.y,
+.prompt .yesNo .promptInput .yesNo-ada-container label.n {
+	background-color: @ratingOptionBgColor;
+	color: @ratingOptionTextColor;
+	-moz-transition: @radioButtonTransition;
+	-webkit-transition: @radioButtonTransition;
+	-o-transition: @radioButtonTransition;
+	transition: @radioButtonTransition;
+}
+/* Hover button */
+.prompt .yesNo .promptInput label.y:hover,
+.prompt .yesNo .promptInput label.n:hover,
+.prompt .yesNo .promptInput .yesNo-ada-container label.y:hover,
+.prompt .yesNo .promptInput .yesNo-ada-container label.n:hover {
+	background-color: @ratingOptionBgColorHover;
+	color: @ratingOptionTextColorHover;
+}
+/* Selected button */
+.prompt .yesNo .promptInput label.y.chkd,
+.prompt .yesNo .promptInput label.n.chkd,
+.prompt .yesNo .promptInput .yesNo-ada-container label.y.chkd,
+.prompt .yesNo .promptInput .yesNo-ada-container label.n.chkd,
+.prompt .yesNo .promptInput label.y.chkd:hover,
+.prompt .yesNo .promptInput label.n.chkd:hover,
+.prompt .yesNo .promptInput .yesNo-ada-container label.y.chkd:hover,
+.prompt .yesNo .promptInput .yesNo-ada-container label.n.chkd:hover {
+	background-color: @ratingOptionBgColorSelected;
+	color: @ratingOptionTextColorSelected;
+}
+
+
+/* ================================================
+   Location picker
+   ================================================ */
+/* Drop down text */
+.ui-select .btn-inner .btn-text {
+	font-size: @font-size-base;
+	font-weight: normal;
+}
+
+/* Space between drop downs */
+.levelData {
+	padding: 15px 0 0 0;
+}
+.locationPickerPrompt.prompt .promptText__header {
+	margin-bottom: 0;
+}
+/* Space between text and drop down */
+.levelData .btn.ui-select {
+	left: 15px;
+}
+
+
+/* Stacked location picker for mobile */
+@media all and (max-width: 480px) {
+	.level {
+		display: block;
+		margin-bottom: @promptSpacing; /* Default space between prompts is 1.5em */
+		width: 100%;
+	}
+	.level:nth-last-of-type(2) {
+		margin-bottom: 0;
+	}
+	.levelData {
+		display: block;
+		padding: 0;
+	}
+	.locationPickerPrompt.prompt .promptText__header {
+		margin-bottom: 15px;
+	}
+	/* Location picker label */
+	.levelLabel {
+		padding: 0 0 15px !important;
+	}
+	.levelData .btn.ui-select {
+		left: 0px;
+	}
+}
+
+
+/* ================================================
+   Booleans
+   ================================================ */
+/* Normal answer choice background and answer choice label */
+.ui-checkbox {
+	line-height: 1.5em;
+	margin-bottom: 0px;
+	min-height: 20px;
+	padding: 0.3125rem 0; /* 5px */
+}
+/* Vertically centering the Boolean text with the checkbox */
+.ui-checkbox .booleanText {
+	position: relative;
+	top: 1px;
+}
+
+/* Normal checkbox */
+.ui-checkbox span.show-check {
+	background-clip: padding-box;
+	box-sizing: border-box;
+	margin-bottom: 0;
+	margin-right: 0.625rem; /* 10px */
+	position: relative;
+	padding-left: 0.1875rem; /* 3px */
+	top: 0.125rem; /* 2px */
+	-moz-transition: @radioButtonTransition;
+	-webkit-transition: @radioButtonTransition;
+	-o-transition: @radioButtonTransition;
+	transition: @radioButtonTransition;
+	width: 1.25rem; /* 20px */
+	height: 1.25rem; /* 20px */
+}
+/* Hover checkbox */
+.ui-checkbox:hover span.show-check {
+	
+}
+
+/* Checkmark */
+.ui-checkbox.checked span.show-check::before {
+	font-size: 1rem; /* 16px */
+	font-weight: bold;
+	position: relative;
+	top: 0px;
+}
+
+/* Repeat default code - Making sure middle error borders do not appear */
+.booleanGroupPrompt .field-prompt-error {
+	border-bottom-style: none !important;
+	border-top-style: none !important;
+}
+
+
+/* ================================================
+   Boolean groups
+   ================================================ */
+.prompt.booleanGroupPrompt {
+	max-width: 100%;
+}
+/* Removing extra indent spacing from Boolean prompts and adding gap between answer choices */
+.booleanGroupPrompt .prompt {
+	border-width: 0px !important;
+	padding-bottom: 2px;
+}
+/* Removing bottom padding for the last answer choice of a Boolean group */
+.booleanGroupPrompt .last-child .prompt {
+	padding-bottom: 0;
+}
+/* Max width to make sure error box isn't bigger than check box rectangles */
+.prompt.booleanGroupPrompt .ng-isolate-scope.ng-animate {
+	max-width: @optionBgMaxWidth;
+}
+/* Adjusting error box for check box questions */
+.prompt.booleanGroupPrompt.groupPrompt .field-prompt-error {
+	height: auto;
+	max-width: @optionBgMaxWidth;
+}
+
+/* Normal answer choice background and answer choice label */
+.booleanGroupPrompt .ui-checkbox {
+	background-color: @optionBgColor;
+	border-radius: @entryFieldCorners;
+	-moz-border-radius: @entryFieldCorners;
+	-webkit-border-radius: @entryFieldCorners;
+	box-sizing: border-box;
+	color: @optionTextColor;
+	max-width: @optionBgMaxWidth;
+	padding: 0.4375rem 1.25rem 0.4375rem 0.625rem; /* 7px 20px 7px 10px */
+}
+/* Hover answer choice background and answer choice label */
+.booleanGroupPrompt .ui-checkbox:hover {
+	background-color: @optionBgColorHover;
+	color: @optionTextColorHover;
+}
+/* Selected answer choice background and answer choice label */
+.booleanGroupPrompt .ui-checkbox.checked {
+	background-color: @optionBgColorSelected;
+	color: @optionTextColorSelected;
+}
+
+/* Normal checkbox */
+.prompt.booleanGroupPrompt .ui-checkbox span.show-check {
+	background-color: @radioButtonBgColor;
+	border: @radioButtonBorder;
+}
+/* Hover checkbox */
+.prompt.booleanGroupPrompt .ui-checkbox:hover span.show-check {
+	background-color: @radioButtonBgColorHover;
+	border: @radioButtonBorderHover;
+}
+/* Selected checkbox */
+.prompt.booleanGroupPrompt .ui-checkbox.checked span.show-check,
+.prompt.booleanGroupPrompt .ui-checkbox.checked:hover span.show-check {
+	background-color: @radioButtonBgColorSelected;
+	border: @radioButtonBorderSelected;
+}
+
+
+/* ================================================
+   Horizontal rating prompts
+   ================================================ */
+/* Focus outline */
+.rating_prompt.slider .options .option:focus,
+.rating_prompt.horizontal .options .option:focus {
+	outline: @adaOutline;
+}
+
+/* Normal answer choice background */
+.rating_prompt.horizontal .options .option .rating {
+	font-size: @promptTextSize;
+}
+.rating_prompt.horizontal .options .option .rating,
+.rating_prompt.horizontal .options .option.before .rating,
+.rating_prompt.horizontal .options .option.after .rating,
+.rating_prompt.horizontal .options .option:hover .rating {
+	box-sizing: border-box;
+	-moz-transition: @radioButtonTransition;
+	-webkit-transition: @radioButtonTransition;
+	-o-transition: @radioButtonTransition;
+	transition: @radioButtonTransition;
+}
+/* Selected hover answer choice background */
+.rating_prompt.horizontal .options .option.selected .rating:hover {
+	background-color: @ratingOptionBgColorSelected;
+}
+
+/* Normal/middle answer choice label */
+.prompt.categoricalGroup .choiceDescriptionContainer .choiceDescription {
+	box-sizing: border-box;
+	display: inline-block; /* Default it table-cell - change to inline-block to overlap long labels instead of offsetting them */
+	line-height: 1.2em;
+	padding: 0 0.25em;
+}
+.rating_prompt.horizontal .options .option .description {
+	display: none;
+	line-height: 1.2em;
+	margin: 0 0 0px 0;
+	width: 100%;
+}
+/* First answer choice label */
+.rating_prompt.horizontal .options.unused .option.first .description {
+	display: block;
+	direction: ltr;
+}
+/* Last answer choice label */
+.rating_prompt.horizontal .options.unused .option.last .description {
+	display: block;
+	direction: ltr;
+}
+
+@media all and (max-width: 480px) {
+	.rating_prompt.horizontal .options.unused .option.first .description {
+		text-align: left;
+		width: 144px;
+	}
+	.rating_prompt.horizontal .options.unused .option.last .description {
+		bottom: 100%;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		width: 144px;
+	}
+}
+
+/* N/A answer choice label */
+.rating_prompt.horizontal .options.unused .option.lastna .description {
+	display: block;
+	direction: ltr;
+	margin: 0 10% 0px 10%;
+	width: 80%;
+}
+
+
+/* Normal N/A answer choice background */
+.rating_prompt.horizontal .options .option.na .rating {
+	background-color: transparent;
+}
+/* Hover N/A answer choice background */
+.rating_prompt.horizontal .options .option.na .rating:hover,
+.rating_prompt.horizontal .options .option.na:hover .rating {
+	background-color: transparent;
+}
+/* Selected N/A answer choice background */
+.rating_prompt.horizontal .options .option.na.selected .rating,
+.rating_prompt.horizontal .options .option.na.selected .rating:hover,
+.rating_prompt.horizontal .options .option.na.selected:hover .rating {
+	background-color: transparent;
+}
+
+/* N/A radio button */
+.rating_prompt.horizontal .options .option.na label .rating div {
+	background-clip: border-box;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	bottom: -0.5625rem; /* -9px */
+	box-sizing: border-box;
+	-moz-transition: @radioButtonTransition;
+	-webkit-transition: @radioButtonTransition;
+	-o-transition: @radioButtonTransition;
+	transition: @radioButtonTransition;
+	width: 1.375rem; /* 22px */
+	height: 1.375rem; /* 22px */
+}
+/* Hover N/A radio button */
+.rating_prompt.horizontal .options .option.na label .rating div:hover {
+	border: @radioButtonBorderHover;
+}
+/* Selected N/A radio button */
+.rating_prompt.horizontal .options .option.na.selected label .rating div,
+.rating_prompt.horizontal .options .option.na.selected label .rating div:hover {
+	border: @radioButtonBorderSelected;
+}
+
+
+@media all and (max-width: 769px) {
+	/* N/A answer choice */
+	.rating_prompt.horizontal .options .option.na {
+		display: table;
+		margin-top: 0.3125rem; /* 5px */
+		margin-bottom: 0px;
+	}
+	/* N/A label */
+	.rating_prompt.horizontal .options .option.na.lastna .description {
+		font-size: @font-size-base-mobile !important;
+		font-weight: normal;
+		margin-left: 1.9375rem; /* 31px */
+		margin-top: 0.6875rem; /* 11px */
+		margin-bottom: 0.625rem; /* 10px */
+	}
+	/* N/A radio button */
+	.rating_prompt.horizontal .options .option.na label .rating div {
+		top: 0.5rem; /* 8px */
+	}
+}
+
+
+/* ================================================
+   Rating group prompts
+   ================================================ */
+/* Mobile rating group divider line - Adding default space (1.5em) between prompts to divider line */
+.prompt.categoricalGroup hr {
+	border: none;
+	border-bottom: none;
+	margin: 0;
+}
+/* Hiding line for last prompt in the rating group */
+.prompt.categoricalGroup .categoricalChild.last-child hr {
+	display: none;
+}
+/* Removing default space between rating group prompts because it was added to the divider line style */
+.prompt.categoricalGroup .prompt .promptInput .rating_prompt {
+	margin: 0 auto;
+}
+/* Removing extra space underneath rating groups */
+.prompt.categoricalGroup #groupClear {
+	margin-bottom: 0;
+}
+@media all and (max-width: 769px) {
+	.rating_prompt.horizontal .options .option.na label .rating {
+		height: 20px !important;
+	}
+}
+
+@media all and (max-width: 769px) {
+	/* Space between prompt text and rating scale on mobile */
+	.prompt.categoricalGroup .prompt .promptInput {
+		margin-bottom: @promptSpacing;
+		margin-top: @promptTextSpacing; /* Should be the same as margin on the prompt text */
+	}
+	.prompt.categoricalGroup .categoricalChild.last-child .prompt .promptInput {
+		margin-bottom: 0;
+	}
+}
+
+
+/* Fixes for rating group table error messages */
+@media all and (min-width: 770px) {
+	/* Fix for important tagged error message background colour */
+	.prompt.categoricalGroup .categoricalChild .multipleChoiceInput .field-prompt-error .rating_prompt .rating:hover {
+		background-color: transparent !important;
+	}
+	/* Fix for the height for the error message box when disappearing */
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .rating,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.na .rating {
+		height: 40px;
+	}
+}
+/* Readjusting the label position after the above fix for the error message box */
+.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .description {
+	bottom: 100% !important;
+}
+@media all and (min-width: 770px) {
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .description {
+		bottom: 47px !important;
+		margin: 0 5%;
+		text-align: center;
+		width: 90%;
+	}
+}
+
+
+/* Widths and spacing of rating group columns/rows */
+.prompt.categoricalGroup .prompt .text {
+	line-height: 1.5em;
+}
+@media all and (min-width: 770px) {
+	.prompt.categoricalGroup .promptText__header {
+		margin-bottom: @promptTextSpacing !important;
+	}
+
+	/* Width of questions */
+	.prompt.categoricalGroup .prompt .promptText__child {
+		min-height: 46px; /* Default min-height is 46px */
+		width: 40%; /* Default width is 40% - decrease if needed to make more room for many answer choices */
+	}
+	/* Width of answer choices */
+	.prompt.categoricalGroup .prompt .multipleChoiceInput {
+		width: 60%; /* Default width is 60% - increase if needed to make more room for many answer choices */
+	}
+	/* Margins for rating group labels */
+	.prompt.categoricalGroup .choiceDescriptionContainer {
+		margin-left: 40%; /* Should be the same as width of questions */
+		width: 60%; /* Should be the same as width of answer choices */
+	}
+	.prompt.categoricalGroup .prompt .text {
+		padding: 10px; /* Padding of text from the zebra stripe. Default padding-left is 5px */
+		vertical-align: -13px; /* Adjusting the vertical aligning of the text for the minimum height of 46px. Default template value is -11px */
+	}
+	/* Vertically aligning radio buttons to the minimum zebra stripe height of 46px */
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .rating div,
+	.prompt.categoricalGroup .categoricalChild.first-child .multipleChoiceInput .options .option .rating div {
+		bottom: -0.75rem; /* Default value is -9px - Changed to -12px */
+	}
+}
+
+
+/* Removing extra background colours/borders from rating groups */
+.prompt.categoricalGroup .categoricalChild.first-child,
+.prompt.categoricalGroup .categoricalChild:nth-child(2n),
+.prompt.categoricalGroup .categoricalChild:nth-child(2n+1) {
+	border: none;
+}
+@media all and (min-width: 770px) {
+	.prompt.categoricalGroup .categoricalChild.first-child,
+	.prompt.categoricalGroup .categoricalChild:nth-child(2n),
+	.prompt.categoricalGroup .categoricalChild:nth-child(2n+1) {
+		border: none;
+	}
+	/* Answer choice background colour */
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .rating,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .rating:hover,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option:hover .rating {
+		background-color: transparent;
+		border: none;
+	}
+	/* Grey zebra stripe questions */
+	.prompt.categoricalGroup .categoricalChild:nth-child(2n) .promptText__child {
+		background-color: transparent;
+	}
+	/* Grey zebra stripe answer choices */
+	.prompt.categoricalGroup .categoricalChild:nth-child(2n) .multipleChoiceInput {
+		background-color: transparent !important;
+	}
+	/* White zebra stripe questions */
+	.prompt.categoricalGroup .categoricalChild:nth-child(2n+1) .promptText__child {
+		background-color: transparent;
+	}
+	/* White zebra stripe answer choices */
+	.prompt.categoricalGroup .categoricalChild:nth-child(2n+1) .multipleChoiceInput {
+		background-color: transparent !important;
+	}
+}
+
+/* First, last and middle labels */
+@media all and (min-width: 770px) {
+	/* All/Middle labels */
+	.prompt.categoricalGroup .options .option .description {
+		display: block;
+	}
+	/* First label */
+	.prompt.categoricalGroup .options.unused .option.first .description {
+		display: block;
+	}
+	/* Last label */
+	.prompt.categoricalGroup .options.unused .option.last .description {
+		display: block;
+	}
+}
+
+/* Rating group radio buttons */
+@media all and (min-width: 770px) {
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .rating div {
+		background-clip: border-box; /* Default is padding-box */
+		border-radius: 50%;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		box-shadow: @radioButtonBoxShadow;
+		box-sizing: border-box;
+		-moz-transition: @radioButtonTransition;
+		-webkit-transition: @radioButtonTransition;
+		-o-transition: @radioButtonTransition;
+		transition: @radioButtonTransition;
+		width: 1.375rem; /* 22px */
+		height: 1.375rem; /* 22px */
+	}
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option .rating div:hover {
+		border: @radioButtonBorderHover;
+	}
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.selected .rating div,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.selected .rating div:hover {
+		border: @radioButtonBorderSelected;
+	}
+}
+
+
+/* ================================================
+   GoRecommend
+   ================================================ */
+/* GoRecommend Share comment box */
+.goRecSharePrompt .promptInput .commentArea {
+	padding: 0.3125rem 0.625rem; /* 5px 10px */
+	width: 100%;
+}
+
+/* Share prompt buttons */
+.goRecSharePrompt .promptInput .goRecBtn {
+	border-radius: @buttonCorners;
+	-moz-border-radius: @buttonCorners;
+	-webkit-border-radius: @buttonCorners;
+	margin-right: 19px;
+	-moz-transition: @buttonTransition;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+/* Space between Share button icon and text */
+.goRecSharePrompt .promptInput .goRecBtn .inner .goRecBtnText {
+ 	margin-left: 10px;
+	width: auto;
+}
+@media all and (min-width: 770px) {
+	/* Increase button size as needed if Facebook text is being cut off */
+	.goRecSharePrompt .promptInput .goRecBtn {
+		width: 186px; /* Default value is 135px */
+	}
+}
+
+/* Vertical mobile Share prompt buttons */
+.goRecSharePrompt .promptInput .goRecVert .goRecBtn {
+	width: 186px;
+}
+
+/* GoRec popups */
+.gorecModal {
+	font-size: 1rem; /* 16px */
+}
+
+/* Popup header bars */
+@media all and (min-width: 601px) {
+	.gorecModal #header {
+		min-height: 35px;
+		padding: 5px 0;
+	}
+}
+#facebookModal #header {
+	border: none;
+	min-height: 35px;
+	padding: 5px 0;
+}
+.gorecModal #header .logo {
+	color: #ffffff;
+	height: 20px;
+	margin: 0 12px 0 0;
+	padding: 8px 0 0 0;
+}
+.gorecModal #header .logo span:after {
+	font-size: 1.25rem; /* 20px */
+}
+/* Popup header bar verbiage */
+.gorecModal #header label {
+	color: #ffffff;
+	padding-top: 8px;
+}
+
+
+/* GoRec popup buttons */
+.gorecModal form .ft .fieldset .button.share,
+.gorecModal form .ft .fieldset .button.share:hover,
+.gorecModal form .ft .fieldset .button.share:focus,
+#facebookModal form#facebook-recommendation-form .ft .fieldset .button.share:hover,
+#facebookModal form#facebook-recommendation-form .ft .fieldset .button.share:focus,
+#twitterModal form#twitter-recommendation-form .ft .fieldset .button.share:hover,
+#twitterModal form#twitter-recommendation-form .ft .fieldset .button.share:focus {
+	border-radius: @buttonCorners;
+	-moz-border-radius: @buttonCorners;
+	-webkit-border-radius: @buttonCorners;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: none;
+	-moz-transition: @buttonTransition;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+
+
+/* Fix for web theme HTML colour being applied inside email popup */
+html#emailModalBody {
+	background-color: #ffffff;
+	background-image: none;
+}
+
+#emailModalBody #emailModal #header{
+	background-color: #93c080;
+	border: none;
+}
+
+/* Email popup input field labels */
+#emailModal form#email-recommendation-form #emailFormFields .email-form-row .label-group {
+	color: #000000;
+}
+/* Email popup input fields */
+#emailModal form#email-recommendation-form #emailFormFields .email-form-row .data input,
+#emailModal form#email-recommendation-form #emailFormFields .email-form-row .data input:focus,
+#emailModal form#email-recommendation-form #emailFormFields .email-form-row .data textarea,
+#emailModal form#email-recommendation-form #emailFormFields .email-form-row .data textarea:focus {
+	background-color: #ffffff;
+	border: 1px solid #777777;
+	border-radius: @entryFieldCorners;
+	-moz-border-radius: @entryFieldCorners;
+	-webkit-border-radius: @entryFieldCorners;
+	box-sizing: border-box;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	color: #000000;
+	font-size: 1rem; /* 16px */
+	padding: 0.3125rem 0.625rem !important; /* 5px 10px */
+	text-align: left;
+}
+
+
+#emailModal #errorMessage {
+	font-size: 0.6875rem; /* 11px */
+	height: auto;
+	line-height: auto;
+	margin-bottom: 10px;
+}
+
+
+/* Footer bar */
+.gorecModal form .ft {
+	background-color: #ececec;
+	border-top: none;
+	padding: 0 20px;
+}
+
+/* Send button */
+#emailModal form#email-recommendation-form .ft .fieldset .button.share {
+	background-clip: border-box;
+	background-color: #69a251;
+	border-radius: @buttonCorners;
+	-moz-border-radius: @buttonCorners;
+	-webkit-border-radius: @buttonCorners;
+	border: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-sizing: border-box;
+	color: #ffffff;
+	font-size: 1rem; /* 16px */
+	text-shadow: none;
+	-moz-transition: @buttonTransition;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+#emailModal form#email-recommendation-form .ft .fieldset .button.share:hover,
+#emailModal form#email-recommendation-form .ft .fieldset .button.share:focus {
+	background-color: #69a251;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+/* Cancel button */
+.gorecModal form .ft .fieldset .button.cancel {
+	background-color: #999999;
+	border-radius: @buttonCorners;
+	-moz-border-radius: @buttonCorners;
+	-webkit-border-radius: @buttonCorners;
+	border: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-sizing: border-box;
+	color: #ffffff;
+	font-size: 1rem; /* 16px */
+	margin-right: 30px;
+	min-width: 90px;
+	text-shadow: none;
+	-moz-transition: @buttonTransition;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+.gorecModal form .ft .fieldset .button.cancel:hover,
+.gorecModal form .ft .fieldset .button.cancel:focus {
+	background-color: #999999;
+	color: #ffffff;
+}
+
+
+/* Mobile GoRec email popup */
+@media all and (max-width: 600px) {
+	/* Matching right/left margin of header with main body */
+	#emailModalBody #emailModal #header .bar {
+		margin: 0 20px;
+	}
+	#emailModalBody #emailModal #header .logo {
+		height: 29px;
+	}
+
+	/* Making header text visible */
+	#emailModalBody #emailModal #header label {
+		color: #000000;
+		padding: 10px 0 5px 0;
+	}
+	#emailModal #errorMessage {
+		margin-bottom: 0px;
+	}
+
+	/* Adding space between input fields */
+	#emailModal form#email-recommendation-form #emailFormFields .email-form-row .label-group {
+		margin-top: 5px;
+	}
+}
+
+
+/* Connect prompt buttons */
+.goRecConnectPrompt .cwu-btn {
+	border-radius: @buttonCorners;
+	-moz-border-radius: @buttonCorners;
+	-webkit-border-radius: @buttonCorners;
+	height: 50px; /* Default 47px - 50px makes it consistent with Share prompt buttons */
+	margin: 0 14px 14px 0; /* Remove margin-left so that it is flush left with text */
+	-moz-transition: @buttonTransition;
+	-webkit-transition: @buttonTransition;
+	-o-transition: @buttonTransition;
+	transition: @buttonTransition;
+}
+.goRecConnectPrompt .cwu-btn .btn-text {
+ 	line-height: 1.2em;
+ 	padding-top: 10px;
+}
+
+/* Icon size on mobile */
+#cwu-custom {
+	background-size: auto 32px;
+}
+
+.goRecConnectPrompt .twitter-follow-button {
+	color: #ffffff;
+}
+
+#cwu-custom:hover {
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	-webkit-opacity: 1;
+	opacity: 1;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+	filter: alpha(opacity=100);
+}
+.goRecConnectPrompt span:last-child #cwu-custom:hover {
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	-webkit-opacity: 1;
+	opacity: 1;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+	filter: alpha(opacity=100);
+}
+
+
+/* ================================================
+   Extra prompt styling
+   ================================================ */
+/* Date and time picker positioning fix */
+.prompt.datePrompt .dataIconSpan,
+.prompt.timePrompt .dataIconSpan {
+	left: 0px;
+	top: 0px;
+}
+.promptInputDateTime_aria,
+.promptInputDateTime_aria {
+	display: none;
+}
+
+/* Move checkbox further off the page so that it can't be seen on wide screens */
+.ui-checkbox input[type="checkbox"] { left: -9999px; }
+.lcl_ar .ui-checkbox input[type="checkbox"] { right: -9999px; }
+
+
+/* Removing shadow from detail strength meter */
+.commentPrompt .nudge_sidebar .nudge_meter .nudge_progress,
+.commentPrompt .nudge_sidebar .nudge_meter .nudge_progress::before,
+.promptArea .commentPrompt .nudge_sidebar.active .nudge_progress::after {
+	box-shadow: none;
+}
+/* Border of detail strength meter */
+.commentPrompt .nudge_sidebar .nudge_meter .nudge_progress,
+.commentPrompt .nudge_sidebar .nudge_meter .nudge_progress::before,
+.promptArea .commentPrompt .nudge_sidebar.active .nudge_progress::after {
+	border-color: @surveyBgColor;
+}
+/* Detail strength meter colour */
+.commentPrompt .nudge_sidebar .nudge_meter,
+.commentPrompt .nudge_sidebar .nudge_meter .nudge_goal {
+	background-color: @commentMeterColor;
+}
+
+/* To remove triggered prompt choppy animation
+.slideDown,
+.prompt.triggered,
+.prompt.triggered.ng-hide-add,
+.prompt.triggered.concurrentTriggered,
+.prompt.triggered.ng-hide-add.concurrentTriggered {
+	transition: none;
+} */
+
+
+/* Mobile font size */
+@media all and (max-width: 480px) {
+	body {
+		font-size: @font-size-base-mobile;
+	}
+
+	.prompt input,
+	.ui-select .btn-inner .btn-text {
+		font-size: @font-size-base-mobile;
+	}
+	input[type="button"],
+	input[type="button"]:focus,
+	input[type="button"]:hover,
+	.prompt input[type="button"],
+	.prompt input[type="button"]:focus,
+	.prompt input[type="button"]:hover {
+		font-size: @buttonFontSize;
+	}
+	.prompt .promptText,
+	.prompt .promptText__header,
+	.prompt.numericPrompt .promptText,
+	.prompt.numericPrompt .promptText__header,
+	.prompt.textPrompt .promptText,
+	.prompt.textPrompt .promptText__header {
+		font-size: @promptTextSize-mobile;
+		line-height: 1.5em;
+	}
+	.rating_prompt.horizontal .options .option .rating {
+		font-size: @promptTextSize-mobile;
+	}
+
+	/* Potential adjustments from font size changes 
+	.multipleChoiceInput .menuItem span {
+		top: 10px;
+	}
+	.ui-checkbox span.show-check {
+		top: 1px;
+	}
+	.ui-checkbox .booleanText {
+		top: 0px;
+	} */
+}
+
+
+/* Rounded corners rating scale */
+.rating_prompt.horizontal .options .option.first .rating {
+	border-radius: @entryFieldCorners 0 0 @entryFieldCorners;
+	-moz-border-radius: @entryFieldCorners 0 0 @entryFieldCorners;
+	-webkit-border-radius: @entryFieldCorners 0 0 @entryFieldCorners;
+}
+.rating_prompt.horizontal .options .option.last .rating {
+	border-radius: 0 @entryFieldCorners @entryFieldCorners 0;
+	-moz-border-radius: 0 @entryFieldCorners @entryFieldCorners 0;
+	-webkit-border-radius: 0 @entryFieldCorners @entryFieldCorners 0;
+}
+
+
+/* Bordered rating scale (separate N/A) */
+.rating_prompt.horizontal .options .option .rating,
+.rating_prompt.horizontal .options .option.before .rating,
+.rating_prompt.horizontal .options .option.after .rating,
+.rating_prompt.horizontal .options .option:hover .rating {
+	border: @radioButtonBorder;
+	border-left: none;
+}
+.rating_prompt.horizontal .options .option .rating:hover {
+	border: @radioButtonBorder;
+	border-left: none;
+}
+.rating_prompt.horizontal .options .option.selected .rating,
+.rating_prompt.horizontal .options .option.selected .rating:hover,
+.rating_prompt.horizontal .options .option.selected:hover .rating {
+	border: @radioButtonBorder;
+	border-left: none;
+}
+.rating_prompt.horizontal .options .option.first .rating,
+.rating_prompt.horizontal .options .option.first .rating:hover,
+.rating_prompt.horizontal .options .option.first:hover .rating,
+.rating_prompt.horizontal .options .option.first.selected .rating,
+.rating_prompt.horizontal .options .option.first.selected .rating:hover,
+.rating_prompt.horizontal .options .option.first.selected:hover .rating {
+	border-left: @radioButtonBorder;
+}
+.rating_prompt.horizontal .options .option.na .rating,
+.rating_prompt.horizontal .options .option.na .rating:hover,
+.rating_prompt.horizontal .options .option.na:hover .rating,
+.rating_prompt.horizontal .options .option.na.selected .rating,
+.rating_prompt.horizontal .options .option.na.selected .rating:hover,
+.rating_prompt.horizontal .options .option.na.selected:hover .rating {
+	border: none;
+}
+@media all and (min-width: 770px) {
+	.rating_prompt.horizontal .options .option.na label .rating {
+		height: 2.625rem; /* 42px */
+	}
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.first .rating,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.first .rating:hover,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.first:hover .rating,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.first.selected .rating,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.first.selected .rating:hover,
+	.prompt.categoricalGroup .prompt .multipleChoiceInput .options .option.first.selected:hover .rating {
+		border-left: none;
+	}
+}
+
+
+/* Headings and text */
+h1 {
+	font-family: @h1Font;
+	font-size: @h1Size;
+	font-weight: @h1Bold;
+	color: @h1Color;
+	line-height: 1.4em;
+	margin: 0 0 1.125rem 0;
+}
+h2 {
+	font-size: 1.625rem;
+	font-weight: bold;
+	color: @h2Color;
+	line-height: 1.4em;
+	margin: 0 0 1.125rem 0;
+}
+h3 {
+	font-size: 1.375rem;
+	font-weight: normal;
+	color: @h3Color;
+	line-height: 1.5em;
+	margin: 0 0 0.625em 0;
+}
+
+@media all and (max-width: 480px) {
+	h1 {
+		font-size: calc(@h1Size * 0.75);
+	}
+	h2 {
+		font-size: 1.25rem;
+	}
+	h3 {
+		font-size: 1.125rem;
+	}
+}
+
+p, ul, ol {
+	margin: 0 0 1.5em 0;
+}
+.genericPromptHeader p:last-child {
+	margin-bottom: 0;
+}
+
+.prompt_identifier_noBottomMargin .prompt {
+	margin-bottom: 0;
+}
+/* Survey-specific formatting */
+/* Hide table descriptions */
+#promptText_523977, #promptText_523970, #promptText_523982, #promptText_523979{
+	display: none;
+}
+
+
+/* Hide comment question text which uses descriptive text instead */
+#promptText_523986{
+	display: none
+}
