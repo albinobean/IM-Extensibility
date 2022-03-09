@@ -1,0 +1,64 @@
+// #prompt_507552
+.prompt_identifier_imagebooleangroup>div>div>.prompt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+// Allows the question DIV and error DIV to be smaller than the images
+.prompt_identifier_imagebooleangroup > div > div > .prompt > div:first-child, 
+.prompt_identifier_imagebooleangroup > div > div > .prompt > div.errors{
+  width: 100%;
+  height: fit-content;
+}
+.prompt_identifier_imagebooleangroup>div>div>.prompt .show-check{
+  display: none;
+}
+.prompt_identifier_imagebooleangroup>div>div>.prompt>div,
+.prompt_identifier_imagebooleangroup>div>div>.prompt.booleanGroupPrompt.groupPrompt .field-prompt-error{
+  width: 30%;
+  height: 250px; 
+  margin:10px;
+}
+.prompt_identifier_imagebooleangroup>div>div>.prompt img{
+  width:calc(100% - 60px);
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+}
+.prompt_identifier_imagebooleangroup>div>div>.prompt .booleanPrompt, .prompt_identifier_imagebooleangroup>div>div>.prompt .booleanText {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.prompt_identifier_imagebooleangroup>div>div>.prompt .booleanPrompt label{
+  padding:10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width:100%;
+}
+.prompt_identifier_imagebooleangroup>div>div>.prompt .checked{
+  border:1px solid black;
+}
+.prompt_identifier_imagebooleangroup>div>div>.prompt .ui-checkbox{
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+// Change to a 2 column layout
+@media screen and (max-width: 750px){
+  .prompt_identifier_imagebooleangroup>div>div>.prompt>div{
+    width:45%;
+  }
+}
+// Change to a 1 column layout
+@media screen and (max-width: 600px) {
+  .prompt_identifier_imagebooleangroup>div>div>.prompt>div{
+    width: 100%;
+    height: fit-content;
+  }
+}

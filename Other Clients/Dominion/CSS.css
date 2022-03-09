@@ -1,0 +1,15 @@
+/* Put the input boxes to the right of the question text on page 2 */
+@media only screen and (min-width: 464px){
+  .page_409579 .promptInput {
+    top: -50px;
+    left: 200px;
+  }
+  /* Remove the extra spacing between questions */
+  .promptContainer {
+    height: 49px;
+  }
+  /* Allow more height for the paragraph text */
+  #prompt_content_501990 {
+    height: unset;
+  }
+}

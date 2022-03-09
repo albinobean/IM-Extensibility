@@ -1,0 +1,2102 @@
+<Questions>
+  <Question>
+    <QuestionId>52</QuestionId>
+    <QuestionText>Breadth of Avnet’s product line card</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>53</QuestionId>
+    <QuestionText>Overall Account Management from Avnet</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>54</QuestionId>
+    <QuestionText>The degree to which you feel Avnet really cares about customers</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>55</QuestionId>
+    <QuestionText>[speedboat]’s overall contribution to the success of your business?</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>56</QuestionId>
+    <QuestionText>The overall value of your relationship with [speedboat]?</QuestionText>
+    <QuestionAlias>Value of relationship</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>57</QuestionId>
+    <QuestionText>The overall ease of doing business with [speedboat]?</QuestionText>
+    <QuestionAlias>Ease of doing business</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>58</QuestionId>
+    <QuestionText>The overall quality of [speedboat]'s products, services, and solutions?</QuestionText>
+    <QuestionAlias>Quality of services and products</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>59</QuestionId>
+    <QuestionText>I would like [speedboat] to be a:</QuestionText>
+    <QuestionAlias>(EM) Would like Avnet to be</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>60</QuestionId>
+    <QuestionText>I currently view [speedboat] as a:</QuestionText>
+    <QuestionAlias>(EM) Current view of Avnet</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>61</QuestionId>
+    <QuestionText>I would like Avnet to be a:</QuestionText>
+    <QuestionAlias>(TS) Would like Avnet to be</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>62</QuestionId>
+    <QuestionText>I currently view Avnet as a:</QuestionText>
+    <QuestionAlias>(TS) Current view of Avnet</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>63</QuestionId>
+    <QuestionText>Thank you.  Please tell us how we can improve your experience with [speedboat].</QuestionText>
+    <QuestionAlias>Why - Detractor?</QuestionAlias>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>64</QuestionId>
+    <QuestionText>Thank you.  Please tell us how we can improve your experience with [speedboat].</QuestionText>
+    <QuestionAlias>Why - Passive?</QuestionAlias>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>65</QuestionId>
+    <QuestionText>Thanks! Tell us more about your experiences.</QuestionText>
+    <QuestionAlias>NPS Follow-Up</QuestionAlias>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>66</QuestionId>
+    <QuestionText>How likely would you be to recommend [speedboat] to someone else?</QuestionText>
+    <QuestionAlias>How likely would you be to recommend Avnet to someone else?</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>67</QuestionId>
+    <QuestionText>In order to make the questions we’ll be asking you more efficient, please select the role that best describes your involvement with Avnet:</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>68</QuestionId>
+    <QuestionText>Program contact phone</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>69</QuestionId>
+    <QuestionText>Program contact email</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>70</QuestionId>
+    <QuestionText>Program contact name</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>71</QuestionId>
+    <QuestionText>Signatory Title</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>72</QuestionId>
+    <QuestionText>Signatory Name</QuestionText>
+    <QuestionShortCode>SIGNATORY_NAME</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>73</QuestionId>
+    <QuestionText>Alert Recipient</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>74</QuestionId>
+    <QuestionText>Country / Regional Manager Email</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>75</QuestionId>
+    <QuestionText>Regional Manager</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>76</QuestionId>
+    <QuestionText>GSM</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>77</QuestionId>
+    <QuestionText>Area VP / Sales Director email</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>78</QuestionId>
+    <QuestionText>Area VP Name / Sales Director Name</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>79</QuestionId>
+    <QuestionText>AREA DIRECTOR/RD  EMAIL</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>80</QuestionId>
+    <QuestionText>AREA DIRECTOR/RD NAME</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>81</QuestionId>
+    <QuestionText>DM email</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>82</QuestionId>
+    <QuestionText>DM NAME</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>83</QuestionId>
+    <QuestionText>SMM /SSR DIRECTOR EMAIL ADDRESS</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>84</QuestionId>
+    <QuestionText>SMM / SSR DIRECTOR</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>85</QuestionId>
+    <QuestionText>SMR/SSR EMAIL ADDRESS</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>86</QuestionId>
+    <QuestionText>SMR/SSR NAME</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>87</QuestionId>
+    <QuestionText>Rep / AM name</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>88</QuestionId>
+    <QuestionText>Purchase influence</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>89</QuestionId>
+    <QuestionText>Contact email address</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>90</QuestionId>
+    <QuestionText>Contact Title / Designation</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>91</QuestionId>
+    <QuestionText>Contact Last Name</QuestionText>
+    <QuestionShortCode>CONTACT_LAST_NAME</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92</QuestionId>
+    <QuestionText>Country</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93</QuestionId>
+    <QuestionText>Cross Supplier Sales</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>94</QuestionId>
+    <QuestionText>Industry/Market</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>95</QuestionId>
+    <QuestionText>Customer Type</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>96</QuestionId>
+    <QuestionText>Customer Type / Channel</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>97</QuestionId>
+    <QuestionText>Account type</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>98</QuestionId>
+    <QuestionText>Global Parent / Sold To</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>99</QuestionId>
+    <QuestionText>National ID / Sold To</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>100</QuestionId>
+    <QuestionText>last 12 months sales value</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>101</QuestionId>
+    <QuestionText>Tier</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>102</QuestionId>
+    <QuestionText>Contact ID</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>103</QuestionId>
+    <QuestionText>Customer (Account) Name</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>104</QuestionId>
+    <QuestionText>Global Region</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>105</QuestionId>
+    <QuestionText>District ID / Area</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>106</QuestionId>
+    <QuestionText>Area / Country</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>107</QuestionId>
+    <QuestionText>Business Unit / group</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>108</QuestionId>
+    <QuestionText>Division</QuestionText>
+    <QuestionShortCode>division</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>109</QuestionId>
+    <QuestionText>Brand</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>110</QuestionId>
+    <QuestionText>Wave</QuestionText>
+    <QuestionShortCode>Wave</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>111</QuestionId>
+    <QuestionText>Global Team / Region</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>112</QuestionId>
+    <QuestionText>Please indicate the nature of the issue so we can route this request to the right person:</QuestionText>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>113</QuestionId>
+    <QuestionText>My Time Zone is:</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>114</QuestionId>
+    <QuestionText>The best time to call me is:</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>115</QuestionId>
+    <QuestionText>Phone:</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>116</QuestionId>
+    <QuestionText>How do you want to be contacted:</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>117</QuestionId>
+    <QuestionText>Do you need to speak with someone from [speedboat] on an immediate issue or question?</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>118</QuestionId>
+    <QuestionText>Speaking to the executive leaders of [speedboat], what additional comments would you provide?</QuestionText>
+    <QuestionAlias>Executive Comments</QuestionAlias>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>119</QuestionId>
+    <QuestionText>Avnet’s technical support</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>120</QuestionId>
+    <QuestionText>Avnet’s customer service</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>121</QuestionId>
+    <QuestionText>Timeliness of Avnet’s deliveries</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>122</QuestionId>
+    <QuestionText>Quality of Avnet’s best-practices advice</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>123</QuestionId>
+    <QuestionText>Avnet’s overall order management process</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>124</QuestionId>
+    <QuestionText>Overall value of manufacturers’ reseller programs</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>125</QuestionId>
+    <QuestionText>Breadth of available Avnet services and solutions</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>126</QuestionId>
+    <QuestionText>Breadth of Avnet’s product line card</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>127</QuestionId>
+    <QuestionText>Overall Account Management from Avnet</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>128</QuestionId>
+    <QuestionText>The degree to which Avnet really cares about customers</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>129</QuestionId>
+    <QuestionText>Contact First Name</QuestionText>
+    <QuestionShortCode>CONTACT_FIRST_NAME</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>130</QuestionId>
+    <QuestionText>Industry/Market</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>131</QuestionId>
+    <QuestionText>last 12 months sales value</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>132</QuestionId>
+    <QuestionText>Business Unit / group</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>133</QuestionId>
+    <QuestionText>Brand</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>134</QuestionId>
+    <QuestionText>Alert Recipient Email</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>135</QuestionId>
+    <QuestionText>Regional Manager Email</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>136</QuestionId>
+    <QuestionText>GSM</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>137</QuestionId>
+    <QuestionText>MEMEC email address</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>138</QuestionId>
+    <QuestionText>MEMEC AM name</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>139</QuestionId>
+    <QuestionText>Rep / email address</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>140</QuestionId>
+    <QuestionText>Contact Role</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>141</QuestionId>
+    <QuestionText>Phone Number</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>142</QuestionId>
+    <QuestionText>State</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>143</QuestionId>
+    <QuestionText>City</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>144</QuestionId>
+    <QuestionText>Market</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>145</QuestionId>
+    <QuestionText>Industry</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>146</QuestionId>
+    <QuestionText>CUSTOMER TYPE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>147</QuestionId>
+    <QuestionText>CHANNEL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>148</QuestionId>
+    <QuestionText>SUPPLY CHAIN DESCRIPTION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>149</QuestionId>
+    <QuestionText>ACCOUNT TYPE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>150</QuestionId>
+    <QuestionText>GLOBAL PARENT</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>151</QuestionId>
+    <QuestionText>NATIONAL ACCOUNT</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>152</QuestionId>
+    <QuestionText>LAST 12 MONTHS SALES VALUE</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>153</QuestionId>
+    <QuestionText>PURCHASE-EMBEDDED</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>154</QuestionId>
+    <QuestionText>PURCHASE-MEMEC</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>155</QuestionId>
+    <QuestionText>PURCHASE-IPE</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>156</QuestionId>
+    <QuestionText>PURCHASE-SEMI</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>157</QuestionId>
+    <QuestionText>REVENUE TIER</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>158</QuestionId>
+    <QuestionText>ACCOUNT CREATE DATE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>159</QuestionId>
+    <QuestionText>ACCOUNT NUMBER</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>160</QuestionId>
+    <QuestionText>COMPANY NAME</QuestionText>
+    <QuestionShortCode>COMPANY_NAME</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>161</QuestionId>
+    <QuestionText>PT BRANCH DESCRIPTION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>162</QuestionId>
+    <QuestionText>AREA DESCRIPTION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>163</QuestionId>
+    <QuestionText>BUSINESS UNIT / GROUP</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>164</QuestionId>
+    <QuestionText>SPEED BOAT</QuestionText>
+    <QuestionShortCode>speedboat</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>165</QuestionId>
+    <QuestionText>GLOBAL REGION</QuestionText>
+    <QuestionShortCode>globalregion</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>166</QuestionId>
+    <QuestionText>Language</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>167</QuestionId>
+    <QuestionText>Please select a language:</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>9</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>168</QuestionId>
+    <QuestionText>Please select a language:</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>9</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>169</QuestionId>
+    <QuestionText>Alert Recipient Last Name</QuestionText>
+    <QuestionShortCode>AlertRecipientLN</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>170</QuestionId>
+    <QuestionText>Alert Recipient First Name</QuestionText>
+    <QuestionShortCode>AlertRecipientFN</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>173</QuestionId>
+    <QuestionText>Please select a language:</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>9</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>174</QuestionId>
+    <QuestionText>SIGNATORY TITLE LINE 2</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE_LINE_2</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>175</QuestionId>
+    <QuestionText>Net Promoter Score</QuestionText>
+    <QuestionShortCode>.</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>3</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>176</QuestionId>
+    <QuestionText>Please select a language:</QuestionText>
+    <QuestionShortCode>LanguageSelector</QuestionShortCode>
+    <QuestionAlias>Language</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>9</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>177</QuestionId>
+    <QuestionText>Email:</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>178</QuestionId>
+    <QuestionText>Avnet's quoting process</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>179</QuestionId>
+    <QuestionText>Avnet Express website experience</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>180</QuestionId>
+    <QuestionText>Overall Avnet Account Relationship</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>181</QuestionId>
+    <QuestionText>Experience with Avnet Outside Sales team</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>182</QuestionId>
+    <QuestionText>Experience with Avnet Inside Sales/ Program Management team</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>183</QuestionId>
+    <QuestionText>Please tell us more about your involvement with [speedboat]:</QuestionText>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>184</QuestionId>
+    <QuestionText>My involvement with [speedboat]'s products and services:</QuestionText>
+    <QuestionAlias>Level of Involvement:</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>185</QuestionId>
+    <QuestionText>My job role:</QuestionText>
+    <QuestionAlias>Job Role:</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>186</QuestionId>
+    <QuestionText>SUB REGION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>187</QuestionId>
+    <QuestionText>GEO REGION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>188</QuestionId>
+    <QuestionText>AVNET UNITED</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>189</QuestionId>
+    <QuestionText>ESCALATION RECIPIENT EMAIL</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>190</QuestionId>
+    <QuestionText>ESCALATION RECIPIENT LAST NAME</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>191</QuestionId>
+    <QuestionText>ESCALATION RECIPIENT FIRST NAME</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>192</QuestionId>
+    <QuestionText>CHURN CUSTOMER</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>193</QuestionId>
+    <QuestionText>SAP SOLD-TO-CODE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>194</QuestionId>
+    <QuestionText>Contact ID</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>195</QuestionId>
+    <QuestionText>NATIONAL ACCOUNT</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>196</QuestionId>
+    <QuestionText>BUSINESS UNIT / GROUP</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>197</QuestionId>
+    <QuestionText>PT BRANCH DESCRIPTION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>198</QuestionId>
+    <QuestionText>AREA DESCRIPTION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>199</QuestionId>
+    <QuestionText>BUSINESS UNIT / GROUP</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>200</QuestionId>
+    <QuestionText>PARENT BRANCH</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>201</QuestionId>
+    <QuestionText>AREA DESCRIPTION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>202</QuestionId>
+    <QuestionText>REGIONAL CHAMPION</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>203</QuestionId>
+    <QuestionText>SALES MANAGEMENT 2</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>204</QuestionId>
+    <QuestionText>SALES MANAGEMENT 1</QuestionText>
+    <QuestionShortCode>SALES_MANAGEMENT_1</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>205</QuestionId>
+    <QuestionText>SALES 2</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>206</QuestionId>
+    <QuestionText>SALES 1</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>207</QuestionId>
+    <QuestionText>CHURN CUSTOMER</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>208</QuestionId>
+    <QuestionText>[speedboat]’s customer service</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>209</QuestionId>
+    <QuestionText>[speedboat]’s technical support</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>210</QuestionId>
+    <QuestionText>Quality of [speedboat]’s best-practices advice</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>211</QuestionId>
+    <QuestionText>Timeliness of [speedboat]’s deliveries</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>212</QuestionId>
+    <QuestionText>[speedboat]'s quoting process</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>213</QuestionId>
+    <QuestionText>[speedboat]’s overall order management process</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>214</QuestionId>
+    <QuestionText>[speedboat] Express website experience</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>215</QuestionId>
+    <QuestionText>Breadth of available [speedboat] products, services, and solutions</QuestionText>
+    <QuestionAlias>Breadth of services and solutions</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>216</QuestionId>
+    <QuestionText>Breadth of [speedboat]'s product line card</QuestionText>
+    <QuestionAlias>Breadth of products</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>217</QuestionId>
+    <QuestionText>Program Management</QuestionText>
+    <QuestionAlias>Program Management</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>218</QuestionId>
+    <QuestionText>[speedboat]'s technical support</QuestionText>
+    <QuestionAlias>Technical Support</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>219</QuestionId>
+    <QuestionText>Experience with [speedboat] Outside Sales team</QuestionText>
+    <QuestionAlias>Account Managers</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>220</QuestionId>
+    <QuestionText>Experience with [speedboat] Inside Sales team</QuestionText>
+    <QuestionAlias>Inside Sales</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>221</QuestionId>
+    <QuestionText>The degree to which [speedboat] really cares about customers</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>222</QuestionId>
+    <QuestionText>AVNET UNITED</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>223</QuestionId>
+    <QuestionText>CHANNEL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>224</QuestionId>
+    <QuestionText>Quality of supply chain solutions</QuestionText>
+    <QuestionAlias>Quality of supply chain solutions</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>225</QuestionId>
+    <QuestionText>SALES 1</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>302</QuestionId>
+    <QuestionText>EMA WAVE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>303</QuestionId>
+    <QuestionText>SBU FINANCE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>304</QuestionId>
+    <QuestionText>TOP 100 CUSTOMER</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>346</QuestionId>
+    <QuestionText>SALES MANAGEMENT 2 EMAIL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>347</QuestionId>
+    <QuestionText>SALES MANAGEMENT 1 EMAIL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>348</QuestionId>
+    <QuestionText>SALES 2 EMAIL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>349</QuestionId>
+    <QuestionText>SALES 1 EMAIL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>350</QuestionId>
+    <QuestionText>SIGNATORY TITLE LINE 2 (2)</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE_LINE_2_2</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>351</QuestionId>
+    <QuestionText>Signatory Title (2)</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE2</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>352</QuestionId>
+    <QuestionText>Signatory Name (2)</QuestionText>
+    <QuestionShortCode>SIGNATORY_NAME2</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>676</QuestionId>
+    <QuestionText>AUTOMOTIVE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>686</QuestionId>
+    <QuestionText>TOP 100 CUSTOMER</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>687</QuestionId>
+    <QuestionText>COE</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>693</QuestionId>
+    <QuestionText>COMPANY LABEL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>913</QuestionId>
+    <QuestionText>Why Detractor Translation</QuestionText>
+    <QuestionShortCode>Why_Detractor</QuestionShortCode>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>914</QuestionId>
+    <QuestionText>Why Passive Translation</QuestionText>
+    <QuestionShortCode>Why_Passive</QuestionShortCode>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>915</QuestionId>
+    <QuestionText>Why Promoter Translation</QuestionText>
+    <QuestionShortCode>Why_Promoter</QuestionShortCode>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>916</QuestionId>
+    <QuestionText>Executive Comments Translation</QuestionText>
+    <QuestionShortCode>Executive_Comments</QuestionShortCode>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>928</QuestionId>
+    <QuestionText>Competence in Display-Solutions</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>929</QuestionId>
+    <QuestionText>Competence in Embedded-Solutions</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>930</QuestionId>
+    <QuestionText>Manufacturing Services</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>931</QuestionId>
+    <QuestionText>Design and engineering support</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1083</QuestionId>
+    <QuestionText> .</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1132</QuestionId>
+    <QuestionText>Combined 4 Passive-Promoter-Detractor AND Exec Comments</QuestionText>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1133</QuestionId>
+    <QuestionText>Combined 3 Passive-Promoter-Detractor Comments</QuestionText>
+    <QuestionType>memo</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1152</QuestionId>
+    <QuestionText>Case Management Access Owner</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1490</QuestionId>
+    <QuestionText>Signatory Title Two</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE_TWO</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1491</QuestionId>
+    <QuestionText>Signatory Name Two</QuestionText>
+    <QuestionShortCode>SIGNATORY_NAME_TWO</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1492</QuestionId>
+    <QuestionText>SIGNATORY TITLE LINE 2 TWO</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE_LINE_2_TWO</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1502</QuestionId>
+    <QuestionText>D+B - Global Channel</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1503</QuestionId>
+    <QuestionText>D+B - Primary NAICS Code</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1504</QuestionId>
+    <QuestionText>D+B - Subsidiary Indicator</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1505</QuestionId>
+    <QuestionText>D+B - Status Code</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1506</QuestionId>
+    <QuestionText>D+B - DOMESTIC ULTIMATE DUNS</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1507</QuestionId>
+    <QuestionText>D+B - Global Ultimate DUNS Number</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1508</QuestionId>
+    <QuestionText>D+B - LOCAL DUNS Number</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1509</QuestionId>
+    <QuestionText>TS A-B-C CUSTOMER SEGMENT</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1514</QuestionId>
+    <QuestionText>I would like to participate in customer focus groups to further improve [speedboat]'s products and services.</QuestionText>
+    <QuestionAlias>Focus Group opt-in</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1515</QuestionId>
+    <QuestionText>Please explain.</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1516</QuestionId>
+    <QuestionText>Competence in Display-Solutions</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1517</QuestionId>
+    <QuestionText>Competence in Embedded-Solutions</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1518</QuestionId>
+    <QuestionText>Manufacturing Services</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1519</QuestionId>
+    <QuestionText>Design and engineering support</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1520</QuestionId>
+    <QuestionText>[speedboat]’s customer service</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1521</QuestionId>
+    <QuestionText>[speedboat]’s technical support</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1522</QuestionId>
+    <QuestionText>Timeliness of [speedboat]’s deliveries</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1523</QuestionId>
+    <QuestionText>[speedboat]’s overall order management process</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1524</QuestionId>
+    <QuestionText>[speedboat]'s quoting process</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1525</QuestionId>
+    <QuestionText>[speedboat] Express website experience</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1526</QuestionId>
+    <QuestionText>Overall value of manufacturers’ reseller programs</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1527</QuestionId>
+    <QuestionText>Breadth of available [speedboat] services, solutions and products</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1528</QuestionId>
+    <QuestionText>Breadth of [speedboat]’s product line card</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1529</QuestionId>
+    <QuestionText>Overall Account Management with [speedboat]</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1530</QuestionId>
+    <QuestionText>Experience with [speedboat] Outside Sales team</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1531</QuestionId>
+    <QuestionText>Experience with [speedboat] Inside Sales team</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1532</QuestionId>
+    <QuestionText>Competence of Display-Solutions</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1533</QuestionId>
+    <QuestionText>Competence of Embedded-Solutions</QuestionText>
+    <QuestionAlias>Quality of Display-Solutions</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1534</QuestionId>
+    <QuestionText>Manufacturing services</QuestionText>
+    <QuestionAlias>Quality of Embedded-Solutions</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1535</QuestionId>
+    <QuestionText>Overall value of manufacturers’ reseller programs</QuestionText>
+    <QuestionAlias>Manufacturing services</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1536</QuestionId>
+    <QuestionText>Timeliness of [speedboat]'s deliveries</QuestionText>
+    <QuestionAlias>Timeliness of deliveries</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1537</QuestionId>
+    <QuestionText>[speedboat]'s overall order management process</QuestionText>
+    <QuestionAlias>Order scheduling process</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1538</QuestionId>
+    <QuestionText>[speedboat]'s quoting process</QuestionText>
+    <QuestionAlias>Quoting process</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1539</QuestionId>
+    <QuestionText>Ease of ordering via the website</QuestionText>
+    <QuestionAlias>Ordering through website</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1540</QuestionId>
+    <QuestionText>Quality of website informational content</QuestionText>
+    <QuestionAlias>Website content</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1541</QuestionId>
+    <QuestionText>Design and engineering support</QuestionText>
+    <QuestionAlias>Design services</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1542</QuestionId>
+    <QuestionText>Survey Method</QuestionText>
+    <QuestionShortCode>survey_method</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1549</QuestionId>
+    <QuestionText>[speedboat] ​Express website experience</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1550</QuestionId>
+    <QuestionText>Overall account management with [speedboat]</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1551</QuestionId>
+    <QuestionText>The degree to which [speedboat] really cares about customers?</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>1552</QuestionId>
+    <QuestionText>[speedboat]'s customer service</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>2009</QuestionId>
+    <QuestionText>Please Explain (Job Role = Other) Translation</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>2010</QuestionId>
+    <QuestionText>COMPANY LABEL</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>2011</QuestionId>
+    <QuestionText>COMPANY NAME</QuestionText>
+    <QuestionShortCode>COMPANY_NAME</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>2012</QuestionId>
+    <QuestionText>COMPANY LABEL</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>2013</QuestionId>
+    <QuestionText>COMPANY NAME</QuestionText>
+    <QuestionShortCode>COMPANY_NAME</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>2895</QuestionId>
+    <QuestionText>I would like to participate in an optional survey regarding supply chain solutions at this time.</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>3190</QuestionId>
+    <QuestionText>What is your desired delivery service level?</QuestionText>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>3191</QuestionId>
+    <QuestionText>Thinking about deliveries who is your preferred carrier?</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>3192</QuestionId>
+    <QuestionText>Quality of Display-Solutions</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>3193</QuestionId>
+    <QuestionText>Quality of Integrated-Solutions</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>3194</QuestionId>
+    <QuestionText>Quality of delivery status update</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92305</QuestionId>
+    <QuestionText>PRIOR SBU FINANCE</QuestionText>
+    <QuestionShortCode>PRIOR_SBU_FINANCE</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92306</QuestionId>
+    <QuestionText>Response Trend</QuestionText>
+    <QuestionType>multi</QuestionType>
+    <QuestionStatus>1</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92307</QuestionId>
+    <QuestionText>Response Trend</QuestionText>
+    <QuestionAlias>Response Trend</QuestionAlias>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92430</QuestionId>
+    <QuestionText>The overall reliability of [speedboat]</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92431</QuestionId>
+    <QuestionText>The overall value for money offered by [speedboat]</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92432</QuestionId>
+    <QuestionText>Salesforce Contact ID</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92433</QuestionId>
+    <QuestionText>Revenue last 12 months</QuestionText>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92434</QuestionId>
+    <QuestionText>MOTS OTS</QuestionText>
+    <QuestionShortCode>MOTS_OTS</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>4</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92503</QuestionId>
+    <QuestionText>Quality of [speedboat] 's supply chain services (Kanban, JIT, VMI, KOnsignationslager etc.)</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92830</QuestionId>
+    <QuestionText>Salesforce Escalation Recipient</QuestionText>
+    <QuestionShortCode>SalesforceEscalationRecipient</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92831</QuestionId>
+    <QuestionText>Salesforce Alert Recipient</QuestionText>
+    <QuestionShortCode>SalesforceAlertRecipient</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92832</QuestionId>
+    <QuestionText>Signatory Image URL</QuestionText>
+    <QuestionShortCode>SIGNATORY_IMAGE</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92928</QuestionId>
+    <QuestionText>SIGNATORY TITLE LINE 2 THREE</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE_LINE_2_THREE</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92929</QuestionId>
+    <QuestionText>Signatory Title Three</QuestionText>
+    <QuestionShortCode>SIGNATORY_TITLE_THREE</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92930</QuestionId>
+    <QuestionText>Signatory Name Three</QuestionText>
+    <QuestionShortCode>SIGNATORY_NAME_THREE</QuestionShortCode>
+    <QuestionType>text</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92931</QuestionId>
+    <QuestionText>Quality of supply chain solutions</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92932</QuestionId>
+    <QuestionText>Ease of navigating the website</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92933</QuestionId>
+    <QuestionText>Quality of Avnet Integrated innovation units - Server</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92934</QuestionId>
+    <QuestionText>Quality of Avnet Integrated innovation units - Display</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>92935</QuestionId>
+    <QuestionText>Quality of Avnet Integrated innovation units - Embedded</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93195</QuestionId>
+    <QuestionText>Occupational health and safety risks with direct and indirect suppliers and vendors</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93196</QuestionId>
+    <QuestionText>Ethics and compliance-related risks (bribery, corruption, etc.) with direct and indirect suppliers and vendors</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93197</QuestionId>
+    <QuestionText>Environmental risks with direct and indirect suppliers and vendors</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93198</QuestionId>
+    <QuestionText>Human rights and fair labor practices risks with direct and indirect suppliers and vendors</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93199</QuestionId>
+    <QuestionText>Reporting on the ethics and compliance program and activities</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93200</QuestionId>
+    <QuestionText>Prioritizing an inclusive and diverse workforce</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93201</QuestionId>
+    <QuestionText>Increasing recyclable materials used in packaging customer orders</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93202</QuestionId>
+    <QuestionText>Reducing packaging sent for customer orders</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93203</QuestionId>
+    <QuestionText>Reducing water usage</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93204</QuestionId>
+    <QuestionText>Reducing waste to landfill</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93205</QuestionId>
+    <QuestionText>Reducing energy usage</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93206</QuestionId>
+    <QuestionText>Reducing Greenhouse Gas emissions</QuestionText>
+    <QuestionAlias />
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+  <Question>
+    <QuestionId>93207</QuestionId>
+    <QuestionText>Please Select a Language:</QuestionText>
+    <QuestionShortCode>fakeLanguageSelector</QuestionShortCode>
+    <QuestionType>single</QuestionType>
+    <QuestionStatus>0</QuestionStatus>
+    <ExtendedType>0</ExtendedType>
+  </Question>
+</Questions>
