@@ -1,0 +1,46 @@
+{
+  "name": "in_moment_public_rest_api",
+  "version": "1.0.0",
+  "description": "Welcome_to_the_InMoment_Public_REST_API__Access_is_restricted_to_clients_of_InMoment__Contact_your_InMoment_account_manager_for_more_information_or_visit__https__inmoment_com__https__inmoment_com__to_learn_what_InMoment_can_do_for_you_To_help_you_get_started_application_client_libraries_for_some_popularlanguages_and_frameworks_have_been_included_below____csharp_dotnet2__api_documentation_client_csharp_dotnet2_zip___go__api_documentation_client_go_zip___java__api_documentation_client_java_zip___javascript__api_documentation_client_javascript_zip___php__api_documentation_client_php_zip___python__api_documentation_client_python_zip___typescript_angular__api_documentation_client_typescript_angular_zip___typescript_angularjs__api_documentation_client_typescript_angularjs_zip___typescript_jquery__api_documentation_client_typescript_jquery_zip___typescript_node__api_documentation_client_typescript_node_zipAdditionally_you_can_use_many_opensource_tools_to_generate_libraries_yourself_using_the__OpenApi_3_0_Spec__api_documentation_openapi_json",
+  "license": "Unlicense",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "prepack": "npm run build",
+    "test": "mocha --require @babel/register --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "superagent": "3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
